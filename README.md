@@ -1,5 +1,7 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+it is an automotive service site, that helps clients with prepurchase inspection, diagnostics, buying and selling of cars, auto errands as a service among other services.
+
 ## Getting Started
 
 First, run the development server:
