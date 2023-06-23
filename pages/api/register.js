@@ -6,30 +6,10 @@ export default async function handler(req, res) {
     return;
   }
 
-  const {
-    firstName,
-    lastName,
-    yearOfBirth,
-    email,
-    whatsappNumber,
-    educationalQualification,
-    linkedInProfile,
-    aspiration,
-    reasonForJoining,
-  } = req.body;
+  const { firstName, lastName, email } = req.body;
 
   // Validate the input
-  if (
-    !firstName ||
-    !lastName ||
-    !yearOfBirth ||
-    !email ||
-    !whatsappNumber ||
-    !educationalQualification ||
-    !linkedInProfile ||
-    !aspiration ||
-    !reasonForJoining
-  ) {
+  if (!firstName || !lastName || !email) {
     res.status(400).json({ message: "All fields are required" });
     return;
   }
@@ -44,13 +24,7 @@ export default async function handler(req, res) {
     await collection.insertOne({
       firstName,
       lastName,
-      yearOfBirth,
       email,
-      whatsappNumber,
-      educationalQualification,
-      linkedInProfile,
-      aspiration,
-      reasonForJoining,
     });
 
     // Close the client connection when done

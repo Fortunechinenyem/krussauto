@@ -66,32 +66,32 @@ function Navbar() {
             Home
           </Link>
           <Link
-            href="/AboutUs"
+            href="/about"
             className="text-black-300 hover:bg-[rgb(7,39,78)] hover:text-white px-3 py-2 rounded-md text-sm font-medium"
           >
             About Us
           </Link>
           <Link
-            href="/OurWork"
+            href="/services"
             className="text-black-300 hover:bg-[rgb(7,39,78)] hover:text-white px-3 py-2 rounded-md text-sm font-medium"
           >
-            Our Work
+            Services
           </Link>
           <Link
-            href="/Blog"
+            href="/blog"
             className="text-black-300 hover:bg-[rgb(7,39,78)] hover:text-white px-3 py-2 rounded-md text-sm font-medium"
           >
             Blog
           </Link>
 
           <Link
-            href="/ContactUs"
+            href="/contact"
             className="text-black-300 hover:bg-[rgb(7,39,78)] hover:text-white px-3 py-2 rounded-md text-sm font-medium"
           >
             Contact US
           </Link>
           <Link
-            href="/Careers"
+            href="/register"
             className="btn text-black bg-[#3ADFF1]  hover:text-white px-3 py-2 rounded-md text-sm font-medium"
           >
             Login/SignUp
