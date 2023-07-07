@@ -1,31 +1,36 @@
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
+import Link from "next/link";
 import Logo from "../public/assets/images/kruss (1).jpg";
+import Home1 from "../public/assets/images/img (6).jpg";
+import Home2 from "../public/assets/images/img (2).jpg";
+import Home3 from "../public/assets/images/pic (3).jpg";
+import Home4 from "../public/assets/images/img (10).jpg";
+import Home5 from "../public/assets/images/img (4).jpg";
 
 export default function HomePage() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="m-4">
       <Navbar />
 
       <div className="container">
         <div className="mt-9 mb-7 flex flex-col md:flex-row">
           <div className="md:w-1/2">
             <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold">
-              Make an informed decision – Get a professional used car
-              inspection.
+              Get your Auto-services needs taken care of.
             </h1>
             <p className="text-lg md:text-xl mt-4">
-              Don't get stuck with a lemon – Get a comprehensive inspection
-              before purchasing a used car.
+              Don't get stuck with a lemon – let our professionals take the load
+              off you.
             </p>
             <div>
-              <input
+              {/* <input
                 className="mt-8 py-2 px-4 rounded-lg bg-gray-200"
                 placeholder="Enter your email"
-              />
+              /> */}
               <button className="m-4 btn text-black bg-[#3ADFF1]  hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                Submit
+                <Link href="/appointment">Book An Appointment</Link>
               </button>
             </div>
           </div>
@@ -36,16 +41,22 @@ export default function HomePage() {
 
         <div className="mt-9 flex flex-col md:flex-row">
           <div className="md:w-1/2 flex justify-center mt-6 md:mt-0">
-            <Image className="w-full max-w-md" src={Logo} alt="logo" priority />
+            <Image
+              className="w-full max-w-md"
+              src={Home1}
+              alt="logo"
+              priority
+            />
           </div>
           <div className="md:w-1/2">
             <h1 className="text-xl md:text-2xl lg:text-3xl font-bold">
-              Know what you’re buying.
+              Pre-Purchase Inspection
             </h1>
             <p className="text-lg md:text-xl mt-4">
-              Our experienced inspectors conduct thorough inspections to
-              identify any issues. Our reports provide a detailed analysis of
-              the car’s condition, giving you peace of mind.
+              We offer comprehensive vehicle inspections to ensure your car is
+              safe and reliable on the road. Our inspections cover all major
+              systems and components, including brakes, suspension, steering,
+              tires, and more.
             </p>
           </div>
         </div>
@@ -53,25 +64,36 @@ export default function HomePage() {
         <div className="mt-9 flex flex-col md:flex-row">
           <div className="md:w-1/2">
             <h1 className="text-xl md:text-2xl lg:text-3xl font-bold">
-              Negotiate with confidence.
+              Auto Errand as a Service
             </h1>
             <p className="text-lg md:text-xl mt-4">
-              Armed with a KrussAuto report, you are in a better position to
-              negotiate a fair price with the seller.
+              Don't have time to take care of your vehicle's maintenance needs?
+              Let us handle it for you! We offer a range of auto errand
+              services, including oil changes, tire rotations, and more.
             </p>
           </div>
           <div className="md:w-1/2 flex justify-center mt-6 md:mt-0">
-            <Image className="w-full max-w-md" src={Logo} alt="logo" priority />
+            <Image
+              className="w-full max-w-md"
+              src={Home2}
+              alt="logo"
+              priority
+            />
           </div>
         </div>
 
         <div className="mt-9 flex flex-col md:flex-row">
           <div className="md:w-1/2 flex justify-center mt-6 md:mt-0">
-            <Image className="w-full max-w-md" src={Logo} alt="logo" priority />
+            <Image
+              className="w-full max-w-md"
+              src={Home3}
+              alt="logo"
+              priority
+            />
           </div>
           <div className="md:w-1/2">
             <h1 className="text-xl md:text-2xl lg:text-3xl font-bold">
-              Ensure safety on the road.
+              Fleet Management
             </h1>
             <p className="text-lg md:text-xl mt-4">
               Our inspection will identify any safety issues with the car. You
@@ -81,41 +103,66 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="bg-[#364B45] text-white card mt-9 mb-7">
+        <div className="mt-9 flex flex-col md:flex-row">
+          <div className="md:w-1/2">
+            <h1 className="text-xl md:text-2xl lg:text-3xl font-bold">
+              Buy and Sell Cars
+            </h1>
+            <p className="text-lg md:text-xl mt-4">
+              We help connect you to buyers and sellers if you either want to
+              buy or sell cars
+            </p>
+          </div>
+          <div className="md:w-1/2 flex justify-center mt-6 md:mt-0">
+            <Image
+              className="w-full max-w-md"
+              src={Home4}
+              alt="logo"
+              priority
+            />
+          </div>
+        </div>
+        <div className="mt-9 flex flex-col md:flex-row">
+          <div className="md:w-1/2 flex justify-center mt-6 md:mt-0">
+            <Image
+              className="w-full max-w-md"
+              src={Home5}
+              alt="logo"
+              priority
+            />
+          </div>
+          <div className="md:w-1/2">
+            <h1 className="text-xl md:text-2xl lg:text-3xl font-bold">
+              Auto Consultancy
+            </h1>
+            <p className="text-lg md:text-xl mt-4">
+              We give informed opinions on automotive products thanks to years
+              of experience and exposure.
+            </p>
+          </div>
+        </div>
+        {/* <div className="bg-[#364B45] text-white card mt-9 mb-7">
           <p>
             "I highly recommend CarCheck to anyone looking to buy a used car.
             It's the peace of mind you need when making a big purchase." Kerry
             White
           </p>
-        </div>
+        </div> */}
 
-        <div className=" border rounded-border">
-          <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            <div className="bg-gray-100 p-4 rounded-lg">
-              <Image className="w-32 max-w-md" src={Logo} alt="logo" priority />
-            </div>
-            <div className="bg-gray-100 p-4 rounded-lg">
-              <Image className="w-32 max-w-md" src={Logo} alt="logo" priority />
-            </div>
-            <div className="bg-gray-100 p-4 rounded-lg">
-              <Image className="w-32 max-w-md" src={Logo} alt="logo" priority />
-            </div>
-            <div className="bg-gray-100 p-4 rounded-lg">
-              <Image className="w-32 max-w-md" src={Logo} alt="logo" priority />
-            </div>
-            <Image className="w-32 max-w-md" src={Logo} alt="logo" priority />
-          </div>
+        <div className="mt-9">
+          <h3 className="text-3xl text-center font-bold">Exciting News</h3>
 
-          <p className="text-lg md:text-xl mt-4">
-            Get your CarCheck report now.
+          <p className="text-lg md:text-xl mt-4 text-center">
+            Check out or e-book{" "}
+            <span>"How to buy and sell Nigerian used cars"</span>
           </p>
-          <div>
-            <input
+          <div className="text-center">
+            {/* <input
               className="mt-8 py-2 px-4 rounded-lg bg-gray-200"
               placeholder="Enter your email"
-            />
+            /> */}
             <button className="m-4 btn text-black bg-[#3ADFF1]  hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-              Submit
+              Purchase
             </button>
           </div>
         </div>

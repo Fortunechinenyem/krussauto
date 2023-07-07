@@ -2,15 +2,16 @@ import React from "react";
 import Link from "next/link";
 
 import { AiOutlineHome } from "react-icons/ai";
-import { AiOutlineWechat } from "react-icons/ai";
-import { GrResources } from "react-icons/gr";
+import { FcIdea } from "react-icons/fc";
 import { MdOutlineSupportAgent } from "react-icons/md";
+import { MdOutlineHomeRepairService } from "react-icons/md";
+import { FaBlog } from "react-icons/fa";
 import { BiLogOut } from "react-icons/bi";
 
 const UserDashboardLayout = ({ children }) => {
   return (
     <div className="md:flex h-screen">
-      <nav className="grow md:w-48 shadow-md md:relative bg-[#328471]  text-black z-[100] flex justify-between">
+      <nav className="grow md:w-48 shadow-md md:relative bg-[#4C9CA6]  text-black z-[100] flex justify-between">
         <div className="w-full flex flex-col">
           <ul className="pl-5 pt-5 pb-2 text-zinc-500 md:block grow">
             <li>
@@ -27,7 +28,7 @@ const UserDashboardLayout = ({ children }) => {
                 href="/about"
                 className="flex gap-3 items-center py-3 hover:text-blue-1"
               >
-                <AiOutlineWechat width={22} />
+                <FcIdea width={22} />
                 <span>About</span>
               </Link>
             </li>
@@ -36,7 +37,7 @@ const UserDashboardLayout = ({ children }) => {
                 href="/services"
                 className="flex gap-3 items-center py-3 hover:text-blue-1"
               >
-                <GrResources width={22} />
+                <MdOutlineHomeRepairService width={22} />
                 <span>Services</span>
               </Link>
             </li>
@@ -45,7 +46,7 @@ const UserDashboardLayout = ({ children }) => {
                 href="/blog"
                 className="flex gap-3 items-center py-3 stroke-zinc-600 hover:text-blue-1 hover:stroke-blue-1"
               >
-                <MdOutlineSupportAgent width={18} height={27} />
+                <FaBlog width={18} height={27} />
                 <span>Blog</span>
               </Link>
             </li>
