@@ -9,7 +9,11 @@ const DiscussionBoard = () => {
   useEffect(() => {
     fetch("/api/discussion-board")
       .then((response) => response.json())
-      .then((data) => setDiscussions(data))
+      .then((data) => {
+        if (Array.isArray(data)) {
+          setDiscussions(data);
+        }
+      })
       .catch((error) => console.error(error));
   }, []);
 
