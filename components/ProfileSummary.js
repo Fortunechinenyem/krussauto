@@ -42,7 +42,7 @@ const ProfileSummary = ({ name, headline, introduction }) => {
       <h2 className="text-2xl font-semibold mb-2">{name}</h2>
       <h3 className="text-lg text-gray-600 mb-4">{headline}</h3>
       <p className="text-gray-700">{introduction}</p>
-      <button className="btn rounded bg-[#4C9CA6] text-white py-2 px-4 mt-4">
+      <button className="rounded bg-[#4C9CA6] text-white py-2 px-4 mt-4">
         Edit Profile
       </button>
     </div>
