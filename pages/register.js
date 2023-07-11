@@ -5,9 +5,7 @@ import Link from "next/link";
 export default function RegisterForm() {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
-
   const [email, setEmail] = useState("");
-
   const router = useRouter();
 
   const handleSubmit = async (e) => {
@@ -20,7 +18,6 @@ export default function RegisterForm() {
         body: JSON.stringify({
           firstName,
           lastName,
-
           email,
         }),
       });
@@ -42,8 +39,11 @@ export default function RegisterForm() {
   };
 
   return (
-    <div className="container">
-      <form onSubmit={handleSubmit} className="shadow-md rounded p-6">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+      <form
+        onSubmit={handleSubmit}
+        className="bg-white shadow-md rounded-md p-8"
+      >
         <div className="mb-4">
           <label htmlFor="firstName" className="text-lg font-semibold">
             First Name
@@ -54,7 +54,7 @@ export default function RegisterForm() {
             value={firstName}
             onChange={(e) => setFirstName(e.target.value)}
             placeholder="Enter your first name"
-            className="block w-full border-gray-300 p-2 rounded mt-1"
+            className="w-full py-2 px-4 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-500"
           />
         </div>
         <div className="mb-4">
@@ -67,7 +67,7 @@ export default function RegisterForm() {
             value={lastName}
             onChange={(e) => setLastName(e.target.value)}
             placeholder="Enter your last name"
-            className="block w-full border-gray-300 p-2 rounded mt-1"
+            className="w-full py-2 px-4 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-500"
           />
         </div>
 
@@ -81,20 +81,24 @@ export default function RegisterForm() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Enter your email address"
-            className="block w-full border-gray-300 p-2 rounded mt-1"
+            className="w-full py-2 px-4 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-500"
           />
         </div>
 
         <button
           type="submit"
-          className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
+          className="bg-[#006950] text-white font-bold rounded-md px-6 py-2 text-lg hover:bg-[#005740] transition-colors duration-300"
         >
           Sign Up
         </button>
       </form>
-      <div>
-        <p>Already have an Account?</p>
-        <Link href="/login">Login</Link>
+      <div className="mt-4">
+        <p className="text-gray-600">Already have an account?</p>
+        <Link href="/login">
+          <button className="text-[#006950] font-semibold hover:underline">
+            Login
+          </button>
+        </Link>
       </div>
     </div>
   );

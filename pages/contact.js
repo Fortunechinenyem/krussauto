@@ -140,7 +140,7 @@ function ContactUs() {
               </div>
               <button
                 type="submit"
-                className="inline-block self-start bg-[#006950] text-white font-bold rounded-md px-6 py-2 text-lg"
+                className="inline-block self-start bg-[#006950] text-white font-bold rounded-md px-6 py-2 text-lg px-6 py-3 rounded-md text-sm font-medium"
                 disabled={submitting}
               >
                 {submitting ? "Submitting..." : "Send Message"}

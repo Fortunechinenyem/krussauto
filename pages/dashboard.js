@@ -3,11 +3,20 @@ import React, { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import UserDashboardLayout from "@/layout/UserDashboard";
-import InspectionReports from "@/components/InspectionReports";
-import Notifications from "@/components/Notifications";
-import FAQs from "./faq";
-import CreateNewInspection from "@/components/CreateNewInspection";
+import RoadsideAssistance from "@/components/RoadsideAssistance";
+import DiscussionBoard from "@/components/DiscussionBoard";
+import VehicleComparison from "@/components/VehicleComparison";
+import ExclusiveOffers from "@/components/ExclusiveOffers";
+import VehicleRecommendations from "@/components/VehicleRecommendations";
+import ServiceHistory from "@/components/ServiceHistory";
+import VehicleHealthSummary from "@/components/VehicleHealthSummary";
+
+// import InspectionReports from "@/components/InspectionReports";
+// import Notifications from "@/components/Notifications";
+// import FAQs from "./faq";
+// import CreateNewInspection from "@/components/CreateNewInspection";
 import ProfileSummary from "@/components/ProfileSummary";
+import UpcomingAppointments from "@/components/UpComingAppointments";
 
 export default function DashboardPage({ user }) {
   useEffect(() => {
@@ -26,7 +35,7 @@ export default function DashboardPage({ user }) {
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.8 }}
         >
-          Welcome {user}!
+          Welcome, {user}!
         </h1>
       </div>
       <div className="flex gap-3 space-between">
@@ -39,7 +48,33 @@ export default function DashboardPage({ user }) {
             <ProfileSummary />
           </div>
           <div className="col-span-1" data-aos="fade-down" data-aos-delay="200">
-            <h2 className="text-lg font-bold mb-4">Inspection Reports</h2>
+            <UpcomingAppointments />
+          </div>
+          <div className="col-span-1" data-aos="fade-down" data-aos-delay="200">
+            <VehicleHealthSummary />
+          </div>
+          <div className="col-span-1" data-aos="fade-down" data-aos-delay="200">
+            <ServiceHistory />
+          </div>
+          <div className="col-span-1" data-aos="fade-down" data-aos-delay="200">
+            <VehicleRecommendations />
+          </div>
+          <div className="col-span-1" data-aos="fade-down" data-aos-delay="200">
+            <ExclusiveOffers />
+          </div>
+          <div className="col-span-1" data-aos="fade-down" data-aos-delay="200">
+            <VehicleComparison />
+          </div>
+          <div className="col-span-1" data-aos="fade-down" data-aos-delay="200">
+            <DiscussionBoard />
+          </div>
+          <div className="col-span-1" data-aos="fade-down" data-aos-delay="200">
+            <RoadsideAssistance />
+          </div>
+          {/* <div className="col-span-1" data-aos="fade-down" data-aos-delay="200">
+            <h2 className="text-lg font-bold mb-4">
+              Recent Inspection Reports
+            </h2>
             <InspectionReports />
           </div>
           <div className="col-span-1" data-aos="fade-down" data-aos-delay="200">
@@ -51,9 +86,11 @@ export default function DashboardPage({ user }) {
             <Notifications />
           </div>
           <div className="col-span-1" data-aos="fade-down" data-aos-delay="200">
-            <h2 className="text-lg font-bold mb-4">FAQs</h2>
+            <h2 className="text-lg font-bold mb-4">
+              Frequently Asked Questions
+            </h2>
             <FAQs />
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

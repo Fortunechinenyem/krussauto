@@ -1,5 +1,4 @@
 import React from "react";
-
 import BlogHero from "../public/assets/images/kruss (1).jpg";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
@@ -16,13 +15,32 @@ const PrePurchase = () => {
           alt="blog hero"
           priority
         />
-        <div className="p-6 md:p-24 text-center">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl text-white font-bold">
-            PrePurchase
+        <div className="p-6 md:p-24 text-center text-white">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold">
+            PrePurchase Inspection
           </h1>
         </div>
       </div>
-
+      <p className=" mt-4">
+        At Kruss Automotive Services, we offer comprehensive PrePurchase
+        Inspection services to help our clients make informed decisions before
+        buying a car. Our experienced technicians thoroughly examine the
+        vehicle, identifying any existing issues or potential problems, and
+        providing detailed reports and recommendations.
+      </p>
+      <p className=" mt-4">
+        Our PrePurchase Inspection includes a comprehensive check of various
+        aspects, including the engine, transmission, suspension, brakes,
+        electrical systems, and more. We aim to provide our clients with a clear
+        understanding of the vehicle's condition, helping them avoid unexpected
+        repairs and ensure they are making a wise investment.
+      </p>
+      <p className=" mt-4">
+        With our PrePurchase Inspection service, you can have peace of mind
+        knowing that you are making a well-informed decision when purchasing a
+        car. Contact us today to schedule an appointment and let our experts
+        assist you in your car-buying journey.
+      </p>
       <Footer />
     </div>
   );

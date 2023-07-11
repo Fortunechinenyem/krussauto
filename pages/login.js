@@ -26,22 +26,34 @@ export default function LoginPage() {
   };
 
   return (
-    <div>
-      <h1>Login Page</h1>
-      <form onSubmit={handleLogin}>
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-800">
+        Login
+      </h1>
+      <form
+        onSubmit={handleLogin}
+        className="bg-white shadow-md rounded-md p-8"
+      >
         <input
           type="email"
           placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          className="w-full mb-4 py-2 px-4 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-500"
         />
         <input
           type="password"
           placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+          className="w-full mb-4 py-2 px-4 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-500"
         />
-        <button type="submit">Login</button>
+        <button
+          className="bg-[#006950] text-white font-bold rounded-md px-6 py-2 text-lg hover:bg-[#005740] transition-colors duration-300"
+          type="submit"
+        >
+          Login
+        </button>
       </form>
     </div>
   );

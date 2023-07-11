@@ -92,7 +92,7 @@ function Navbar() {
           </Link>
           <Link
             href="/register"
-            className="btn text-black bg-[#3ADFF1]  hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+            className="inline-block self-start bg-[#006950] text-white font-bold rounded-md px-6 py-2 text-lg px-6 py-3 rounded-md text-sm font-medium"
           >
             Login/SignUp
           </Link>

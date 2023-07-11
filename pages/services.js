@@ -61,6 +61,16 @@ const Services = () => {
             </p>
           </div>
         </Link>
+        <Link href="/cardiagnostics">
+          {" "}
+          <div className="bg-white shadow-lg rounded-lg p-6">
+            <p className="text-xl font-bold mb-2">Car Diagnostics</p>
+            <p className="text-gray-600">
+              Get comprehensive Car Diagnostics to identify and address issues
+              with your vehicle's performance.
+            </p>
+          </div>
+        </Link>
         <Link href="/autoconsultancy">
           {" "}
           <div className="bg-white shadow-lg rounded-lg p-6">

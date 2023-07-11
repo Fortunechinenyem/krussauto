@@ -1,5 +1,4 @@
 import React from "react";
-
 import BlogHero from "../public/assets/images/kruss (1).jpg";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
@@ -23,6 +22,26 @@ const AutoErrand = () => {
         </div>
       </div>
 
+      <div>
+        <p className=" mt-4">
+          At Kruss Automotive Services, we offer Auto Errand as a Service to
+          provide convenience and assistance with your automotive-related tasks.
+          Whether you need someone to pick up groceries, drop off packages, or
+          handle other errands, our dedicated team is here to help.
+        </p>
+        <p className=" mt-4">
+          Our Auto Errand service saves you time and effort by taking care of
+          your errands while you focus on other important aspects of your life.
+          Our reliable and professional team members will ensure that your
+          errands are handled efficiently and with utmost care.
+        </p>
+        <p className=" mt-4">
+          With our Auto Errand as a Service, you can enjoy a hassle-free
+          experience and the convenience of having someone you can trust to
+          handle your automotive errands. Contact us today to learn more about
+          our Auto Errand service and how we can assist you.
+        </p>
+      </div>
       <Footer />
     </div>
   );

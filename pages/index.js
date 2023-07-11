@@ -1,5 +1,6 @@
-import Footer from "@/components/Footer";
+import React from "react";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import Image from "next/image";
 import Link from "next/link";
 import Logo from "../public/assets/images/kruss (1).jpg";
@@ -15,23 +16,21 @@ export default function HomePage() {
       <Navbar />
 
       <div className="container">
-        <div className="mt-9 mb-7 flex flex-col md:flex-row">
+        <div className="mt-9 mb-7 flex flex-col md:flex-row items-center">
           <div className="md:w-1/2">
             <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold">
-              Get your Auto-services needs taken care of.
+              Get Your Auto Services Needs Taken Care Of
             </h1>
             <p className="text-lg md:text-xl mt-4">
               Don't get stuck with a lemon – let our professionals take the load
               off you.
             </p>
-            <div>
-              {/* <input
-                className="mt-8 py-2 px-4 rounded-lg bg-gray-200"
-                placeholder="Enter your email"
-              /> */}
-              <button className="m-4 btn text-black bg-[#3ADFF1]  hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                <Link href="/appointment">Book An Appointment</Link>
-              </button>
+            <div className="mt-8 flex flex-wrap justify-center">
+              <Link href="/appointment">
+                <button className="inline-block self-start bg-[#006950] text-white font-bold rounded-md px-6 py-2 text-lg px-6 py-3 rounded-md text-sm font-medium">
+                  Book An Appointment
+                </button>
+              </Link>
             </div>
           </div>
           <div className="md:w-1/2 flex justify-center mt-6 md:mt-0">
@@ -39,12 +38,12 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="mt-9 flex flex-col md:flex-row">
+        <div className="mt-9 flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 flex justify-center mt-6 md:mt-0">
             <Image
-              className="w-full max-w-md"
+              className="w-full max-w-md rounded-lg"
               src={Home1}
-              alt="logo"
+              alt="Pre-Purchase Inspection"
               priority
             />
           </div>
@@ -61,7 +60,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="mt-9 flex flex-col md:flex-row">
+        <div className="mt-9 flex flex-col md:flex-row items-center">
           <div className="md:w-1/2">
             <h1 className="text-xl md:text-2xl lg:text-3xl font-bold">
               Auto Errand as a Service
@@ -74,20 +73,20 @@ export default function HomePage() {
           </div>
           <div className="md:w-1/2 flex justify-center mt-6 md:mt-0">
             <Image
-              className="w-full max-w-md"
+              className="w-full max-w-md rounded-lg"
               src={Home2}
-              alt="logo"
+              alt="Auto Errand as a Service"
               priority
             />
           </div>
         </div>
 
-        <div className="mt-9 flex flex-col md:flex-row">
+        <div className="mt-9 flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 flex justify-center mt-6 md:mt-0">
             <Image
-              className="w-full max-w-md"
+              className="w-full max-w-md rounded-lg"
               src={Home3}
-              alt="logo"
+              alt="Fleet Management"
               priority
             />
           </div>
@@ -103,31 +102,32 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="mt-9 flex flex-col md:flex-row">
+        <div className="mt-9 flex flex-col md:flex-row items-center">
           <div className="md:w-1/2">
             <h1 className="text-xl md:text-2xl lg:text-3xl font-bold">
               Buy and Sell Cars
             </h1>
             <p className="text-lg md:text-xl mt-4">
               We help connect you to buyers and sellers if you either want to
-              buy or sell cars
+              buy or sell cars.
             </p>
           </div>
           <div className="md:w-1/2 flex justify-center mt-6 md:mt-0">
             <Image
-              className="w-full max-w-md"
+              className="w-full max-w-md rounded-lg"
               src={Home4}
-              alt="logo"
+              alt="Buy and Sell Cars"
               priority
             />
           </div>
         </div>
-        <div className="mt-9 flex flex-col md:flex-row">
+
+        <div className="mt-9 flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 flex justify-center mt-6 md:mt-0">
             <Image
-              className="w-full max-w-md"
+              className="w-full max-w-md rounded-lg"
               src={Home5}
-              alt="logo"
+              alt="Auto Consultancy"
               priority
             />
           </div>
@@ -136,34 +136,26 @@ export default function HomePage() {
               Auto Consultancy
             </h1>
             <p className="text-lg md:text-xl mt-4">
-              We give informed opinions on automotive products thanks to years
-              of experience and exposure.
+              We provide informed opinions on automotive products thanks to
+              years of experience and exposure.
             </p>
           </div>
         </div>
-        {/* <div className="bg-[#364B45] text-white card mt-9 mb-7">
-          <p>
-            "I highly recommend CarCheck to anyone looking to buy a used car.
-            It's the peace of mind you need when making a big purchase." Kerry
-            White
-          </p>
-        </div> */}
 
         <div className="mt-9">
           <h3 className="text-3xl text-center font-bold">Exciting News</h3>
-
           <p className="text-lg md:text-xl mt-4 text-center">
-            Check out or e-book{" "}
-            <span>"How to buy and sell Nigerian used cars"</span>
+            Check out our e-book{" "}
+            <span className="text-blue-500">
+              "How to Buy and Sell Nigerian Used Cars"
+            </span>
           </p>
-          <div className="text-center">
-            {/* <input
-              className="mt-8 py-2 px-4 rounded-lg bg-gray-200"
-              placeholder="Enter your email"
-            /> */}
-            <button className="m-4 btn text-black bg-[#3ADFF1]  hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-              Purchase
-            </button>
+          <div className="text-center mt-6">
+            <Link href="/ebook">
+              <button className="inline-block self-start bg-[#006950] text-white font-bold rounded-md px-6 py-2 text-lg px-6 py-3 rounded-md text-sm font-medium mb-7">
+                Purchase
+              </button>
+            </Link>
           </div>
         </div>
       </div>
