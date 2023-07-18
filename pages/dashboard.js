@@ -4,7 +4,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import UserDashboardLayout from "@/layout/UserDashboard";
 import RoadsideAssistance from "@/components/RoadsideAssistance";
-import DiscussionBoard from "@/components/DiscussionBoard";
+
 import VehicleComparison from "@/components/VehicleComparison";
 import ExclusiveOffers from "@/components/ExclusiveOffers";
 import VehicleRecommendations from "@/components/VehicleRecommendations";
@@ -65,9 +65,7 @@ export default function DashboardPage({ user }) {
           <div className="col-span-1" data-aos="fade-down" data-aos-delay="200">
             <VehicleComparison />
           </div>
-          <div className="col-span-1" data-aos="fade-down" data-aos-delay="200">
-            <DiscussionBoard />
-          </div>
+
           <div className="col-span-1" data-aos="fade-down" data-aos-delay="200">
             <RoadsideAssistance />
           </div>
