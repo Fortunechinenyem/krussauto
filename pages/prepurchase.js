@@ -3,6 +3,7 @@ import BlogHero from "../public/assets/images/kruss (1).jpg";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Link from "next/link";
 
 const PrePurchase = () => {
   return (
@@ -41,6 +42,19 @@ const PrePurchase = () => {
         car. Contact us today to schedule an appointment and let our experts
         assist you in your car-buying journey.
       </p>
+      <div className="mt-9">
+        <h3 className="text-3xl text-center font-bold">
+          Book A Pre-Purchase Inspection
+        </h3>
+
+        <div className="text-center mt-6">
+          <Link href="/contact">
+            <button className="inline-block self-start bg-[#006950] text-white font-bold rounded-md px-6 py-2 text-lg px-6 py-3 rounded-md text-sm font-medium mb-7">
+              Book An Appointment
+            </button>
+          </Link>
+        </div>
+      </div>
       <Footer />
     </div>
   );

@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 
 import { AiOutlineHome } from "react-icons/ai";
-import { FcIdea } from "react-icons/fc";
+import { FcInspection } from "react-icons/fc";
 import { MdOutlineSupportAgent } from "react-icons/md";
 import { MdOutlineHomeRepairService } from "react-icons/md";
 import { FaBlog } from "react-icons/fa";
@@ -26,11 +26,11 @@ const UserDashboardLayout = ({ children }) => {
             </li>
             <li>
               <Link
-                href="/about"
+                href="/inspection"
                 className="flex gap-3 items-center py-3 hover:text-blue-1"
               >
-                <FcIdea width={22} />
-                <span>About</span>
+                <FcInspection width={22} />
+                <span>Inspection</span>
               </Link>
             </li>
             <li>
@@ -82,15 +82,15 @@ const UserDashboardLayout = ({ children }) => {
         </div>
       </nav>
       <div className="main w-full flex flex-col">
-        <header className="p-4 flex justify-between items-center shadow-md">
+        {/* <header className="p-4 flex justify-between items-center shadow-md">
           <div className="profile flex items-center gap-2"></div>
-          {/* <div className="logout">
+          <div className="logout">
             <button className="text-zinc-600 flex items-center gap-3 hover:text-blue-1">
               <BiLogOut width={15} />
               <span>Logout</span>
             </button>
-          </div> */}
-        </header>
+          </div>
+        </header> */}
         <main className="dashboard__content grow overflow-y-scroll px-8 md:px-2">
           {children}
         </main>

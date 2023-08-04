@@ -3,6 +3,7 @@ import BlogHero from "../public/assets/images/kruss (1).jpg";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Link from "next/link";
 
 const FleetManagement = () => {
   return (
@@ -46,7 +47,19 @@ const FleetManagement = () => {
         Contact us today to learn more about our Fleet Management services and
         how we can help your business achieve greater efficiency and success.
       </p>
+      <div className="mt-9">
+        <h3 className="text-3xl text-center font-bold">
+          Let us Help you manage your fleet
+        </h3>
 
+        <div className="text-center mt-6">
+          <Link href="/contact">
+            <button className="inline-block self-start bg-[#006950] text-white font-bold rounded-md px-6 py-2 text-lg px-6 py-3 rounded-md text-sm font-medium mb-7">
+              Book An Appointment
+            </button>
+          </Link>
+        </div>
+      </div>
       <Footer />
     </div>
   );

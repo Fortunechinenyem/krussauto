@@ -8,10 +8,18 @@ html {
   background: #f9f9f9;
   color: #324063;
 }
-
+/* 
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
   -webkit-box-shadow: 0 0 0 30px white inset !important;
+} */
+
+.range-input {
+  background: #006950;
+
+  -webkit-slider-thumb {
+    background: #006950;
+  }
 }
