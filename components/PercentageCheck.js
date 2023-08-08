@@ -9,8 +9,8 @@ export default function PercentageChecksSection() {
   };
 
   return (
-    <div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div className="">
+      <div className=" bg-[#95B1AF] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         <input
           className="mb-4"
           type="text"
@@ -24,7 +24,7 @@ export default function PercentageChecksSection() {
           placeholder="Color"
         />
       </div>
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form onSubmit={handleSubmit(onSubmit)} className="bg-[#95B1AF]">
         <div>
           Exterior
           <input

@@ -8,15 +8,14 @@ export default function CheckedBoxesSection() {
     console.log(data);
   };
 
-  // Watch for changes in the inputs
   const criteria1Value = watch("criteria1");
   const criteria2Value = watch("criteria2");
 
   return (
-    <div>
+    <div className="">
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          <div>
+          <div className="bg-[#95B1AF]">
             <p>Documentation</p>
             <div>
               Vehicle License
@@ -211,7 +210,7 @@ export default function CheckedBoxesSection() {
               />
             </div>
           </div>
-          <div>
+          <div className="bg-[#95B1AF]">
             <p>Exterior</p>
             <div>
               Frame Type
@@ -382,7 +381,7 @@ export default function CheckedBoxesSection() {
               />
             </div>
           </div>
-          <div>
+          <div className="bg-[#95B1AF]">
             <p>Engine , Exhaust & Cooling</p>
             <div>
               Number Plate
@@ -821,7 +820,7 @@ export default function CheckedBoxesSection() {
               />
             </div>
           </div>
-          <div>
+          <div className="bg-[#95B1AF]">
             <p>interior</p>
             <div>
               Dashboard Condition
@@ -1004,7 +1003,7 @@ export default function CheckedBoxesSection() {
               />
             </div>
           </div>
-          <div>
+          <div className="bg-[#95B1AF]">
             <div>
               <p>Heating, AC & Electrical</p>
               <div>
@@ -1164,7 +1163,7 @@ export default function CheckedBoxesSection() {
                 />
               </div>
             </div>
-            <div>
+            <div className="bg-[#95B1AF]">
               <div>
                 <p>Suspension, Steering & Braking</p>
                 <div>
@@ -1338,7 +1337,7 @@ export default function CheckedBoxesSection() {
               </div>
             </div>
           </div>
-          <div>
+          <div className="bg-[#95B1AF]">
             <div>
               <p>Additional Faetures</p>
               <div>

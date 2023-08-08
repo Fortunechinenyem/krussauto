@@ -13,7 +13,7 @@ export default function VehicleInformationSection() {
   };
 
   return (
-    <div>
+    <div className="bg-[#95B1AF]">
       <h2 className="mb-4">Vehicle Information</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div>

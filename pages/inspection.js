@@ -19,26 +19,44 @@ export default function InspectionPage() {
 
   return (
     <InspectionLayout>
-      <div className="">
-        <h1 className="text-2xl text-center font-bold mb-5 mt-5">Dashboard</h1>
-        <div className="bg-[#95B1AF] text-black">
-          <div className="col-span-1" data-aos="fade-down" data-aos-delay="200">
+      <div className="px-6 py-8">
+        <h1 className="text-3xl font-semibold text-center mb-6">
+          Vehicle Inspection Report
+        </h1>
+        <div className="grid grid-cols-1 gap-6">
+          <div
+            className="rounded-lg bg-white shadow-md p-6"
+            data-aos="fade-down"
+            data-aos-delay="200"
+          >
             <VehicleInformationSection />
           </div>
-          <div className="col-span-1" data-aos="fade-down" data-aos-delay="200">
-            {" "}
+          <div
+            className="rounded-lg bg-white shadow-md p-6"
+            data-aos="fade-down"
+            data-aos-delay="200"
+          >
             <PercentageChecksSection />
           </div>
-
-          <div className="col-span-1" data-aos="fade-down" data-aos-delay="200">
-            {" "}
+          <div
+            className="rounded-lg bg-white shadow-md p-6"
+            data-aos="fade-down"
+            data-aos-delay="200"
+          >
             <CommentsSection />
           </div>
-          <div className="col-span-1" data-aos="fade-down" data-aos-delay="200">
-            {" "}
+          <div
+            className="rounded-lg bg-white shadow-md p-6"
+            data-aos="fade-down"
+            data-aos-delay="200"
+          >
             <CheckedBoxesSection />
           </div>
-          <div className="col-span-1" data-aos="fade-down" data-aos-delay="200">
+          <div
+            className="rounded-lg bg-white shadow-md p-6"
+            data-aos="fade-down"
+            data-aos-delay="200"
+          >
             <DamagedPartsSection />
           </div>
         </div>
