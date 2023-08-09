@@ -9,6 +9,7 @@ import Home2 from "../public/assets/images/img (2).jpg";
 import Home3 from "../public/assets/images/pic (3).jpg";
 import Home4 from "../public/assets/images/img (10).jpg";
 import Home5 from "../public/assets/images/img (4).jpg";
+import FAQs from "./faq";
 
 export default function HomePage() {
   return (
@@ -158,6 +159,10 @@ export default function HomePage() {
             </Link>
           </div>
         </div>
+      </div>
+
+      <div className="text-center mt-6 mb-5">
+        <FAQs />
       </div>
 
       <Footer />

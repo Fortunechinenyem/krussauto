@@ -1,5 +1,5 @@
 import React from "react";
-import BlogHero from "../public/assets/images/kruss (1).jpg";
+import BlogHero from "../../public/assets/images/kruss (1).jpg";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";

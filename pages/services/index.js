@@ -1,6 +1,6 @@
 import React from "react";
 
-import BlogHero from "../public/assets/images/kruss (1).jpg";
+import ServicesHero from "../../public/assets/images/kruss (1).jpg";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -13,8 +13,8 @@ const Services = () => {
       <div className="relative bg-gradient-to-tr from-gray-500 to-gray-700 w-full bg-cover">
         <Image
           className="absolute w-full h-full object-cover mix-blend-overlay"
-          src={BlogHero}
-          alt="blog hero"
+          src={ServicesHero}
+          alt="services hero"
           priority
         />
         <div className="p-6 md:p-24 text-center">
