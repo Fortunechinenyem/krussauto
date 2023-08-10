@@ -12,12 +12,12 @@ function Navbar() {
 
   return (
     <header className="text-gray-600 body-font">
-      <div className="container mx-auto flex flex-wrap items-center justify-between py-4 px-6">
+      <div className="container flex flex-wrap items-center justify-between py-4 px-6">
         <Link href="/" className="flex title-font font-medium items-center">
           <Image className="" src={Logo} alt="logo" width={110} priority />
         </Link>
         <button
-          className="hamburger-menu md:hidden"
+          className="hamburger-menu  md:hidden"
           aria-label="Open Menu"
           onClick={toggleMenu}
         >
@@ -55,47 +55,50 @@ function Navbar() {
         </button>
 
         <nav
-          className={`${
-            isOpen ? "flex" : "hidden"
-          } sm:flex sm:items-center sm:w-auto mt-4 sm:mt-0`}
+          className={`md:flex items-center w-full  ${
+            isOpen ? "block" : "hidden"
+          }`}
         >
-          <Link
-            href="/"
-            className="text-black-300 hover:bg-[rgb(7,39,78)] hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-          >
-            Home
-          </Link>
-          <Link
-            href="/about"
-            className="text-black-300 hover:bg-[rgb(7,39,78)] hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-          >
-            About Us
-          </Link>
-          <Link
-            href="/services"
-            className="text-black-300 hover:bg-[rgb(7,39,78)] hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-          >
-            Services
-          </Link>
-          <Link
-            href="/blog"
-            className="text-black-300 hover:bg-[rgb(7,39,78)] hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-          >
-            Blog
-          </Link>
-
-          <Link
-            href="/contact"
-            className="text-black-300 hover:bg-[rgb(7,39,78)] hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-          >
-            Contact US
-          </Link>
-          <Link
-            href="/register"
-            className="inline-block self-start bg-[#006950] text-white font-bold rounded-md px-6 py-2 text-lg px-6 py-3 rounded-md text-sm font-medium"
-          >
-            Login/SignUp
-          </Link>
+          <div className="flex flex-col md:flex-row md:ml-auto md:space-x-2">
+            <Link
+              href="/"
+              className="text-black-300 hover:bg-[rgb(7,39,78)] hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+            >
+              Home
+            </Link>
+            <Link
+              href="/about"
+              className="text-black-300 hover:bg-[rgb(7,39,78)] hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+            >
+              About Us
+            </Link>
+            <Link
+              href="/services"
+              className="text-black-300 hover:bg-[rgb(7,39,78)] hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+            >
+              Services
+            </Link>
+            <Link
+              href="/blog"
+              className="text-black-300 hover:bg-[rgb(7,39,78)] hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+            >
+              Blog
+            </Link>
+            <Link
+              href="/contact"
+              className="text-black-300 hover:bg-[rgb(7,39,78)] hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+            >
+              Contact Us
+            </Link>
+          </div>
+          <div className="mt-4 md:mt-0">
+            <Link
+              href="/register"
+              className="text-black-300 bg-[#006950] text-white hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+            >
+              Login/SignUp
+            </Link>
+          </div>
         </nav>
       </div>
     </header>

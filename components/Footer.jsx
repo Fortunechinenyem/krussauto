@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
-// import Image from "next/image";
-// import Logo from "../public/assets/images/logo.png";
+import Image from "next/image";
+import Logo from "../public/assets/images/logo.png";
 import {
   BsLinkedin,
   BsInstagram,
@@ -12,51 +12,19 @@ import {
 
 function Footer() {
   return (
-    <div className="bg-[#0b2546] text-white">
+    <div className="bg-[#214F5F] text-white">
       <div className="h-1/2 w-full flex md:flex-row flex-col justify-around items-start p-20">
         <div className="p-5">
-          <ul>
-            {/* <Link href="/" className="flex title-font font-medium items-center">
-              <Image
-                className=" mb-5"
-                src={Logo}
-                alt="logo"
-                width={110}
-                priority
-              />
-            </Link> */}
-            <div className="flex gap-6 pb-5">
-              <Link href="/">
-                <button className="cursor-pointer text-4xl hover:text-gray-400">
-                  <BsLinkedin />
-                </button>
-              </Link>
-
-              <Link href="/">
-                <button className="cursor-pointer text-4xl hover:text-gray-400">
-                  <BsInstagram />
-                </button>
-              </Link>
-
-              <Link href="/">
-                <button className="cursor-pointer text-4xl hover:text-gray-400">
-                  <BsTwitter />
-                </button>
-              </Link>
-
-              <Link href="/">
-                <button className="cursor-pointer text-4xl hover:text-gray-400">
-                  <BsFacebook />
-                </button>
-              </Link>
-
-              <Link href="/">
-                <button className="cursor-pointer text-4xl hover:text-gray-400">
-                  <BsYoutube />
-                </button>
-              </Link>
-            </div>
-          </ul>
+          <Link href="/" className="flex title-font font-medium items-center">
+            <Image
+              className=" mb-5"
+              src={Logo}
+              alt="logo"
+              width={110}
+              priority
+            />
+          </Link>
+          <p>We take the auto-load off you.</p>
         </div>
 
         <div className="p-5">
@@ -78,6 +46,37 @@ function Footer() {
               <Link href="/Blog">Blog</Link>
             </li>
           </ul>
+        </div>
+        <div className="flex gap-6 p-5">
+          {/* <Link href="/">
+            <button className="cursor-pointer text-4xl hover:text-gray-400">
+              <BsLinkedin />
+            </button>
+          </Link> */}
+
+          <Link href="/">
+            <button className="cursor-pointer text-2xl hover:text-gray-400">
+              <BsInstagram />
+            </button>
+          </Link>
+
+          <Link href="/">
+            <button className="cursor-pointer text-2xl hover:text-gray-400">
+              <BsTwitter />
+            </button>
+          </Link>
+
+          <Link href="/">
+            <button className="cursor-pointer text-2xl hover:text-gray-400">
+              <BsFacebook />
+            </button>
+          </Link>
+
+          <Link href="/">
+            <button className="cursor-pointer text-2xl hover:text-gray-400">
+              <BsYoutube />
+            </button>
+          </Link>
         </div>
 
         <div className="p-5">
