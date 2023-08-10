@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import Image from "next/image";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
-import Logo from "../public/assets/images/car.PNG";
+import Logo from "../public/assets/images/car.png";
 import Home1 from "../public/assets/images/img (10).jpg";
 import Home2 from "../public/assets/images/img (2).jpg";
 import Home3 from "../public/assets/images/img (4).jpg";
