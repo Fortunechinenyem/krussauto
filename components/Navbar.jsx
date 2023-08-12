@@ -94,7 +94,7 @@ function Navbar() {
           <div className="mt-4 md:mt-0">
             <Link
               href="/register"
-              className="text-black-300 bg-[#006950] text-white hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+              className="text-black-300 bg-[#2F4858] text-white hover:text-white px-3 py-2 rounded-md text-sm font-medium"
             >
               Login/SignUp
             </Link>

@@ -5,7 +5,7 @@ import "aos/dist/aos.css";
 import InspectionLayout from "@/layout/InspectionLayout";
 import CheckedBoxesSection from "@/components/CheckedBoxesSection";
 import CommentsSection from "@/components/CommentsSection";
-import DamagedPartsSection from "@/components/DamagedPartsSection";
+import DamagedPartsSection from "@/DamagedPartsSection";
 import PercentageChecksSection from "@/components/PercentageCheck";
 import VehicleInformationSection from "@/components/VehicleInformation";
 

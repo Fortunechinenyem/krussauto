@@ -1,5 +1,5 @@
 import React from "react";
-import BlogHero from "../../public/assets/images/kruss (1).jpg";
+import AutoErrandHero from "../../public/assets/images/kruss (1).jpg";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -9,53 +9,63 @@ const AutoErrand = () => {
   return (
     <div>
       <Navbar />
-      <div className="relative bg-gradient-to-tr from-gray-500 to-gray-700 w-full bg-cover">
+      <div className="relative h-screen bg-gradient-to-b from-gray-500 to-gray-700 w-full bg-cover">
         <Image
           className="absolute w-full h-full object-cover mix-blend-overlay"
-          src={BlogHero}
-          alt="blog hero"
+          src={AutoErrandHero}
+          alt="inspection hero"
           priority
         />
-        <div className="p-6 md:p-24 text-center">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl text-white font-bold">
-            Auto Errand as a Service
-          </h1>
+        <div className="absolute inset-0 bg-black opacity-50"></div>
+        <div className="absolute inset-0 flex justify-center items-center">
+          <div
+            className="text-center text-white"
+            data-aos="fade-down"
+            data-aos-delay="400"
+          >
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+              Auto Arrand As A Service
+            </h1>
+            <p className="text-lg md:text-xl lg:text-2xl">
+              Let us do the running around for you
+            </p>
+          </div>
         </div>
       </div>
 
-      <div>
-        <p className=" mt-4">
-          At Kruss Automotive Services, we offer Auto Errand as a Service to
-          provide convenience and assistance with your automotive-related tasks.
-          Whether you need someone to pick up groceries, drop off packages, or
-          handle other errands, our dedicated team is here to help.
+      <div className="bg-white shadow-lg rounded-lg p-6 mt-9 mb-7 text-center">
+        {/* <h3 className="text-xl md:text-xl lg:text-4xl font-bold mb-4">
+          Auto Errand as a Service
+        </h3> */}
+        <p className="text-xl md:text-xl lg:text-3xl mt-4">
+          Kruss Automotive Services offers a comprehensive Auto Errand service,
+          designed to provide convenience and assistance with your
+          automotive-related tasks.
         </p>
-        <p className=" mt-4">
-          Our Auto Errand service saves you time and effort by taking care of
-          your errands while you focus on other important aspects of your life.
-          Our reliable and professional team members will ensure that your
-          errands are handled efficiently and with utmost care.
+        <p className="text-xl md:text-xl lg:text-3xl mt-4">
+          Need someone to pick up groceries, drop off packages, or handle other
+          errands? Our dedicated team is here to help, allowing you to focus on
+          what truly matters.
         </p>
-        <p className=" mt-4">
-          With our Auto Errand as a Service, you can enjoy a hassle-free
-          experience and the convenience of having someone you can trust to
-          handle your automotive errands. Contact us today to learn more about
-          our Auto Errand service and how we can assist you.
+        <p className="text-xl md:text-xl lg:text-3xl mt-4">
+          Our reliable and professional team members ensure your errands are
+          handled efficiently and with the utmost care, freeing up your time and
+          reducing stress.
         </p>
-      </div>
-      <div className="mt-9">
-        <h3 className="text-3xl text-center font-bold">
-          Let Us take the Load off you
-        </h3>
-
-        <div className="text-center mt-6">
-          <Link href="/contact">
-            <button className="inline-block self-start bg-[#006950] text-white font-bold rounded-md px-6 py-2 text-lg px-6 py-3 rounded-md text-sm font-medium mb-7">
-              Book An Appointment
-            </button>
-          </Link>
+        <div className="mt-9">
+          <h3 className="text-2xl md:text-2xl lg:text-3xl text-center font-bold">
+            Simplify Your Life with Auto Errand as a Service
+          </h3>
+          <div className="text-center mt-6">
+            <Link href="/contact">
+              <button className="inline-block bg-[#006950] text-white font-bold rounded-md px-6 py-3 text-lg">
+                Book Our Errand Service
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
+
       <Footer />
     </div>
   );

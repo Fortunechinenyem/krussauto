@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Image from "next/image";
@@ -9,21 +9,50 @@ import Home1 from "../public/assets/images/img (10).jpg";
 import Home2 from "../public/assets/images/img (2).jpg";
 import Home3 from "../public/assets/images/img (4).jpg";
 import Home4 from "../public/assets/images/kruss1.jpg";
-import Home5 from "../public/assets/images/img (4).jpg";
+import Home5 from "../public/assets/images/kruss2.jpg";
 import FAQs from "./faq";
 
 import Aos from "aos";
 import "aos/dist/aos.css";
 
 export default function HomePage() {
+  const [customerCount, setCustomerCount] = useState(0);
+  const [brandCount, setBrandCount] = useState(0);
+
   useEffect(() => {
     Aos.init({
       duration: 1800,
       offset: 0,
     });
   }, []);
+
+  useEffect(() => {
+    const targetCountCustomers = 500;
+    const targetCountBrands = 10;
+    const incrementInterval = 30;
+
+    const intervalCustomers = setInterval(() => {
+      setCustomerCount(
+        (prevCount) =>
+          prevCount + Math.ceil((targetCountCustomers - prevCount) / 10)
+      );
+    }, incrementInterval);
+
+    const intervalBrands = setInterval(() => {
+      setBrandCount(
+        (prevCount) =>
+          prevCount + Math.ceil((targetCountBrands - prevCount) / 10)
+      );
+    }, incrementInterval);
+
+    return () => {
+      clearInterval(intervalCustomers);
+      clearInterval(intervalBrands);
+    };
+  }, []);
+
   return (
-    <div className="m-4">
+    <div className="m-4  ">
       <Navbar />
 
       <div className="container">
@@ -54,7 +83,7 @@ export default function HomePage() {
         </div>
 
         <div
-          className=" bg-[#2F4858] text-white mt-9 flex flex-col md:flex-row items-center"
+          className=" bg-[#2F4858] text-white shadow-lg rounded-lg overflow-hidden mt-9 flex flex-col md:flex-row items-center"
           data-aos="fade-down"
           data-aos-delay="400"
         >
@@ -85,7 +114,7 @@ export default function HomePage() {
         </div>
 
         <div
-          className="  bg-[#2F4858] text-white mt-9 flex flex-col md:flex-row items-center"
+          className="  bg-[#2F4858] text-white shadow-lg rounded-lg overflow-hidden mt-9 flex flex-col md:flex-row items-center"
           data-aos="fade-down"
           data-aos-delay="400"
         >
@@ -115,7 +144,7 @@ export default function HomePage() {
         </div>
 
         <div
-          className=" bg-[#2F4858] text-white mt-9 flex flex-col md:flex-row items-center"
+          className=" bg-[#2F4858] text-white shadow-lg rounded-lg overflow-hidden mt-9 flex flex-col md:flex-row items-center"
           data-aos="fade-down"
           data-aos-delay="400"
         >
@@ -145,7 +174,7 @@ export default function HomePage() {
         </div>
 
         <div
-          className=" bg-[#2F4858] text-white mt-9 flex flex-col md:flex-row items-center"
+          className=" bg-[#2F4858] text-white shadow-lg rounded-lg overflow-hidden mt-9 flex flex-col md:flex-row items-center"
           data-aos="fade-down"
           data-aos-delay="400"
         >
@@ -174,7 +203,7 @@ export default function HomePage() {
         </div>
 
         <div
-          className=" bg-[#2F4858] text-white mt-9 flex flex-col md:flex-row items-center"
+          className=" bg-[#2F4858] text-white shadow-lg rounded-lg overflow-hidden mt-9 flex flex-col md:flex-row items-center"
           data-aos="fade-down"
           data-aos-delay="400"
         >
@@ -201,8 +230,21 @@ export default function HomePage() {
             </div>
           </div>
         </div>
+        <div className="text-center mt-7  mb-7 shadow-lg rounded-lg overflow-hidden mt-9 flex flex-col  gap-4 md:flex-row justify-center">
+          <div>
+            <p id="satisfiedCustomers">{customerCount} Satisfied Customers</p>
+          </div>
+          <div className="mb-7">
+            {" "}
+            <p id="trustedBrands">{brandCount} Trusted Brands</p>
+          </div>
+        </div>
 
-        <div className="mt-9" data-aos="fade-down" data-aos-delay="400">
+        <div
+          className="mt-9 shadow-lg rounded-lg overflow-hidden mt-9  items-center"
+          data-aos="fade-down"
+          data-aos-delay="400"
+        >
           <h3 className="text-3xl text-center font-bold">Exciting News</h3>
           <p className="text-lg md:text-xl mt-4 text-center">
             Check out our e-book{" "}
@@ -216,6 +258,29 @@ export default function HomePage() {
                 Purchase
               </button>
             </Link>
+          </div>
+        </div>
+      </div>
+      <div className="testimonial-section bg-gray-100 py-10">
+        <div className="container mx-auto">
+          <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-center mb-6">
+            Testimonials
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 text-center gap-6">
+            <div className="testimonial-card bg-white p-6 rounded-lg shadow-lg">
+              <p className="text-gray-700 text-lg mb-4">
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Aliquam venenatis eget elit nec accumsan."
+              </p>
+              <p className="text-gray-500 font-semibold">James Sturgis</p>
+            </div>
+            <div className="testimonial-card bg-white p-6 rounded-lg shadow-lg">
+              <p className="text-gray-700 text-lg mb-4">
+                "Suspendisse consectetur nunc eget quam vulputate, ac gravida
+                odio lacinia."
+              </p>
+              <p className="text-gray-500 font-semibold">Sheldon Cooper</p>
+            </div>
           </div>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import BlogHero from "../../public/assets/images/kruss (1).jpg";
+import InspectionHero from "../../public/assets/images/kruss (1).jpg";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -9,52 +9,64 @@ const PrePurchase = () => {
   return (
     <div>
       <Navbar />
-      <div className="relative bg-gradient-to-tr from-gray-500 to-gray-700 w-full bg-cover">
+      <div className="relative h-screen bg-gradient-to-b from-gray-500 to-gray-700 w-full bg-cover">
         <Image
           className="absolute w-full h-full object-cover mix-blend-overlay"
-          src={BlogHero}
-          alt="blog hero"
+          src={InspectionHero}
+          alt="inspection hero"
           priority
         />
-        <div className="p-6 md:p-24 text-center text-white">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold">
-            PrePurchase Inspection
-          </h1>
+        <div className="absolute inset-0 bg-black opacity-50"></div>
+        <div className="absolute inset-0 flex justify-center items-center">
+          <div
+            className="text-center text-white"
+            data-aos="fade-down"
+            data-aos-delay="400"
+          >
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+              Pre-Purchase Inspection
+            </h1>
+            <p className="text-lg md:text-xl lg:text-2xl">
+              Make an informed decision with our professional guidiance
+            </p>
+          </div>
         </div>
       </div>
-      <p className=" mt-4">
-        At Kruss Automotive Services, we offer comprehensive PrePurchase
-        Inspection services to help our clients make informed decisions before
-        buying a car. Our experienced technicians thoroughly examine the
-        vehicle, identifying any existing issues or potential problems, and
-        providing detailed reports and recommendations.
-      </p>
-      <p className=" mt-4">
-        Our PrePurchase Inspection includes a comprehensive check of various
-        aspects, including the engine, transmission, suspension, brakes,
-        electrical systems, and more. We aim to provide our clients with a clear
-        understanding of the vehicle's condition, helping them avoid unexpected
-        repairs and ensure they are making a wise investment.
-      </p>
-      <p className=" mt-4">
-        With our PrePurchase Inspection service, you can have peace of mind
-        knowing that you are making a well-informed decision when purchasing a
-        car. Contact us today to schedule an appointment and let our experts
-        assist you in your car-buying journey.
-      </p>
-      <div className="mt-9">
-        <h3 className="text-3xl text-center font-bold">
-          Book A Pre-Purchase Inspection
+      <div className="bg-white shadow-lg rounded-lg p-6 mt-9 mb-7 text-center">
+        <h3 className="text-xl md:text-2xl lg:text-3xl font-bold mb-4">
+          Comprehensive PrePurchase Inspection Services
         </h3>
-
-        <div className="text-center mt-6">
-          <Link href="/contact">
-            <button className="inline-block self-start bg-[#006950] text-white font-bold rounded-md px-6 py-2 text-lg px-6 py-3 rounded-md text-sm font-medium mb-7">
-              Book An Appointment
-            </button>
-          </Link>
+        <p className="text-xl md:text-xl lg:text-2xl mt-4">
+          At Kruss Automotive Services, we provide thorough PrePurchase
+          Inspection services to empower our clients with informed decisions
+          before purchasing a vehicle.
+        </p>
+        <p className="text-xl md:text-xl lg:text-2xl mt-4">
+          Our experienced technicians meticulously examine the vehicle,
+          detecting existing issues and potential concerns. We present detailed
+          reports and recommendations to ensure a confident and wise investment.
+        </p>
+        <p className="text-xl md:text-xl lg:text-2xl mt-4">
+          Our PrePurchase Inspection covers all major components, including the
+          engine, transmission, suspension, brakes, and electrical systems. You
+          can trust us to provide a clear understanding of the vehicle's
+          condition, helping you avoid unexpected repairs and ensuring your
+          peace of mind.
+        </p>
+        <div className="mt-9">
+          <h3 className="text-2xl md:text-2xl lg:text-3xl text-center font-bold">
+            Ready to Make an Informed Purchase?
+          </h3>
+          <div className="text-center mt-6">
+            <Link href="/contact">
+              <button className="inline-block bg-[#006950] text-white font-bold rounded-md px-6 py-3 text-lg">
+                Book Your Inspection
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
+
       <Footer />
     </div>
   );
