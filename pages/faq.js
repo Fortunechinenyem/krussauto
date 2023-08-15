@@ -15,7 +15,7 @@ export default function FAQs() {
   ];
 
   return (
-    <div>
+    <div className="px-4 md:px-8 lg:px-16 text-xl">
       <h2>FAQs</h2>
       <ul>
         {faqs.map((faq) => (

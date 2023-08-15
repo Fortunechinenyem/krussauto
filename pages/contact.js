@@ -4,7 +4,7 @@ import { GoLocation } from "react-icons/go";
 import { HiOutlineMailOpen } from "react-icons/hi";
 
 import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+// import Footer from "@/components/Footer";
 
 function ContactUs() {
   const [name, setName] = useState("");
@@ -52,7 +52,7 @@ function ContactUs() {
   };
 
   return (
-    <div>
+    <div className="px-4 md:px-8 lg:px-16 text-xl">
       <Navbar />
       <div className="container text-center my-12 mb-7">
         <h3 className="font-bold text-4xl mb-7">Get in Touch</h3>
@@ -154,7 +154,7 @@ function ContactUs() {
           </div>
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

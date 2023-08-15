@@ -11,7 +11,7 @@ import { BiLogOut } from "react-icons/bi";
 
 const UserDashboardLayout = ({ children }) => {
   return (
-    <div className="md:flex h-screen">
+    <div className="md:flex h-screen ">
       <nav className="grow md:w-48 shadow-md md:relative bg-[#4C9CA6]  text-black z-[100] flex justify-between">
         <div className="w-full flex flex-col">
           <ul className="pl-5 pt-5 pb-2 text-zinc-500 md:block grow">

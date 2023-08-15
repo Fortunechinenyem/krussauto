@@ -39,7 +39,7 @@ export default function RegisterForm() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 px-4 md:px-8 lg:px-16 px-4 md:px-8 lg:px-16">
       <form
         onSubmit={handleSubmit}
         className="bg-white shadow-md rounded-md p-8"
@@ -94,7 +94,7 @@ export default function RegisterForm() {
       </form>
       <div className="mt-4">
         <p className="text-gray-600">Already have an account?</p>
-        <Link href="/login">
+        <Link href="/authentication/login">
           <button className="text-[#006950] font-semibold hover:underline">
             Login
           </button>

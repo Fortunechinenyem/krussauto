@@ -93,7 +93,7 @@ function Navbar() {
           </div>
           <div className="mt-4 md:mt-0">
             <Link
-              href="/register"
+              href="/authentication/register"
               className="text-black-300 bg-[#2F4858] text-white hover:text-white px-3 py-2 rounded-md text-sm font-medium"
             >
               Login/SignUp

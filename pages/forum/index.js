@@ -113,7 +113,7 @@ const Forum = () => {
   };
 
   return (
-    <div className="md:flex h-screen">
+    <div className="md:flex h-screen px-4 md:px-8 lg:px-16 text-xl ">
       <div className="main w-full flex flex-col">
         <Navbar />
 

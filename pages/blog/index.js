@@ -17,7 +17,7 @@ import BlogNav from "@/components/BlogNav";
 
 const Blog = () => {
   return (
-    <div>
+    <div className="px-4 md:px-8 lg:px-16">
       <BlogNav />
       <div className="relative w-full h-[50vh] md:h-[50vh] lg:h-screen bg-gradient-to-b from-gray-500 to-gray-700 bg-cover">
         <Image
@@ -36,11 +36,11 @@ const Blog = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
               How to buy Nigerian Used Cars
             </h1>
-            <div className="flex justify-center items-center gap-4">
+            <div className="flex text-xl justify-center items-center gap-4">
               <p>By KrussAutoServe Team</p>
               <p>.Date</p>
             </div>
-            <p className="max-w-xl mx-auto">
+            <p className=" text-xl max-w-xl mx-auto">
               Getting durable and quality Nigerian used cars have become an
               extreme sport, you need to be armed with the right information
               on...
@@ -54,7 +54,7 @@ const Blog = () => {
         </div>
       </div>
 
-      <div className="m-4 mt-8 grid md:grid-cols-2 gap-8">
+      <div className="text-xl m-4 mt-8 grid md:grid-cols-2 gap-8">
         <div className="grid  gap-8 mt-8">
           <div className="flex gap-4 bg-white shadow-lg rounded-lg p-6">
             <div className="w-1/2">

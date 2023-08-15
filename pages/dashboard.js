@@ -27,7 +27,7 @@ export default function DashboardPage({ user }) {
   }, []);
 
   return (
-    <div>
+    <div className="text-xl">
       <div>
         <h1
           className="text-2xl text-center font-bold mb-5 mt-5"
@@ -43,7 +43,7 @@ export default function DashboardPage({ user }) {
           <UserDashboardLayout />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-xl">
           <div className="col-span-1" data-aos="fade-down" data-aos-delay="200">
             <ProfileSummary />
           </div>

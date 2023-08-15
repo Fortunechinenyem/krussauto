@@ -18,7 +18,7 @@ const About = () => {
   }, []);
 
   return (
-    <div>
+    <div className="px-4 md:px-8 lg:px-16 text-xl">
       <Navbar />
       <div className="relative h-screen bg-gradient-to-b from-gray-500 to-gray-700 w-full bg-cover">
         <Image
@@ -45,7 +45,7 @@ const About = () => {
       </div>
 
       <div
-        className="mt-7 text-center"
+        className="mt-7 text-center text-xl"
         data-aos="fade-down"
         data-aos-delay="400"
       >

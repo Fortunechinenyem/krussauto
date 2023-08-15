@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const CarDiagnostics = () => {
   return (
-    <div>
+    <div className="px-4 md:px-8 lg:px-16 text-xl">
       <Navbar />
       <div className="relative h-screen bg-gradient-to-b from-gray-500 to-gray-700 w-full bg-cover">
         <Image
@@ -29,7 +29,7 @@ const CarDiagnostics = () => {
           </div>
         </div>
       </div>
-      <div className="mt-9 mb-7">
+      <div className="mt-9 mb-7 text-xl">
         {/* <h3 className="text-3xl md:text-4xl lg:text-5xl text-center font-bold mb-4">
           Expert Car Diagnostics
         </h3> */}

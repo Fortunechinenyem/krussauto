@@ -26,7 +26,7 @@ const Appointment = () => {
   };
 
   return (
-    <div>
+    <div className="px-4 md:px-8 lg:px-16 text-xl">
       <Navbar />
       <div className="relative bg-gradient-to-tr from-gray-500 to-gray-700 w-full bg-cover">
         <Image

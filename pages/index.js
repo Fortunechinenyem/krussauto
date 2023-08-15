@@ -52,7 +52,7 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div className="m-4  ">
+    <div className="px-4 md:px-8 lg:px-16">
       <Navbar />
 
       <div className="container">
@@ -83,7 +83,7 @@ export default function HomePage() {
         </div>
 
         <div
-          className=" bg-[#2F4858] text-white shadow-lg rounded-lg overflow-hidden mt-9 flex flex-col md:flex-row items-center"
+          className=" bg-[#2F4858] text-xl text-white shadow-lg rounded-lg overflow-hidden mt-9 flex flex-col md:flex-row items-center"
           data-aos="fade-down"
           data-aos-delay="400"
         >
