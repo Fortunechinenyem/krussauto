@@ -17,7 +17,7 @@ import BlogNav from "@/components/BlogNav";
 
 const Blog = () => {
   return (
-    <div className="px-4 md:px-8 lg:px-16">
+    <div className="m-2 text-xl">
       <BlogNav />
       <div className="relative w-full h-[50vh] md:h-[50vh] lg:h-screen bg-gradient-to-b from-gray-500 to-gray-700 bg-cover">
         <Image

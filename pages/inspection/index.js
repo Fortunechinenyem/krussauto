@@ -19,7 +19,7 @@ export default function InspectionPage() {
 
   return (
     <InspectionLayout>
-      <div className="px-6 py-8">
+      <div className="m-2 text-xl">
         <h1 className="text-3xl font-semibold text-center mb-6">
           Vehicle Inspection Report
         </h1>

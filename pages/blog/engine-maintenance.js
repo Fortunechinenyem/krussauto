@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 
 const EngineMaintenance = () => {
   return (
-    <div>
+    <div className="m-2 text-xl">
       <Navbar />
       <div className="relative bg-gradient-to-tr from-gray-500 to-gray-700 w-full bg-cover">
         {/* <Image

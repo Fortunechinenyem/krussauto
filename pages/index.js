@@ -52,10 +52,10 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div className="px-4 md:px-8 lg:px-16">
+    <div className="m-2 text-xl">
       <Navbar />
 
-      <div className="container">
+      <div className="">
         <div className="mt-9 mb-9 flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 mt-7">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold">

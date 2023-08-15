@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const BuySell = () => {
   return (
-    <div className="px-4 md:px-8 lg:px-16 text-xl">
+    <div className="m-2 text-xl">
       <Navbar />
       <div className="relative h-screen bg-gradient-to-b from-gray-500 to-gray-700 w-full bg-cover">
         <Image
