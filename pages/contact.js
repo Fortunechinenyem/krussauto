@@ -62,7 +62,7 @@ function ContactUs() {
         <p className="text-xl">We’ll be glad to take you there.</p>
       </div>
       <div className="flex w-full min-h-screen justify-center items-center">
-        <div className=" flex flex-col justify-around md:flex-row md:space-x-6 space-y-6 md:space-y-0 bg-[#328471] w-full max-w-6xl p-8 rounded-xl shadow-lg text-white">
+        <div className=" flex flex-col justify-around md:flex-row md:space-x-6 space-y-6 md:space-y-0 bg-[#2F4858] w-full max-w-6xl p-8 rounded-xl shadow-lg text-white">
           <div className="justify-around">
             <div>
               <h3 className="font-bold text-4xl">
@@ -140,7 +140,7 @@ function ContactUs() {
               </div>
               <button
                 type="submit"
-                className="inline-block self-start bg-[#006950] text-white font-bold rounded-md px-6 py-2 text-lg px-6 py-3 rounded-md text-sm font-medium"
+                className="inline-block self-start bg-[#2F4858] text-white font-bold rounded-md px-6 py-2 text-lg px-6 py-3 rounded-md text-sm font-medium"
                 disabled={submitting}
               >
                 {submitting ? "Submitting..." : "Send Message"}

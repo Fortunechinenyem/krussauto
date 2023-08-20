@@ -12,7 +12,7 @@ import {
 
 function Footer() {
   return (
-    <div className="bg-[#2F4858] text-xl text-white p-4 ">
+    <div className="bg-gray-900 text-xl text-white p-4 ">
       <div className="h-1/2 w-full flex md:flex-row flex-col justify-around items-start ">
         <div className="p-5">
           <Link href="/" className="flex title-font font-medium items-center">

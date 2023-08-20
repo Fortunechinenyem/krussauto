@@ -4,11 +4,11 @@ import Image from "next/image";
 import Logo from "../public/assets/images/logo.png";
 import { BiSearch } from "react-icons/bi";
 import {
-  BsLinkedin,
+  // BsLinkedin,
   BsInstagram,
   BsTwitter,
   BsFacebook,
-  BsYoutube,
+  // BsYoutube,
 } from "react-icons/bs";
 
 export default function BlogNav() {
@@ -105,9 +105,18 @@ export default function BlogNav() {
         </nav>
         <div className="flex gap-4 justify-items md:justify-end mt-4 md:mt-0">
           <div className="flex space-x-4 md:space-x-4">
-            <BsFacebook />
-            <BsTwitter />
-            <BsInstagram />
+            <Link href="/">
+              <BsFacebook />
+            </Link>
+
+            <Link href="/">
+              <BsTwitter />
+            </Link>
+
+            <Link href="/">
+              {" "}
+              <BsInstagram />
+            </Link>
           </div>
           <div className="">
             <Link

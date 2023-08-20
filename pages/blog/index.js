@@ -46,7 +46,7 @@ const Blog = () => {
               on...
             </p>
             <Link href="/blog/tire-selection">
-              <button className="mt-9 text-black-300 bg-[#2F4858] text-white hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+              <button className="mt-9 text-black-300 bg-white text-[#2F4858] hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                 Read More
               </button>
             </Link>
