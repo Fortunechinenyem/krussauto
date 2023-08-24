@@ -126,7 +126,7 @@ const Blog = () => {
                 placeholder="Enter your email"
                 className="border border-gray-300 rounded-lg px-4 py-2"
               />
-              <button className="text-black-300 bg-[#2F4858] text-white hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+              <button className="text-black-300 bg-[#006950] text-white hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                 Subscribe
               </button>
             </form>
@@ -138,7 +138,7 @@ const Blog = () => {
                 placeholder="Enter your search topic"
                 className="border border-gray-300 rounded-l-lg px-4 py-2 w-64 focus:outline-none focus:border-blue-500"
               />
-              <button className="bg-[#2F4858] text-white hover:bg-blue-700 px-6 py-2 rounded-r-lg text-sm font-medium">
+              <button className="bg-[#006950] text-white hover:bg-blue-700 px-6 py-2 rounded-r-lg text-sm font-medium">
                 Search
               </button>
             </form>

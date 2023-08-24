@@ -164,7 +164,7 @@ const About = () => {
         </p>
         <div className="mt-5">
           <Link href="/careers">
-            <button className="inline-block bg-[#2F4858] text-white font-bold rounded-md px-6 py-3 text-lg">
+            <button className="inline-block bg-[#006950] text-white font-bold rounded-md px-6 py-3 text-lg">
               Go to Job Openings
             </button>
           </Link>

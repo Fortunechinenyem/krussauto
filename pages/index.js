@@ -68,7 +68,7 @@ export default function HomePage() {
             </p>
             <div className="mt-8 ">
               <Link href="/appointment">
-                <button className="inline-block self-start bg-[#2F4858] text-white font-bold rounded-md px-6 py-2 text-lg px-6 py-3 rounded-md text-sm font-medium">
+                <button className="inline-block self-start bg-[#006950] text-white font-bold rounded-md px-6 py-2 text-lg px-6 py-3 rounded-md text-sm font-medium">
                   Get Started
                 </button>
               </Link>
@@ -95,7 +95,7 @@ export default function HomePage() {
         >
           <Link href="/services">
             <div
-              className="bg-[#2F4858] shadow-lg rounded-lg p-6 text-white"
+              className="bg-[#008892] shadow-lg rounded-lg p-6 text-white"
               data-aos="fade-down"
               data-aos-delay="400"
             >
@@ -114,7 +114,7 @@ export default function HomePage() {
           <Link href="/services/autoerrand">
             {" "}
             <div
-              className="bg-[#2F4858] shadow-lg rounded-lg p-6"
+              className="bg-[#008892] shadow-lg rounded-lg p-6"
               data-aos="fade-down"
               data-aos-delay="400"
             >
@@ -132,7 +132,7 @@ export default function HomePage() {
           </Link>
           <Link href="/services">
             <div
-              className="bg-[#2F4858] shadow-lg rounded-lg p-6"
+              className="bg-[#008892] shadow-lg rounded-lg p-6"
               data-aos="fade-down"
               data-aos-delay="400"
             >
@@ -150,7 +150,7 @@ export default function HomePage() {
           </Link>
           <Link href="/services">
             <div
-              className="bg-[#2F4858] shadow-lg rounded-lg p-6 "
+              className="bg-[#008892] shadow-lg rounded-lg p-6 "
               data-aos="fade-down"
               data-aos-delay="400"
             >
@@ -169,7 +169,7 @@ export default function HomePage() {
           <Link href="/services">
             {" "}
             <div
-              className="bg-[#2F4858] shadow-lg rounded-lg p-6"
+              className="bg-[#008892] shadow-lg rounded-lg p-6"
               data-aos="fade-down"
               data-aos-delay="400"
             >
@@ -188,7 +188,7 @@ export default function HomePage() {
           <Link href="/services">
             {" "}
             <div
-              className="bg-[#2F4858] shadow-lg rounded-lg p-6"
+              className="bg-[#008892] shadow-lg rounded-lg p-6"
               data-aos="fade-down"
               data-aos-delay="400"
             >
@@ -229,7 +229,7 @@ export default function HomePage() {
           </p>
           <div className="text-center mt-6">
             <Link href="/ebook">
-              <button className="inline-block self-start bg-[#2F4858] text-white font-bold rounded-md px-6 py-2 text-lg px-6 py-3 rounded-md text-sm font-medium mb-7">
+              <button className="inline-block self-start bg-[#006950] text-white font-bold rounded-md px-6 py-2 text-lg px-6 py-3 rounded-md text-sm font-medium mb-7">
                 Purchase
               </button>
             </Link>
@@ -247,7 +247,7 @@ export default function HomePage() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 text-center gap-6">
             <div
-              className="testimonial-card bg-[#2F4858] p-6 rounded-lg shadow-lg"
+              className="testimonial-card bg-[#008892] p-6 rounded-lg shadow-lg"
               data-aos="fade-down"
               data-aos-delay="400"
             >
@@ -258,7 +258,7 @@ export default function HomePage() {
               <p className="text-white font-semibold">James Sturgis</p>
             </div>
             <div
-              className="testimonial-card bg-[#2F4858] p-6 rounded-lg shadow-lg"
+              className="testimonial-card bg-[#008892] p-6 rounded-lg shadow-lg"
               data-aos="fade-down"
               data-aos-delay="400"
             >

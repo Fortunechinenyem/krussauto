@@ -38,7 +38,7 @@ const Services = () => {
       </div>
 
       <div
-        className="p-2 bg-[#2F4858] text-xl text-white shadow-lg rounded-lg overflow-hidden mt-9 items-center"
+        className="p-2  text-xl  shadow-lg rounded-lg overflow-hidden mt-9 items-center"
         data-aos="fade-down"
         data-aos-delay="400"
       >
@@ -84,7 +84,7 @@ const Services = () => {
             </h3>
             <div className="text-center mt-6 mb-5">
               <Link href="/contact">
-                <button className="inline-block bg-white text-[#2F4858] font-bold rounded-md px-6 py-3 text-lg">
+                <button className="inline-block bg-[#006950] text-white font-bold rounded-md px-6 py-3 text-lg">
                   Book Your Inspection
                 </button>
               </Link>
@@ -99,7 +99,7 @@ const Services = () => {
       </div>
 
       <div
-        className="p-2  bg-[#2F4858] text-white shadow-lg rounded-lg overflow-hidden mt-9  items-center"
+        className="p-2  shadow-lg rounded-lg overflow-hidden mt-9  items-center"
         data-aos="fade-down"
         data-aos-delay="400"
       >
@@ -141,7 +141,7 @@ const Services = () => {
             </h3>
             <div className="text-center mt-6 mb-5">
               <Link href="/contact">
-                <button className="inline-block bg-white text-[#2F4858] font-bold rounded-md px-6 py-3 text-lg">
+                <button className="inline-block bg-[#006950] text-white font-bold rounded-md px-6 py-3 text-lg">
                   Book Our Errand Service
                 </button>
               </Link>
@@ -156,7 +156,7 @@ const Services = () => {
       </div>
 
       <div
-        className="p-2 bg-[#2F4858] text-white shadow-lg rounded-lg overflow-hidden mt-9  items-center"
+        className="p-2  shadow-lg rounded-lg overflow-hidden mt-9  items-center"
         data-aos="fade-down"
         data-aos-delay="400"
       >
@@ -200,7 +200,7 @@ const Services = () => {
             </h3>
             <div className="text-center mt-6 mb-5">
               <Link href="/contact">
-                <button className="inline-block bg-white text-[#2F4858] font-bold rounded-md px-6 py-3 text-lg">
+                <button className="inline-block bg-[#006950] text-white font-bold rounded-md px-6 py-3 text-lg">
                   Book Our Fleet Management Services
                 </button>
               </Link>
@@ -215,7 +215,7 @@ const Services = () => {
       </div>
 
       <div
-        className="p-2 bg-[#2F4858] text-white shadow-lg rounded-lg overflow-hidden mt-9  items-center"
+        className="p-2 shadow-lg rounded-lg overflow-hidden mt-9  items-center"
         data-aos="fade-down"
         data-aos-delay="400"
       >
@@ -262,7 +262,7 @@ const Services = () => {
               How It Works
             </h3>
             <div className="flex flex-col md:flex-row justify-center gap-6">
-              <div className="bg-white text-[#2F4858] shadow-lg rounded-lg p-6">
+              <div className="bg-[#006950] text-white shadow-lg rounded-lg p-6">
                 <h4 className="text-xl md:text-xl lg:text-xl font-bold mb-4">
                   Step 1: Explore Our Inventory
                 </h4>
@@ -272,7 +272,7 @@ const Services = () => {
                   ensure quality and reliability.
                 </p>
               </div>
-              <div className="bg-white  text-[#2F4858] shadow-lg rounded-lg p-6">
+              <div className="bg-[#006950] text-white shadow-lg rounded-lg p-6">
                 <h4 className="text-xl md:text-xl lg:text-xl font-bold mb-4">
                   Step 2: Schedule a Test Drive
                 </h4>
@@ -282,7 +282,7 @@ const Services = () => {
                   decision.
                 </p>
               </div>
-              <div className="bg-white  text-[#2F4858] text- shadow-lg rounded-lg p-6">
+              <div className="bg-[#006950] text-white text- shadow-lg rounded-lg p-6">
                 <h4 className="text-xl md:text-xl lg:text-xl font-bold mb-4">
                   Step 3: Sell Your Car Hassle-Free
                 </h4>
@@ -296,7 +296,7 @@ const Services = () => {
             </div>
             <div className="text-center mt-6 mb-5">
               <Link href="/contact">
-                <button className="inline-block bg-white text-[#2F4858] font-bold rounded-md px-6 py-3 text-lg">
+                <button className="inline-block bg-[#006950] text-white font-bold rounded-md px-6 py-3 text-lg">
                   Start Your Car Buying/Selling Journey with Kruss Automotive
                   Services
                 </button>
@@ -312,7 +312,7 @@ const Services = () => {
       </div>
 
       <div
-        className="p-2 bg-[#2F4858] text-white shadow-lg rounded-lg overflow-hidden mt-9  items-center"
+        className="p-2  shadow-lg rounded-lg overflow-hidden mt-9  items-center"
         data-aos="fade-down"
         data-aos-delay="400"
       >
@@ -360,7 +360,7 @@ const Services = () => {
 
           <div className="text-center mt-6 mb-5">
             <Link href="/contact">
-              <button className="inline-block bg-white text-[#2F4858] font-bold rounded-md px-6 py-3 text-lg">
+              <button className="inline-block bg-[#006950] text-white font-bold rounded-md px-6 py-3 text-lg">
                 Schedule a Consultation
               </button>
             </Link>
@@ -373,7 +373,7 @@ const Services = () => {
         </div>
       </div>
       <div
-        className="p-2 bg-[#2F4858] text-white shadow-lg rounded-lg overflow-hidden mt-9 mb-7  items-center"
+        className="p-2   shadow-lg rounded-lg overflow-hidden mt-9 mb-7  items-center"
         data-aos="fade-down"
         data-aos-delay="400"
       >
@@ -416,7 +416,7 @@ const Services = () => {
 
           <div className="text-center mt-6 mb-5">
             <Link href="/contact">
-              <button className="inline-block bg-white text-[#2F4858] font-bold rounded-md px-6 py-3 text-lg">
+              <button className="inline-block bg-[#006950] text-white font-bold rounded-md px-6 py-3 text-lg">
                 Book Your Car Diagnostics Appointment
               </button>
             </Link>
