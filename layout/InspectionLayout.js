@@ -1,7 +1,7 @@
 import React from "react";
 
-import Sidebar from "@/components/Sidebar";
-import TopNav from "@/components/Topnav";
+import Sidebar from "@/components/inspection/Sidebar";
+import TopNav from "@/components/inspection/Topnav";
 
 const InspectionLayout = ({ children }) => {
   return (

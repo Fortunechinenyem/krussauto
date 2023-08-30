@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import Image from "next/image";
 import Link from "next/link";
 
-import Logo from "../public/assets/images/car.png";
+import Logo from "../public/assets/images/car.jpeg";
 import { FcInspection } from "react-icons/fc";
 import { MdOutlineMiscellaneousServices } from "react-icons/md";
 import { FaCar } from "react-icons/fa";
@@ -95,7 +95,7 @@ export default function HomePage() {
         >
           <Link href="/services">
             <div
-              className="bg-[#008892] shadow-lg rounded-lg p-6 text-white"
+              className="bg-[#006950] shadow-lg rounded-lg p-6 text-white"
               data-aos="fade-down"
               data-aos-delay="400"
             >
@@ -114,7 +114,7 @@ export default function HomePage() {
           <Link href="/services/autoerrand">
             {" "}
             <div
-              className="bg-[#008892] shadow-lg rounded-lg p-6"
+              className="bg-[#006950] shadow-lg rounded-lg p-6"
               data-aos="fade-down"
               data-aos-delay="400"
             >
@@ -132,7 +132,7 @@ export default function HomePage() {
           </Link>
           <Link href="/services">
             <div
-              className="bg-[#008892] shadow-lg rounded-lg p-6"
+              className="bg-[#006950] shadow-lg rounded-lg p-6"
               data-aos="fade-down"
               data-aos-delay="400"
             >
@@ -150,7 +150,7 @@ export default function HomePage() {
           </Link>
           <Link href="/services">
             <div
-              className="bg-[#008892] shadow-lg rounded-lg p-6 "
+              className="bg-[#006950] shadow-lg rounded-lg p-6 "
               data-aos="fade-down"
               data-aos-delay="400"
             >
@@ -169,7 +169,7 @@ export default function HomePage() {
           <Link href="/services">
             {" "}
             <div
-              className="bg-[#008892] shadow-lg rounded-lg p-6"
+              className="bg-[#006950] shadow-lg rounded-lg p-6"
               data-aos="fade-down"
               data-aos-delay="400"
             >
@@ -188,7 +188,7 @@ export default function HomePage() {
           <Link href="/services">
             {" "}
             <div
-              className="bg-[#008892] shadow-lg rounded-lg p-6"
+              className="bg-[#006950] shadow-lg rounded-lg p-6"
               data-aos="fade-down"
               data-aos-delay="400"
             >
@@ -247,7 +247,7 @@ export default function HomePage() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 text-center gap-6">
             <div
-              className="testimonial-card bg-[#008892] p-6 rounded-lg shadow-lg"
+              className="testimonial-card bg-[#006950] p-6 rounded-lg shadow-lg"
               data-aos="fade-down"
               data-aos-delay="400"
             >
@@ -258,7 +258,7 @@ export default function HomePage() {
               <p className="text-white font-semibold">James Sturgis</p>
             </div>
             <div
-              className="testimonial-card bg-[#008892] p-6 rounded-lg shadow-lg"
+              className="testimonial-card bg-[#006950] p-6 rounded-lg shadow-lg"
               data-aos="fade-down"
               data-aos-delay="400"
             >

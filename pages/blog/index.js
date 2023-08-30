@@ -1,5 +1,5 @@
 import React from "react";
-import BlogHero from "../../public/assets/images/kruss (1).jpg";
+import BlogHero from "../../public/assets/images/car2.jpeg";
 import Image from "next/image";
 
 import Link from "next/link";
@@ -26,7 +26,7 @@ const Blog = () => {
           alt="blog hero"
           priority
         />
-        <div className="absolute inset-0 bg-black opacity-50"></div>
+        <div className="absolute inset-0 bg-black opacity-30"></div>
         <div className="absolute inset-0 flex flex-col justify-center items-center text-center">
           <div
             className="mt-9 text-white"

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import Link from "next/link";
-import AboutHero from "../public/assets/images/kruss (1).jpg";
+import AboutHero from "../public/assets/images/car2.jpeg";
 import Founder from "../public/assets/images/founder.jpg";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";

@@ -27,70 +27,64 @@ export default function DashboardPage({ user }) {
   }, []);
 
   return (
-    <div className="text-xl">
-      <div>
-        <h1
-          className="text-2xl text-center font-bold mb-5 mt-5"
-          initial={{ y: -20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.2, duration: 0.8 }}
-        >
-          Welcome, {user}!
-        </h1>
-      </div>
-      <div className="flex gap-3 space-between">
-        <div>
-          <UserDashboardLayout />
-        </div>
+    <UserDashboardLayout>
+      {" "}
+      <div className="text-xl">
+        <div className="flex gap-3 space-between">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-xl">
+            <div
+              className="col-span-1"
+              data-aos="fade-down"
+              data-aos-delay="200"
+            >
+              <UpcomingAppointments />
+            </div>
+            <div
+              className="col-span-1"
+              data-aos="fade-down"
+              data-aos-delay="200"
+            >
+              <VehicleHealthSummary />
+            </div>
+            <div
+              className="col-span-1"
+              data-aos="fade-down"
+              data-aos-delay="200"
+            >
+              <ServiceHistory />
+            </div>
+            <div
+              className="col-span-1"
+              data-aos="fade-down"
+              data-aos-delay="200"
+            >
+              <VehicleRecommendations />
+            </div>
+            <div
+              className="col-span-1"
+              data-aos="fade-down"
+              data-aos-delay="200"
+            >
+              <ExclusiveOffers />
+            </div>
+            <div
+              className="col-span-1"
+              data-aos="fade-down"
+              data-aos-delay="200"
+            >
+              <VehicleComparison />
+            </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-xl">
-          <div className="col-span-1" data-aos="fade-down" data-aos-delay="200">
-            <ProfileSummary />
+            <div
+              className="col-span-1"
+              data-aos="fade-down"
+              data-aos-delay="200"
+            >
+              <RoadsideAssistance />
+            </div>
           </div>
-          <div className="col-span-1" data-aos="fade-down" data-aos-delay="200">
-            <UpcomingAppointments />
-          </div>
-          <div className="col-span-1" data-aos="fade-down" data-aos-delay="200">
-            <VehicleHealthSummary />
-          </div>
-          <div className="col-span-1" data-aos="fade-down" data-aos-delay="200">
-            <ServiceHistory />
-          </div>
-          <div className="col-span-1" data-aos="fade-down" data-aos-delay="200">
-            <VehicleRecommendations />
-          </div>
-          <div className="col-span-1" data-aos="fade-down" data-aos-delay="200">
-            <ExclusiveOffers />
-          </div>
-          <div className="col-span-1" data-aos="fade-down" data-aos-delay="200">
-            <VehicleComparison />
-          </div>
-
-          <div className="col-span-1" data-aos="fade-down" data-aos-delay="200">
-            <RoadsideAssistance />
-          </div>
-          {/* <div className="col-span-1" data-aos="fade-down" data-aos-delay="200">
-            <h2 className="text-lg font-bold mb-4">
-              Recent Inspection Reports
-            </h2>
-            <InspectionReports />
-          </div>
-          <div className="col-span-1" data-aos="fade-down" data-aos-delay="200">
-            <h2 className="text-lg font-bold mb-4">Create New Inspection</h2>
-            <CreateNewInspection />
-          </div>
-          <div className="col-span-1" data-aos="fade-down" data-aos-delay="200">
-            <h2 className="text-lg font-bold mb-4">Notifications</h2>
-            <Notifications />
-          </div>
-          <div className="col-span-1" data-aos="fade-down" data-aos-delay="200">
-            <h2 className="text-lg font-bold mb-4">
-              Frequently Asked Questions
-            </h2>
-            <FAQs />
-          </div> */}
         </div>
       </div>
-    </div>
+    </UserDashboardLayout>
   );
 }
