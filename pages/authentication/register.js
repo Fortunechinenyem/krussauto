@@ -1,15 +1,19 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import Image from "next/image";
+// import dynamic from "next/dynamic";
+
+// const DynamicImage = dynamic(() => import("next/image"), {
+//   loading: () => <div>Loading...</div>,
+// });
 
 export default function RegisterForm() {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const router = useRouter();
-  const storedProfilePicture = localStorage.getItem("profilePicture");
-  const [profilePicture, setProfilePicture] = useState(storedProfilePicture);
+  const [profilePictureURL, setProfilePictureURL] = useState(null);
   const isLoggedIn = true;
 
   const handleProfilePictureChange = (event) => {
@@ -18,7 +22,7 @@ export default function RegisterForm() {
     if (file) {
       const reader = new FileReader();
       reader.onloadend = () => {
-        setProfilePicture(reader.result);
+        setProfilePictureURL(reader.result); // Set URL instead of data URL
       };
       reader.readAsDataURL(file);
     }
@@ -38,18 +42,14 @@ export default function RegisterForm() {
         }),
       });
 
+      const data = await response.json();
       if (response.ok) {
-        // Registration successful, handle the success case
-        console.log("Registration successful");
-        // Redirect to the dashboard page
+        console.log(data.message);
         router.push("/dashboard");
       } else {
-        // Registration failed, handle the error case
-        const data = await response.json();
         console.error("Registration failed:", data.message);
       }
     } catch (error) {
-      // Handle any network or server errors
       console.error("An error occurred:", error);
     }
   };
@@ -57,16 +57,13 @@ export default function RegisterForm() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 ">
       <nav className="flex justify-between items-center bg-white p-4 w-full">
-        {/* <Link href="/">
-          <a className="text-lg font-bold text-[#006950]">Your App Name</a>
-        </Link> */}
-        {isLoggedIn && profilePicture && (
+        {isLoggedIn && profilePictureURL && (
           <div className="flex items-center">
-            <Image
-              src={profilePicture}
+            <img
+              src={profilePictureURL}
               alt="Profile Picture"
-              width={40}
-              height={40}
+              width={110}
+              height={110}
               className="rounded-full"
             />
           </div>
@@ -127,14 +124,13 @@ export default function RegisterForm() {
               onChange={handleProfilePictureChange}
               className="w-full py-2 px-4 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-500"
             />
-            {profilePicture && (
+            {profilePictureURL && (
               <div className="flex items-center justify-center">
-                <Image
-                  src={profilePicture}
+                <img
+                  src={profilePictureURL}
                   alt="Profile Picture"
-                  width={200}
-                  height={200}
-                  priority
+                  width={110}
+                  height={110}
                   className="rounded-full"
                 />
               </div>

@@ -1,25 +1,20 @@
 import React from "react";
-// import Link from "next/link";
 
-const Topnav = ({ profilePicture }) => {
+const Topnav = ({ profilePictureURL, user }) => {
   return (
-    <div className="p-4 flex gap-4 items-center">
-      {/* <div>
-        <Link href="/account" className="hover:text-gray-300">
-          Account
-        </Link>
-      </div> */}
-      {profilePicture && (
-        <div className="rounded-full overflow-hidden">
+    <div className="p-4 flex justify-between items-center">
+      <div className="text-lg">Welcome, {user}</div>
+      <div className="flex items-center">
+        {profilePictureURL && (
           <img
-            src={profilePicture}
+            src={profilePictureURL}
             alt="Profile Picture"
-            width={40}
-            height={40}
+            width={50}
+            height={50}
             className="rounded-full"
           />
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 };

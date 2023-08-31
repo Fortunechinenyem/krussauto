@@ -2,13 +2,13 @@ import Sidebar from "@/components/userdashboard/Sidebar";
 import Topnav from "@/components/userdashboard/Topnav";
 import React from "react";
 
-const UserDashboardLayout = ({ children, profilePicture }) => {
+const UserDashboardLayout = ({ children, profilePictureURL, userName }) => {
   return (
     <div className="px-4 md:px-8 lg:px-16 text-xl">
       <div className="flex">
         <Sidebar />
         <div className="main-content">
-          <Topnav profilePicture={profilePicture} />
+          <Topnav profilePictureURL={profilePictureURL} user={userName} />
           <main>{children}</main>
         </div>
       </div>

@@ -19,8 +19,6 @@ export default async function handler(req, res) {
     const db = client.db("krussauto");
     const collection = db.collection("users");
 
-    // Access the collection and perform database operations
-    // For example, you can insert a document:
     await collection.insertOne({
       firstName,
       lastName,

@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import Image from "next/image";
 import Link from "next/link";
 
-import Logo from "../public/assets/images/car.jpeg";
+import Logo from "../public/assets/images/carbg.PNG";
 import { FcInspection } from "react-icons/fc";
 import { MdOutlineMiscellaneousServices } from "react-icons/md";
 import { FaCar } from "react-icons/fa";

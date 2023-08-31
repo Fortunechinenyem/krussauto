@@ -12,9 +12,7 @@ const exclusiveOffers = [
     id: 2,
     title: "Exclusive Offer 2",
     description: "Lorem ipsum dolor sit amet.",
-    // Include any other relevant data
   },
-  // Add more exclusive offers and discounts
 ];
 
 // Route handler to get exclusive offers and discounts
