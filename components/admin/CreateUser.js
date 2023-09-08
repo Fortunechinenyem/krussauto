@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 
 const CreateUser = () => {
-  const [userName, setUserName] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
   const [isCreating, setIsCreating] = useState(false);
   const [creationError, setCreationError] = useState(null);
 
@@ -11,7 +13,7 @@ const CreateUser = () => {
 
     fetch("/api/createUser", {
       method: "POST",
-      body: JSON.stringify({ name: userName }),
+      body: JSON.stringify({ firstName, lastName, email }), // Pass firstName, lastName, and email
       headers: {
         "Content-Type": "application/json",
       },
@@ -26,7 +28,9 @@ const CreateUser = () => {
       .then((data) => {
         console.log("User created successfully:", data);
         setIsCreating(false);
-        setUserName("");
+        setFirstName(""); // Clear input fields
+        setLastName("");
+        setEmail("");
       })
       .catch((error) => {
         console.error("Error creating user:", error);
@@ -40,9 +44,21 @@ const CreateUser = () => {
       <h2>Create User</h2>
       <input
         type="text"
-        placeholder="Enter user name"
-        value={userName}
-        onChange={(e) => setUserName(e.target.value)}
+        placeholder="Enter first name"
+        value={firstName}
+        onChange={(e) => setFirstName(e.target.value)}
+      />
+      <input
+        type="text"
+        placeholder="Enter last name"
+        value={lastName}
+        onChange={(e) => setLastName(e.target.value)}
+      />
+      <input
+        type="text"
+        placeholder="Enter email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
       />
       <button onClick={handleCreateUser} disabled={isCreating}>
         {isCreating ? "Creating..." : "Create"}

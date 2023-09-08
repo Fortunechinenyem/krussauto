@@ -3,10 +3,16 @@ import { createUser } from "../../models/users"; // Import the createUser functi
 export default async function handler(req, res) {
   try {
     if (req.method === "POST") {
-      const { name } = req.body;
+      const { firstName, lastName, email } = req.body;
 
       // Create a new user using the createUser function
-      const userId = await createUser({ name });
+      const userData = {
+        firstName,
+        lastName,
+        email,
+      };
+
+      const userId = await createUser(userData);
 
       if (userId) {
         res.status(201).json({ message: `User created with ID: ${userId}` });
