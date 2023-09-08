@@ -53,3 +53,45 @@ const EditUser = ({ user, onCancel }) => {
 };
 
 export default EditUser;
+
+// import React, { useState, useEffect } from "react";
+// import { getUser, updateUser } from "../../pages/api/users"; // Import your API functions
+
+// const EditUser = ({ userId }) => {
+//   const [userData, setUserData] = useState({ name: "", email: "" });
+
+//   useEffect(() => {
+//     // Fetch the user's data using the API function and set the state
+//     getUser(userId).then((data) => setUserData(data));
+//   }, [userId]);
+
+//   const handleSubmit = async (e) => {
+//     e.preventDefault();
+//     // Update the user's data using the API function
+//     await updateUser(userId, userData);
+//     // Reset the form or perform any necessary actions
+//   };
+
+//   return (
+//     <div>
+//       <h2>Edit User</h2>
+//       <form onSubmit={handleSubmit}>
+//         <input
+//           type="text"
+//           placeholder="Name"
+//           value={userData.name}
+//           onChange={(e) => setUserData({ ...userData, name: e.target.value })}
+//         />
+//         <input
+//           type="email"
+//           placeholder="Email"
+//           value={userData.email}
+//           onChange={(e) => setUserData({ ...userData, email: e.target.value })}
+//         />
+//         <button type="submit">Save</button>
+//       </form>
+//     </div>
+//   );
+// };
+
+// export default EditUser;

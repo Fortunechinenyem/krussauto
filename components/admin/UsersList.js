@@ -1,48 +1,39 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
-const UsersList = ({ onEdit }) => {
+function UserList() {
   const [users, setUsers] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch("/api/listUsers")
-      .then((response) => {
+    const fetchUsers = async () => {
+      try {
+        const response = await fetch("/api/users");
         if (response.ok) {
-          return response.json();
+          const data = await response.json();
+          console.log(data);
+          setUsers(data);
         } else {
-          throw new Error("Failed to fetch users");
+          console.error("Error fetching users:", response.statusText);
         }
-      })
-      .then((data) => {
-        setUsers(data);
-        setIsLoading(false);
-      })
-      .catch((error) => {
-        console.error("Error fetching users:", error);
-        setError(error.message); // Set the error message in the state
-        setIsLoading(false);
-      });
+      } catch (error) {
+        console.error("An error occurred:", error);
+      }
+    };
+
+    fetchUsers();
   }, []);
 
   return (
     <div>
       <h2>User List</h2>
-      {isLoading ? (
-        <p>Loading...</p>
-      ) : error ? (
-        <p>Error: {error}</p>
-      ) : (
-        <ul>
-          {users.map((user) => (
-            <li key={user.id}>
-              {user.name} <button onClick={() => onEdit(user)}>Edit</button>
-            </li>
-          ))}
-        </ul>
-      )}
+      <ul>
+        {users.map((user) => (
+          <li key={user._id}>
+            {user.name} {user.email}
+          </li>
+        ))}
+      </ul>
     </div>
   );
-};
+}
 
-export default UsersList;
+export default UserList;
