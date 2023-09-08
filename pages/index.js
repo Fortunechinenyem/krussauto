@@ -66,7 +66,7 @@ export default function HomePage() {
               Don't get stuck with a lemon – let our professionals take the load
               off you.
             </p>
-            <div className="mt-8 ">
+            <div className="mt-8 hidden md:block">
               <Link href="/appointment">
                 <button className="inline-block self-start bg-[#006950] text-white font-bold rounded-md px-6 py-2 text-lg px-6 py-3 rounded-md text-sm font-medium">
                   Get Started

@@ -4,8 +4,8 @@ const Topnav = ({ profilePictureURL, user }) => {
   return (
     <div className="p-4 flex justify-between items-center">
       <div className="text-lg">Welcome, {user}</div>
-      <div className="flex items-center">
-        {profilePictureURL && (
+      {profilePictureURL && (
+        <div className="flex items-center">
           <img
             src={profilePictureURL}
             alt="Profile Picture"
@@ -13,8 +13,8 @@ const Topnav = ({ profilePictureURL, user }) => {
             height={50}
             className="rounded-full"
           />
-        )}
-      </div>
+        </div>
+      )}
     </div>
   );
 };

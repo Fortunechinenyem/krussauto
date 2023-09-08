@@ -4,30 +4,54 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import dynamic from "next/dynamic";
 import UserDashboardLayout from "@/layout/UserDashboard";
-// import RoadsideAssistance from "@/components/RoadsideAssistance";
 
-// import VehicleComparison from "@/components/VehicleComparison";
-// import ExclusiveOffers from "@/components/ExclusiveOffers";
-// import VehicleRecommendations from "@/components/VehicleRecommendations";
-// import ServiceHistory from "@/components/ServiceHistory";
-// import VehicleHealthSummary from "@/components/VehicleHealthSummary";
-
-// import InspectionReports from "@/components/InspectionReports";
-// import Notifications from "@/components/Notifications";
-// import FAQs from "./faq";
-// import CreateNewInspection from "@/components/CreateNewInspection";
-// import ProfileSummary from "@/components/ProfileSummary";
-// import UpcomingAppointments from "@/components/UpComingAppointments";
 const DynamicTopnav = dynamic(
   () => import("@/components/userdashboard/Topnav"),
   {
     ssr: false,
   }
 );
+
 export default function DashboardPage() {
-  const [userName, setUserName] = useState("John");
-  const profilePictureURL = "/profile-pictures/profilepic1.jpg"; // Replace with actual URL
+  const [userName, setUserName] = useState("");
+  const [profilePictureURL, setProfilePictureURL] = useState(
+    "/profile-pictures.jpg"
+  );
+
+  async function testGetUsers() {
+    try {
+      const users = await getUsers();
+      console.log("Users:", users);
+    } catch (error) {
+      console.error("Error fetching users:", error);
+    }
+  }
+
+  // Call the test function
+  testGetUsers();
+
   useEffect(() => {
+    // Simulate fetching user data asynchronously
+    const fetchUserData = async () => {
+      try {
+        // Make an API call to get user data
+        const response = await fetch("/api/user-data"); // Replace with your API endpoint
+        if (response.ok) {
+          const userData = await response.json();
+          setUserName(userData.userName);
+          setProfilePictureURL(userData.profilePictureURL);
+        } else {
+          // Handle error if API call fails
+          console.error("Failed to fetch user data");
+        }
+      } catch (error) {
+        console.error("Error fetching user data:", error);
+      }
+    };
+
+    fetchUserData();
+
+    // Initialize Aos after data is fetched
     Aos.init({
       duration: 800,
       offset: 0,
@@ -36,60 +60,10 @@ export default function DashboardPage() {
 
   return (
     <UserDashboardLayout profilePictureURL={profilePictureURL}>
-      {" "}
       <div className="text-xl">
         <div className="flex gap-3 space-between">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-xl">
-            {/* <div
-              className="col-span-1"
-              data-aos="fade-down"
-              data-aos-delay="200"
-            >
-              <UpcomingAppointments />
-            </div>
-            <div
-              className="col-span-1"
-              data-aos="fade-down"
-              data-aos-delay="200"
-            >
-              <VehicleHealthSummary />
-            </div>
-            <div
-              className="col-span-1"
-              data-aos="fade-down"
-              data-aos-delay="200"
-            >
-              <ServiceHistory />
-            </div>
-            <div
-              className="col-span-1"
-              data-aos="fade-down"
-              data-aos-delay="200"
-            >
-              <VehicleRecommendations />
-            </div>
-            <div
-              className="col-span-1"
-              data-aos="fade-down"
-              data-aos-delay="200"
-            >
-              <ExclusiveOffers />
-            </div>
-            <div
-              className="col-span-1"
-              data-aos="fade-down"
-              data-aos-delay="200"
-            >
-              <VehicleComparison />
-            </div>
-
-            <div
-              className="col-span-1"
-              data-aos="fade-down"
-              data-aos-delay="200"
-            >
-              <RoadsideAssistance />
-            </div> */}
+            {/* Display user name and profile picture */}
           </div>
         </div>
       </div>

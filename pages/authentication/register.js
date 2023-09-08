@@ -1,12 +1,7 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
-import Image from "next/image";
-// import dynamic from "next/dynamic";
-
-// const DynamicImage = dynamic(() => import("next/image"), {
-//   loading: () => <div>Loading...</div>,
-// });
+// import Image from "next/image";
 
 export default function RegisterForm() {
   const [firstName, setFirstName] = useState("");
@@ -43,9 +38,16 @@ export default function RegisterForm() {
       });
 
       const data = await response.json();
+      console.log("Response from /api/register:", data); // Log the response
+
       if (response.ok) {
         console.log(data.message);
-        router.push("/dashboard");
+
+        // Fetch user data from an API endpoint
+        const userDataResponse = await fetch("/api/getUserData");
+        const userData = await userDataResponse.json();
+
+        router.push(`/dashboard?user=${JSON.stringify(userData)}`);
       } else {
         console.error("Registration failed:", data.message);
       }
