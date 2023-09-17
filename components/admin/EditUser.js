@@ -6,8 +6,8 @@ const EditUser = ({ user, onCancel }) => {
   const [saveError, setSaveError] = useState(null);
 
   const handleSaveChanges = () => {
-    setIsSaving(true); // Set isSaving to true to indicate saving is in progress
-    setSaveError(null); // Clear any previous save errors
+    setIsSaving(true);
+    setSaveError(null);
 
     fetch(`/api/editUser/${user.id}`, {
       method: "PUT",
@@ -25,13 +25,13 @@ const EditUser = ({ user, onCancel }) => {
       })
       .then((data) => {
         console.log(`User ${user.id} updated successfully:`, data);
-        setIsSaving(false); // Set isSaving to false after successful update
+        setIsSaving(false);
         onCancel();
       })
       .catch((error) => {
         console.error("Error updating user:", error);
-        setIsSaving(false); // Set isSaving to false on error
-        setSaveError("Failed to update user. Please try again."); // Set the save error message
+        setIsSaving(false);
+        setSaveError("Failed to update user. Please try again.");
       });
   };
 

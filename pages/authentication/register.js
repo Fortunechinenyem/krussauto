@@ -17,7 +17,7 @@ export default function RegisterForm() {
     if (file) {
       const reader = new FileReader();
       reader.onloadend = () => {
-        setProfilePictureURL(reader.result); // Set URL instead of data URL
+        setProfilePictureURL(reader.result);
       };
       reader.readAsDataURL(file);
     }

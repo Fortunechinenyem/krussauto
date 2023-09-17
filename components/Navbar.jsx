@@ -11,9 +11,9 @@ function Navbar() {
   };
 
   return (
-    <header className="text-gray-600 body-font">
+    <header className="text-gray-600 bg-[] body-font">
       <div className="container flex flex-wrap items-center justify-between py-4 px-6">
-        <Link href="/" className="flex title-font font-medium items-center">
+        <Link href="/" className="flex title-font font-medium ">
           <Image className="" src={Logo} alt="logo" width={110} priority />
         </Link>
         <button
@@ -59,7 +59,7 @@ function Navbar() {
             isOpen ? "block" : "hidden"
           }`}
         >
-          <div className="flex flex-col md:flex-row md:ml-auto md:space-x-2">
+          <div className="flex flex-col md:flex-row md:ml-auto ">
             <Link
               href="/"
               className="text-black-300 hover:bg-[rgb(7,39,78)] hover:text-white px-3 py-2 rounded-md text-sm font-medium"
@@ -91,7 +91,7 @@ function Navbar() {
               Contact Us
             </Link>
           </div>
-          <div className="mt-4 md:mt-0">
+          <div className="">
             <Link
               href="/authentication/register"
               className="text-black-300 bg-[#006950] text-white hover:text-white px-3 py-2 rounded-md text-sm font-medium"

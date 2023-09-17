@@ -18,6 +18,19 @@ input:-webkit-autofill:active {
   -webkit-box-shadow: 0 0 0 30px white inset !important;
 } */
 
+.btn {
+  padding: 0.5rem 0.5rem;
+  background-color: #006950;
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #2779bd;
+}
 .range-input {
   background: #006950;
 

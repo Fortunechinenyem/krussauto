@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
+
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Image from "next/image";
@@ -15,10 +17,13 @@ import FAQs from "./faq";
 
 import Aos from "aos";
 import "aos/dist/aos.css";
+import LanguageSelector from "@/components/LanguageSelector";
 
 export default function HomePage() {
   const [customerCount, setCustomerCount] = useState(0);
   const [brandCount, setBrandCount] = useState(0);
+
+  const { t } = useTranslation();
 
   useEffect(() => {
     Aos.init({
@@ -55,12 +60,13 @@ export default function HomePage() {
   return (
     <div className="m-2 text-xl">
       <Navbar />
+      <LanguageSelector />
 
       <div className="">
         <div className="mt-9 mb-9 flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 mt-7">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold">
-              Get Your Auto Services Needs Taken Care Of
+              {t("Get Your Auto Services Needs Taken Care Of")}
             </h1>
             <p className="text-lg md:text-xl mt-4">
               Don't get stuck with a lemon – let our professionals take the load
