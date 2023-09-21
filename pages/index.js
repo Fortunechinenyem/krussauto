@@ -7,6 +7,12 @@ import Image from "next/image";
 import Link from "next/link";
 
 import Logo from "../public/assets/images/carbg.png";
+import Home1 from "../public/assets/images/k4.png";
+import Home2 from "../public/assets/images/k3.png";
+import Home3 from "../public/assets/images/k2.png";
+import Home4 from "../public/assets/images/k51.png";
+import Home5 from "../public/assets/images/k61.png";
+import Home6 from "../public/assets/images/k1.png";
 import { FcInspection } from "react-icons/fc";
 import { MdOutlineMiscellaneousServices } from "react-icons/md";
 import { FaCar } from "react-icons/fa";
@@ -95,119 +101,205 @@ export default function HomePage() {
           </h3>
         </div>
         <div
-          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 mb-7 mt-9 text-white "
+          className=" gap-4 mb-7 mt-9 text-white "
           data-aos="fade-down"
           data-aos-delay="400"
         >
           <Link href="/services">
             <div
-              className="bg-[#006950] shadow-lg rounded-lg p-6 text-white"
+              className="bg-[#006950] flex rounded-lg p-6 mt-7"
               data-aos="fade-down"
               data-aos-delay="400"
             >
-              <p className="text-xl font-bold mb-2">
-                Pre-Purchase Inspection{" "}
-                <span>
-                  <FcInspection />
-                </span>
-              </p>
-              <p className="">
-                Ensure peace of mind before buying a car with our comprehensive
-                pre-purchase inspection service.
-              </p>
+              <div
+                className="md:w-1/2  "
+                data-aos="fade-down"
+                data-aos-delay="400"
+              >
+                <Image
+                  className="w-full max-w-md"
+                  src={Home1}
+                  alt="logo"
+                  priority
+                />
+              </div>
+              <div className="md:w-1/2  ">
+                <p className="text-xl font-bold mb-2">
+                  Pre-Purchase Inspection{" "}
+                  <span>
+                    <FcInspection />
+                  </span>
+                </p>
+                <p className="">
+                  Ensure peace of mind before buying a car with our
+                  comprehensive pre-purchase inspection service.
+                </p>
+              </div>
             </div>
           </Link>
           <Link href="/services/autoerrand">
             {" "}
             <div
-              className="bg-[#006950] shadow-lg rounded-lg p-6"
+              className="bg-[#006950] flex rounded-lg p-6 mt-7"
               data-aos="fade-down"
               data-aos-delay="400"
             >
-              <p className="text-xl font-bold mb-2">
-                Auto-Errand As A Service{" "}
-                <span>
-                  <MdOutlineMiscellaneousServices />
-                </span>
-              </p>
-              <p className="">
-                Let us take care of your auto errands, from picking up groceries
-                to dropping off packages.
-              </p>
+              <div className="md:w-1/2  ">
+                {" "}
+                <p className="text-xl font-bold mb-2">
+                  Auto-Errand As A Service{" "}
+                  <span>
+                    <MdOutlineMiscellaneousServices />
+                  </span>
+                </p>
+                <p className="">
+                  Let us take care of your auto errands, from picking up
+                  groceries to dropping off packages.
+                </p>
+              </div>
+              <div
+                className="md:w-1/2  "
+                data-aos="fade-down"
+                data-aos-delay="400"
+              >
+                <Image
+                  className="w-full max-w-md"
+                  src={Home2}
+                  alt="logo"
+                  priority
+                />
+              </div>
             </div>
           </Link>
           <Link href="/services">
             <div
-              className="bg-[#006950] shadow-lg rounded-lg p-6"
+              className="bg-[#006950] flex rounded-lg p-6 mt-7"
               data-aos="fade-down"
               data-aos-delay="400"
             >
-              <p className="text-xl font-bold mb-2">
-                Fleet Management{" "}
-                <span>
-                  <FaCar />
-                </span>
-              </p>
-              <p className="">
-                Efficiently manage your vehicle fleet with our advanced fleet
-                management solutions.
-              </p>
+              <div
+                className="md:w-1/2  "
+                data-aos="fade-down"
+                data-aos-delay="400"
+              >
+                <Image
+                  className="w-full max-w-md"
+                  src={Home3}
+                  alt="logo"
+                  priority
+                />
+              </div>
+              <div className="md:w-1/2  ">
+                <p className="text-xl font-bold mb-2">
+                  Fleet Management{" "}
+                  <span>
+                    <FaCar />
+                  </span>
+                </p>
+                <p className="">
+                  Efficiently manage your vehicle fleet with our advanced fleet
+                  management solutions.
+                </p>
+              </div>
             </div>
           </Link>
           <Link href="/services">
             <div
-              className="bg-[#006950] shadow-lg rounded-lg p-6 "
+              className="bg-[#006950] flex rounded-lg p-6 mt-7 "
               data-aos="fade-down"
               data-aos-delay="400"
             >
-              <p className="text-xl font-bold mb-2">
-                Buy, Sell Cars{" "}
-                <span>
-                  <FaMoneyBillAlt />
-                </span>
-              </p>
-              <p className="">
-                Explore our curated selection of high-quality cars or sell your
-                car hassle-free.
-              </p>
+              <div className="md:w-1/2  ">
+                <p className="text-xl font-bold mb-2">
+                  Buy, Sell Cars{" "}
+                  <span>
+                    <FaMoneyBillAlt />
+                  </span>
+                </p>
+                <p className="">
+                  Explore our curated selection of high-quality cars or sell
+                  your car hassle-free.
+                </p>
+              </div>
+              <div
+                className="md:w-1/2  "
+                data-aos="fade-down"
+                data-aos-delay="400"
+              >
+                <Image
+                  className="w-full max-w-md"
+                  src={Home4}
+                  alt="logo"
+                  priority
+                />
+              </div>
             </div>
           </Link>
           <Link href="/services">
             {" "}
             <div
-              className="bg-[#006950] shadow-lg rounded-lg p-6"
+              className="bg-[#006950] flex rounded-lg p-6 mt-7"
               data-aos="fade-down"
               data-aos-delay="400"
             >
-              <p className="text-xl font-bold mb-2">
-                Car Diagnostics{" "}
-                <span>
-                  <MdSyncProblem />
-                </span>
-              </p>
-              <p className="">
-                Get comprehensive Car Diagnostics to identify and address issues
-                with your vehicle's performance.
-              </p>
+              <div
+                className="md:w-1/2  "
+                data-aos="fade-down"
+                data-aos-delay="400"
+              >
+                <Image
+                  className="w-full max-w-md"
+                  src={Home5}
+                  alt="logo"
+                  priority
+                />
+              </div>
+              <div className="md:w-1/2  ">
+                <p className="text-xl font-bold mb-2">
+                  Car Diagnostics{" "}
+                  <span>
+                    <MdSyncProblem />
+                  </span>
+                </p>
+                <p className="">
+                  Get comprehensive Car Diagnostics to identify and address
+                  issues with your vehicle's performance.
+                </p>
+              </div>
             </div>
           </Link>
           <Link href="/services">
             {" "}
             <div
-              className="bg-[#006950] shadow-lg rounded-lg p-6"
+              className="bg-[#006950] flex rounded-lg p-6 mt-7"
               data-aos="fade-down"
               data-aos-delay="400"
             >
-              <p className="text-xl font-bold mb-2">
-                Auto Consultancy{" "}
-                <span>
-                  <GiDiscussion />
-                </span>
-              </p>
-              <p className="">
-                Get expert advice and guidance on all your automotive needs from
-                our experienced consultants.
-              </p>
+              <div className="md:w-1/2  ">
+                {" "}
+                <p className="text-xl font-bold mb-2">
+                  Auto Consultancy{" "}
+                  <span>
+                    <GiDiscussion />
+                  </span>
+                </p>
+                <p className="">
+                  Get expert advice and guidance on all your automotive needs
+                  from our experienced consultants.
+                </p>
+              </div>
+              <div
+                className="md:w-1/2  "
+                data-aos="fade-down"
+                data-aos-delay="400"
+              >
+                <Image
+                  className="w-full max-w-md"
+                  src={Home6}
+                  alt="logo"
+                  priority
+                />
+              </div>
             </div>
           </Link>
         </div>

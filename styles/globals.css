@@ -19,9 +19,9 @@ input:-webkit-autofill:active {
 } */
 
 .btn {
-  padding: 0.5rem 0.5rem;
-  background-color: #006950;
-  color: white;
+  padding: 0.2rem 0.2rem;
+  background-color: #e0f1f0;
+  color: black;
   border: none;
   border-radius: 0.25rem;
   cursor: pointer;
