@@ -91,16 +91,9 @@ function Navbar() {
               Contact Us
             </Link>
           </div>
-          <div className="">
-            <Link
-              href="/authentication/register"
-              className="text-black bg-[#E0F1F0]  hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-            >
-              Login/SignUp
-            </Link>
-          </div>
         </nav>
       </div>
+      <hr />
     </header>
   );
 }

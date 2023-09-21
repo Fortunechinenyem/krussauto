@@ -80,7 +80,7 @@ export default function HomePage() {
             </p>
             <div className="mt-8 hidden md:block">
               <Link href="/appointment">
-                <button className="inline-block self-start bg-[#006950] text-white font-bold rounded-md px-6 py-2 text-lg px-6 py-3 rounded-md text-sm font-medium">
+                <button className="inline-block self-start bg-[#0B2546] text-white font-bold rounded-md px-6 py-2 text-lg px-6 py-3 rounded-md text-sm font-medium">
                   Get Started
                 </button>
               </Link>
@@ -107,7 +107,7 @@ export default function HomePage() {
         >
           <Link href="/services">
             <div
-              className="bg-[#006950] flex rounded-lg p-6 mt-7"
+              className="bg-[#0B2546] flex rounded-lg p-6 mt-7"
               data-aos="fade-down"
               data-aos-delay="400"
             >
@@ -140,7 +140,7 @@ export default function HomePage() {
           <Link href="/services/autoerrand">
             {" "}
             <div
-              className="bg-[#006950] flex rounded-lg p-6 mt-7"
+              className="bg-[#0B2546] flex rounded-lg p-6 mt-7"
               data-aos="fade-down"
               data-aos-delay="400"
             >
@@ -173,7 +173,7 @@ export default function HomePage() {
           </Link>
           <Link href="/services">
             <div
-              className="bg-[#006950] flex rounded-lg p-6 mt-7"
+              className="bg-[#0B2546] flex rounded-lg p-6 mt-7"
               data-aos="fade-down"
               data-aos-delay="400"
             >
@@ -205,7 +205,7 @@ export default function HomePage() {
           </Link>
           <Link href="/services">
             <div
-              className="bg-[#006950] flex rounded-lg p-6 mt-7 "
+              className="bg-[#0B2546] flex rounded-lg p-6 mt-7 "
               data-aos="fade-down"
               data-aos-delay="400"
             >
@@ -238,7 +238,7 @@ export default function HomePage() {
           <Link href="/services">
             {" "}
             <div
-              className="bg-[#006950] flex rounded-lg p-6 mt-7"
+              className="bg-[#0B2546] flex rounded-lg p-6 mt-7"
               data-aos="fade-down"
               data-aos-delay="400"
             >
@@ -271,7 +271,7 @@ export default function HomePage() {
           <Link href="/services">
             {" "}
             <div
-              className="bg-[#006950] flex rounded-lg p-6 mt-7"
+              className="bg-[#0B2546] flex rounded-lg p-6 mt-7"
               data-aos="fade-down"
               data-aos-delay="400"
             >
@@ -312,6 +312,28 @@ export default function HomePage() {
             <p id="trustedBrands">{brandCount} Trusted Brands</p>
           </div>
         </div>
+        <div
+          className="mt-9 shadow-lg rounded-lg overflow-hidden mt-9  items-center"
+          data-aos="fade-down"
+          data-aos-delay="400"
+        >
+          <h3 className="text-3xl text-center font-bold">
+            Looking to Invest in Automobile Trading?
+          </h3>
+          <p className="text-lg md:text-xl mt-4 text-center">
+            Earn High ROI while your money works for you.
+          </p>
+          <div className="text-center mt-6 mb-5">
+            <div className="">
+              <Link
+                href="/authentication/register"
+                className="text-white bg-[#0B2546]  hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+              >
+                Become An Investor
+              </Link>
+            </div>
+          </div>
+        </div>
 
         <div
           className="mt-9 shadow-lg rounded-lg overflow-hidden mt-9  items-center"
@@ -327,7 +349,7 @@ export default function HomePage() {
           </p>
           <div className="text-center mt-6">
             <Link href="/ebook">
-              <button className="inline-block self-start bg-[#006950] text-white font-bold rounded-md px-6 py-2 text-lg px-6 py-3 rounded-md text-sm font-medium mb-7">
+              <button className="inline-block self-start bg-[#0B2546] text-white font-bold rounded-md px-6 py-2 text-lg px-6 py-3 rounded-md text-sm font-medium mb-7">
                 Purchase
               </button>
             </Link>
@@ -345,26 +367,26 @@ export default function HomePage() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 text-center gap-6">
             <div
-              className="testimonial-card bg-[#006950] p-6 rounded-lg shadow-lg"
+              className="testimonial-card bg-[] p-6 rounded-lg shadow-lg"
               data-aos="fade-down"
               data-aos-delay="400"
             >
-              <p className="text-white text-lg mb-4">
+              <p className=" text-lg mb-4">
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Aliquam venenatis eget elit nec accumsan."
               </p>
-              <p className="text-white font-semibold">James Sturgis</p>
+              <p className=" font-semibold">James Sturgis</p>
             </div>
             <div
-              className="testimonial-card bg-[#006950] p-6 rounded-lg shadow-lg"
+              className="testimonial-card bg-[] p-6 rounded-lg shadow-lg"
               data-aos="fade-down"
               data-aos-delay="400"
             >
-              <p className="text-white text-lg mb-4">
+              <p className=" text-lg mb-4">
                 "Suspendisse consectetur nunc eget quam vulputate, ac gravida
                 odio lacinia."
               </p>
-              <p className="text-white font-semibold">Sheldon Cooper</p>
+              <p className=" font-semibold">Sheldon Cooper</p>
             </div>
           </div>
         </div>
