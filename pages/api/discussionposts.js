@@ -1,4 +1,4 @@
-import { connectToDatabase } from "../db/index";
+import { connectToDatabase } from "../../db/index";
 
 export async function createDiscussionPost(postData) {
   const client = await connectToDatabase();
