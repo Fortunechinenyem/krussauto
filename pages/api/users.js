@@ -1,21 +1,36 @@
 import { connectToDatabase } from "../../db/index";
 
-export default async function handler(req, res) {
-  if (req.method !== "GET") {
-    return res.status(405).json({ message: "Method Not Allowed" });
-  }
+export async function createUser(userData) {
+  const client = await connectToDatabase();
+  const db = client.db();
+  const usersCollection = db.collection("users");
+  const result = await usersCollection.insertOne(userData);
+  return result.insertedId;
+}
 
-  try {
-    const client = await connectToDatabase();
-    const usersCollection = client.db().collection("users");
+export async function getUsers() {
+  const client = await connectToDatabase();
+  const db = client.db("krussauto");
+  const usersCollection = db.collection("users");
+  const users = await usersCollection.find().toArray();
+  return users;
+}
 
-    const users = await usersCollection.find().toArray();
+export async function updateUser(userId, userData) {
+  const client = await connectToDatabase();
+  const db = client.db();
+  const usersCollection = db.collection("users");
+  const result = await usersCollection.updateOne(
+    { _id: userId },
+    { $set: userData }
+  );
+  return result.modifiedCount > 0;
+}
 
-    client.close();
-
-    res.status(200).json(users);
-  } catch (error) {
-    console.error("An error occurred:", error);
-    res.status(500).json({ message: "Internal Server Error" });
-  }
+export async function deleteUser(userId) {
+  const client = await connectToDatabase();
+  const db = client.db();
+  const usersCollection = db.collection("users");
+  const result = await usersCollection.deleteOne({ _id: userId });
+  return result.deletedCount > 0;
 }

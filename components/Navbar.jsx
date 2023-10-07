@@ -11,88 +11,82 @@ function Navbar() {
   };
 
   return (
-    <header className="text-gray-600 bg-[] body-font">
-      <div className="container flex flex-wrap items-center justify-between py-4 px-6">
-        <Link href="/" className="flex title-font font-medium ">
+    <header className="flex flex-col md:flex-row items-center justify-between p-4 w-full">
+      <div className="container flex items-center justify-between">
+        <Link href="/" className="flex title-font font-medium">
           <Image className="" src={Logo} alt="logo" width={110} priority />
         </Link>
+
         <button
-          className="hamburger-menu  md:hidden"
+          className="hamburger-menu focus:outline-none md:hidden"
           aria-label="Open Menu"
           onClick={toggleMenu}
         >
-          {isOpen ? (
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            {isOpen ? (
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth="2"
                 d="M6 18L18 6M6 6l12 12"
               />
-            </svg>
-          ) : (
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
+            ) : (
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth="2"
-                d="M4 6h16M4 12h16M4 18h16"
+                d="M4 6h16M4 12h16m-7 6h7"
               />
-            </svg>
-          )}
+            )}
+          </svg>
         </button>
-
-        <nav
-          className={`md:flex items-center w-full  ${
-            isOpen ? "block" : "hidden"
-          }`}
-        >
-          <div className="flex flex-col md:flex-row md:ml-auto ">
-            <Link
-              href="/"
-              className="text-black-300 hover:bg-[rgb(7,39,78)] hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-            >
-              Home
-            </Link>
-            <Link
-              href="/about"
-              className="text-black-300 hover:bg-[rgb(7,39,78)] hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-            >
-              About Us
-            </Link>
-            <Link
-              href="/services"
-              className="text-black-300 hover:bg-[rgb(7,39,78)] hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-            >
-              Services
-            </Link>
-            <Link
-              href="/blog"
-              className="text-black-300 hover:bg-[rgb(7,39,78)] hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-            >
-              Blog
-            </Link>
-            <Link
-              href="/contact"
-              className="text-black-300 hover:bg-[rgb(7,39,78)] hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-            >
-              Contact Us
-            </Link>
-          </div>
-        </nav>
       </div>
+
+      <nav
+        className={`md:flex  md:ml-auto ${isOpen ? "flex flex-col" : "hidden"}`}
+      >
+        <Link
+          href="/"
+          className="text-black-300 hover:bg-[rgb(7,39,78)] hover:text-white px-3 py-2 rounded-md text-md font-medium "
+          onClick={toggleMenu}
+        >
+          Home
+        </Link>
+        <Link
+          href="/about"
+          className="text-black-300 hover:bg-[rgb(7,39,78)] hover:text-white px-3 py-2 rounded-md text-md font-medium"
+          onClick={toggleMenu}
+        >
+          About
+        </Link>
+        <Link
+          href="/services"
+          className="text-black-300 hover:bg-[rgb(7,39,78)] hover:text-white px-3 py-2 rounded-md text-md font-medium"
+          onClick={toggleMenu}
+        >
+          Services
+        </Link>
+        <Link
+          href="/blog"
+          className="text-black-300 hover:bg-[rgb(7,39,78)] hover:text-white px-3 py-2 rounded-md text-md font-medium"
+          onClick={toggleMenu}
+        >
+          Blog
+        </Link>
+        <Link
+          href="/contact"
+          className="text-black-300 hover:bg-[rgb(7,39,78)] hover:text-white px-3 py-2 rounded-md text-md font-medium"
+          onClick={toggleMenu}
+        >
+          Contact
+        </Link>
+      </nav>
       <hr />
     </header>
   );

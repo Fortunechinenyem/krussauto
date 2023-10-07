@@ -1,5 +1,6 @@
 import { MongoClient } from "mongodb";
 import { getUsers } from "../models/users";
+import { getAppointments, createAppointment } from "../models/appointment";
 
 const uri = process.env.MONGODB_URI;
 const options = {
@@ -66,4 +67,22 @@ export async function createUser(userData) {
   const result = await db.collection("users").insertOne(userData);
 
   return result;
+}
+
+export async function createNewAppointment(appointmentData) {
+  const client = await connectToDatabase();
+  const db = client.db();
+
+  const result = await db.collection("appointment").insertOne(appointmentData);
+
+  return result;
+}
+
+export async function getAllAppointments() {
+  const client = await connectToDatabase();
+  const db = client.db();
+
+  const appointments = await db.collection("appointment").find().toArray();
+
+  return appointments;
 }

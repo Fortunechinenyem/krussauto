@@ -1,5 +1,20 @@
-import { connectToDatabase } from "../../db/index";
+import { connectToDatabase } from "../db/index";
 
+export async function createPost(postData) {
+  const client = await connectToDatabase();
+  const db = client.db("krussauto");
+  const postsCollection = db.collection("discussionposts");
+  const result = await postsCollection.insertOne(postData);
+  return result.insertedId;
+}
+
+export async function getPosts() {
+  const client = await connectToDatabase();
+  const db = client.db("krussauto");
+  const postsCollection = db.collection("discussionposts");
+  const posts = await postsCollection.find().toArray();
+  return posts;
+}
 export async function createDiscussionPost(postData) {
   const client = await connectToDatabase();
   const db = client.db();

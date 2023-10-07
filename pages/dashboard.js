@@ -27,15 +27,12 @@ export default function DashboardPage() {
     }
   }
 
-  // Call the test function
   testGetUsers();
 
   useEffect(() => {
-    // Simulate fetching user data asynchronously
     const fetchUserData = async () => {
       try {
-        // Make an API call to get user data
-        const response = await fetch("/api/user-data"); // Replace with your API endpoint
+        const response = await fetch("/api/user-data");
         if (response.ok) {
           const userData = await response.json();
           setUserName(userData.userName);

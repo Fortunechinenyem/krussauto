@@ -8,7 +8,6 @@ const UsersPage = () => {
       <h1>Users Page</h1>
       <UsersList />
       <CreateUser />
-      {/* EditUser component can be rendered based on user selection */}
     </div>
   );
 };

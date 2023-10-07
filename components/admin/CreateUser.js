@@ -28,7 +28,7 @@ const CreateUser = () => {
       .then((data) => {
         console.log("User created successfully:", data);
         setIsCreating(false);
-        setFirstName(""); // Clear input fields
+        setFirstName("");
         setLastName("");
         setEmail("");
       })
@@ -63,7 +63,7 @@ const CreateUser = () => {
       <button onClick={handleCreateUser} disabled={isCreating}>
         {isCreating ? "Creating..." : "Create"}
       </button>
-      {creationError && <p className="error">{creationError}</p>}
+      {creationError && <p className="error">Error: {creationError}</p>}
     </div>
   );
 };

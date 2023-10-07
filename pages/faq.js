@@ -1,4 +1,8 @@
+import React, { useState } from "react";
+
 export default function FAQs() {
+  const [activeIndex, setActiveIndex] = useState(null);
+
   const faqs = [
     {
       id: 1,
@@ -11,17 +15,47 @@ export default function FAQs() {
       answer:
         "If the car fails the inspection, we provide a detailed report highlighting the issues.",
     },
-    // Add more FAQs
   ];
 
+  const toggleAnswer = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
+
+  const faqStyle = {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    gap: "80px",
+    width: "80%", // Adjusted width for responsiveness
+    maxWidth: "1035px", // Maximum width for larger screens
+    margin: "0 auto", // Centering the component
+  };
+
+  const questionStyle = {
+    display: "flex",
+    width: "100%",
+    padding: "35px 48px",
+    justifyContent: "space-between",
+    alignItems: "center",
+    border: "1px solid #ccc",
+    marginBottom: "10px",
+    cursor: "pointer",
+    borderRadius: "10px", // Added border radius
+  };
+
   return (
-    <div className="text-xl">
-      <h2>FAQs</h2>
-      <ul>
-        {faqs.map((faq) => (
-          <li key={faq.id}>
-            <h3>{faq.question}</h3>
-            <p>{faq.answer}</p>
+    <div style={faqStyle}>
+      <h4 className="text-xl font-bold">FAQs</h4>
+      <ul style={{ width: "100%", padding: 0, margin: 0 }}>
+        {faqs.map((faq, index) => (
+          <li key={faq.id} style={{ width: "100%" }}>
+            <div onClick={() => toggleAnswer(index)} style={questionStyle}>
+              <h3>{faq.question}</h3>
+              <span>{activeIndex === index ? "v" : "v"}</span>
+            </div>
+            {activeIndex === index && (
+              <p style={{ padding: "10px 48px" }}>{faq.answer}</p>
+            )}
           </li>
         ))}
       </ul>

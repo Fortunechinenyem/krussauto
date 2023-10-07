@@ -2,6 +2,7 @@ import { getUsers } from "../../models/users";
 
 export default async function handler(req, res) {
   try {
+    console.log("Fetching users...");
     if (req.method === "GET") {
       const users = await getUsers();
       res.status(200).json(users);

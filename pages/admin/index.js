@@ -4,8 +4,6 @@ import UsersList from "@/components/admin/UsersList";
 import CreateUser from "@/components/admin/CreateUser";
 import EditUser from "@/components/admin/EditUser";
 
-// const response = await fetch("/api/listUsers");
-
 const AdminPage = () => {
   const [view, setView] = useState("list");
   const [selectedUser, setSelectedUser] = useState(null);
@@ -18,15 +16,12 @@ const AdminPage = () => {
   };
 
   useEffect(() => {
+    console.log("Fetching users...");
+
     fetch("/api/listUsers")
-      .then((response) => {
-        if (response.ok) {
-          return response.json();
-        } else {
-          throw new Error("Failed to fetch users");
-        }
-      })
+      .then((response) => response.json())
       .then((data) => {
+        console.log("Fetched users:", data);
         setUsers(data);
         setIsLoading(false);
       })

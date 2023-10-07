@@ -39,8 +39,5 @@ export default async function handler(req, res) {
 }
 
 function isValidObjectId(id) {
-  // Replace this function with your validation logic
-  // For MongoDB ObjectId validation, you can use a library like 'mongodb' or 'mongoose'
-  // Example: mongoose.Types.ObjectId.isValid(id)
   return true;
 }
