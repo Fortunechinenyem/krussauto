@@ -7,7 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import Logo from "../public/assets/images/carbg.png";
-
+import How from "../public/assets/images/how.png";
 import { FcInspection } from "react-icons/fc";
 import { MdOutlineMiscellaneousServices } from "react-icons/md";
 import { FaCar } from "react-icons/fa";
@@ -18,7 +18,7 @@ import FAQs from "./faq";
 
 import Aos from "aos";
 import "aos/dist/aos.css";
-import LanguageSelector from "@/components/LanguageSelector";
+import BlogSnippet from "@/components/BlogSnippet";
 
 export default function HomePage() {
   const [customerCount, setCustomerCount] = useState(0);
@@ -94,7 +94,7 @@ export default function HomePage() {
             <Image className="w-full max-w-md" src={Logo} alt="logo" priority />
           </div>
         </div>
-        <section className="">
+        <section className="bg-gray-200">
           <div data-aos="fade-down" data-aos-delay="400">
             <h3 className="p-4 text-[#11111]  text-center text-2xl md:text-2xl lg:text-4xl font-bold mb-4">
               Our Product Suite
@@ -107,7 +107,7 @@ export default function HomePage() {
           >
             <Link href="/services">
               <div
-                className=" rounded-lg p-6 mt-7 shadow-lg"
+                className="bg-[#8E99AD] rounded-lg p-6 mt-7 shadow-lg"
                 data-aos="fade-down"
                 data-aos-delay="400"
               >
@@ -118,17 +118,13 @@ export default function HomePage() {
                       <FcInspection />
                     </span>
                   </p>
-                  <p className="">
-                    Ensure peace of mind before buying a car with our
-                    comprehensive pre-purchase inspection service.
-                  </p>
                 </div>
               </div>
             </Link>
             <Link href="/services/autoerrand">
               {" "}
               <div
-                className=" rounded-lg p-6 mt-7 shadow-lg"
+                className="bg-[#8E99AD] rounded-lg p-6 mt-7 shadow-lg"
                 data-aos="fade-down"
                 data-aos-delay="400"
               >
@@ -140,16 +136,12 @@ export default function HomePage() {
                       <MdOutlineMiscellaneousServices />
                     </span>
                   </p>
-                  <p className="">
-                    Let us take care of your auto errands, from picking up
-                    groceries to dropping off packages.
-                  </p>
                 </div>
               </div>
             </Link>
             <Link href="/services">
               <div
-                className=" rounded-lg p-6 mt-7 shadow-lg"
+                className="bg-[#8E99AD] rounded-lg p-6 mt-7 shadow-lg"
                 data-aos="fade-down"
                 data-aos-delay="400"
               >
@@ -160,16 +152,12 @@ export default function HomePage() {
                       <FaCar />
                     </span>
                   </p>
-                  <p className="">
-                    Efficiently manage your vehicle fleet with our advanced
-                    fleet management solutions.
-                  </p>
                 </div>
               </div>
             </Link>
             <Link href="/services">
               <div
-                className=" rounded-lg p-6 mt-7 shadow-lg "
+                className="bg-[#8E99AD] rounded-lg p-6 mt-7 shadow-lg "
                 data-aos="fade-down"
                 data-aos-delay="400"
               >
@@ -180,17 +168,13 @@ export default function HomePage() {
                       <FaMoneyBillAlt />
                     </span>
                   </p>
-                  <p className="">
-                    Explore our curated selection of high-quality cars or sell
-                    your car hassle-free.
-                  </p>
                 </div>
               </div>
             </Link>
             <Link href="/services">
               {" "}
               <div
-                className=" rounded-lg p-6 mt-7 shadow-lg"
+                className="bg-[#8E99AD] rounded-lg p-6 mt-7 shadow-lg"
                 data-aos="fade-down"
                 data-aos-delay="400"
               >
@@ -201,17 +185,13 @@ export default function HomePage() {
                       <MdSyncProblem />
                     </span>
                   </p>
-                  <p className="">
-                    Get comprehensive Car Diagnostics to identify and address
-                    issues with your vehicle's performance.
-                  </p>
                 </div>
               </div>
             </Link>
             <Link href="/services">
               {" "}
               <div
-                className=" rounded-lg p-6 mt-7 shadow-lg"
+                className="bg-[#8E99AD] rounded-lg p-6 mt-7 shadow-lg"
                 data-aos="fade-down"
                 data-aos-delay="400"
               >
@@ -223,10 +203,6 @@ export default function HomePage() {
                       <GiDiscussion />
                     </span>
                   </p>
-                  <p className="">
-                    Get expert advice and guidance on all your automotive needs
-                    from our experienced consultants.
-                  </p>
                 </div>
               </div>
             </Link>
@@ -236,32 +212,47 @@ export default function HomePage() {
           <div className="text-center mt-9 mb-9">
             <h3 className="text-3xl font-bold">How It Works</h3>
           </div>
-          <div className="grid  grid-cols-1 md:grid-cols-3 gap-6 mb-7 mt-9">
-            <div className=" rounded-lg p-6">
-              <h4 className="text-xl font-bold mb-2">Step 1</h4>
-              <p className="">
-                Choose the service you need and book an appointment.
-              </p>
+          <div className="flex flex-col md:flex-row items-center">
+            <div
+              className="md:w-1/2 justify-center mt-7 "
+              data-aos="fade-down"
+              data-aos-delay="400"
+            >
+              <Image
+                className="w-full max-w-md"
+                src={How}
+                alt="logo"
+                priority
+              />
             </div>
-            <div className=" rounded-lg p-6">
-              <h4 className="text-xl font-bold mb-2">Step 2</h4>
-              <p className="">
-                Our professionals will provide the service at your convenience.
-              </p>
+            <div className=" md:w-1/2  justify-center mb-7 mt-9">
+              <div className=" rounded-lg p-6">
+                <h4 className="text-xl font-bold mb-2">Step 1</h4>
+                <p className="">
+                  Choose the service you need and book an appointment.
+                </p>
+              </div>
+              <div className=" rounded-lg p-6">
+                <h4 className="text-xl font-bold mb-2">Step 2</h4>
+                <p className="">
+                  Our professionals will provide the service at your
+                  convenience.
+                </p>
+              </div>
+              <div className=" rounded-lg p-6">
+                <h4 className="text-xl font-bold mb-2">Step 3</h4>
+                <p className="">
+                  Sit back and enjoy a hassle-free experience with your vehicle.
+                </p>
+              </div>
+              <div className="mt-8 ">
+                <Link href="/appointment">
+                  <button className="  bg-[#0B2546] text-white font-bold rounded-md px-6 py-2 text-lg px-6 py-3 rounded-md text-x font-medium">
+                    Get Started
+                  </button>
+                </Link>
+              </div>
             </div>
-            <div className=" rounded-lg p-6">
-              <h4 className="text-xl font-bold mb-2">Step 3</h4>
-              <p className="">
-                Sit back and enjoy a hassle-free experience with your vehicle.
-              </p>
-            </div>
-          </div>
-          <div className="mt-8 text-center ">
-            <Link href="/appointment">
-              <button className="inline-block self-start bg-[#0B2546] text-white font-bold rounded-md px-6 py-2 text-lg px-6 py-3 rounded-md text-sm font-medium">
-                Get Started
-              </button>
-            </Link>
           </div>
         </section>
         <div className="text-center mt-7 mb-7 shadow-lg rounded-lg overflow-hidden mt-9 flex flex-col md:flex-row justify-center items-center bg-gradient-to-r from-[#2D3748] via-[#718096] to-[#2D3748] p-10">
@@ -289,11 +280,10 @@ export default function HomePage() {
             Earn High ROI while your money works for you.
           </p>
           <div className="text-center">
-            <Link
-              href="/services"
-              className="text-white bg-[#0B2546] hover:bg-[#1A365D] px-6 py-3 rounded-md text-lg md:text-xl font-bold"
-            >
-              See how it Works
+            <Link href="/services" className="">
+              <button className="  bg-[#0B2546] text-white font-bold rounded-md px-6 py-2 text-lg px-6 py-3 rounded-md text-x font-medium">
+                See how it works
+              </button>
             </Link>
           </div>
         </div>
@@ -312,7 +302,7 @@ export default function HomePage() {
           </p>
           <div className="text-center mt-6">
             <Link href="/ebook">
-              <button className="inline-block self-start bg-[#0B2546] text-white font-bold rounded-md px-6 py-2 text-lg px-6 py-3 rounded-md text-sm font-medium mb-7">
+              <button className="  bg-[#0B2546] text-white font-bold rounded-md px-6 py-2 text-lg px-6 py-3 rounded-md text-x font-medium">
                 Purchase
               </button>
             </Link>
@@ -360,6 +350,14 @@ export default function HomePage() {
         <div className="text-center mt-6 mb-5">
           <FAQs />
         </div>
+      </section>
+      <section className="container mt-5 bg-[#515B6D] text-[#F0F0F0] mx-auto my-10">
+        <div className="text-center mt-5">
+          <h2 className="text-2xl mt-5 font-bold mb-6">
+            Checkout Our Blogpost
+          </h2>
+        </div>
+        <BlogSnippet />
       </section>
 
       <Footer />

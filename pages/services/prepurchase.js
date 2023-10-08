@@ -27,18 +27,18 @@ const PrePurchase = () => {
               Pre-Purchase Inspection
             </h1>
             <p className="text-lg md:text-xl lg:text-2xl">
-              Make an informed decision with our professional guidiance
+              Make an informed decision with our professional guidance
             </p>
           </div>
         </div>
       </div>
       <div className="bg-white shadow-lg rounded-lg p-6 mt-9 mb-7 text-center">
         <h3 className="text-xl md:text-2xl lg:text-3xl font-bold mb-4">
-          Comprehensive PrePurchase Inspection Services
+          Comprehensive Pre-Purchase Inspection Services
         </h3>
         <p className="text-xl md:text-xl lg:text-2xl mt-4">
-          At Kruss Automotive Services, we provide thorough PrePurchase
-          Inspection services to empower our clients with informed decisions
+          At Kruss Automotive Services, we provide a thorough pre-purchase
+          inspection service to empower our clients with informed decisions
           before purchasing a vehicle.
         </p>
         <p className="text-xl md:text-xl lg:text-2xl mt-4">
@@ -58,12 +58,21 @@ const PrePurchase = () => {
             Ready to Make an Informed Purchase?
           </h3>
           <div className="text-center mt-6">
-            <Link href="/contact">
-              <button className="inline-block bg-[#006950] text-white font-bold rounded-md px-6 py-3 text-lg">
-                Book Your Inspection
+            <Link href="/appointment">
+              <button className="bg-[#0B2546] text-white font-bold rounded-md px-6 py-2 text-lg px-6 py-3 rounded-md text-x font-medium">
+                Book An Inspection
               </button>
             </Link>
           </div>
+        </div>
+      </div>
+
+      <div className="bg-gray-100 py-10">
+        <div className="container mx-auto">
+          <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-center mb-6">
+            What Our Clients Say
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 text-center gap-6"></div>
         </div>
       </div>
 
