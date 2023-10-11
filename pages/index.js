@@ -94,7 +94,7 @@ export default function HomePage() {
             <Image className="w-full max-w-md" src={Logo} alt="logo" priority />
           </div>
         </div>
-        <section className="bg-gray-200">
+        <section className="">
           <div data-aos="fade-down" data-aos-delay="400">
             <h3 className="p-4 text-[#11111]  text-center text-2xl md:text-2xl lg:text-4xl font-bold mb-4">
               Our Product Suite

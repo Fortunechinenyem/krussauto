@@ -17,6 +17,7 @@ const Appointment = () => {
   const [fullName, setFullName] = useState("");
   const [message, setMessage] = useState("");
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [location, setLocation] = useState("");
 
   const handleDateChange = (e) => {
     setAppointmentDate(e.target.value);
@@ -36,6 +37,10 @@ const Appointment = () => {
 
   const handleMessageChange = (e) => {
     setMessage(e.target.value);
+  };
+
+  const handleLocationChange = (e) => {
+    setLocation(e.target.value);
   };
 
   const handleSubmit = async (e) => {
@@ -198,6 +203,13 @@ const Appointment = () => {
               value={fullName}
               onChange={handleFullNameChange}
               required
+            />
+            <input
+              type="text"
+              style={styles.input}
+              placeholder="Location"
+              value={location}
+              onChange={handleLocationChange}
             />
             <textarea
               style={styles.textarea}
