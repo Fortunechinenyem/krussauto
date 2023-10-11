@@ -28,7 +28,7 @@ const UserDashboardLayout = ({ children }) => {
             </li>
             <li>
               <Link
-                href="/"
+                href="/dashboard/profile"
                 className="flex gap-3 items-center py-3 stroke-zinc-600 hover:text-blue-1 hover:stroke-blue-1"
                 target="_blank"
               >

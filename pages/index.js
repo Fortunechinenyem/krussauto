@@ -351,10 +351,10 @@ export default function HomePage() {
           <FAQs />
         </div>
       </section>
-      <section className="container mt-5 bg-[#515B6D] text-[#F0F0F0] mx-auto my-10">
+      <section className="p-5 mt-5 bg-[#F0F0F0] mx-auto my-10 rounded-lg shadow-lg">
         <div className="text-center mt-5">
-          <h2 className="text-2xl mt-5 font-bold mb-6">
-            Checkout Our Blogpost
+          <h2 className="text-2xl mt-5 font-bold mb-6 text-[#515B6D]">
+            Check Out Our Latest Blog Post
           </h2>
         </div>
         <BlogSnippet />

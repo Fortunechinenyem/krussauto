@@ -4,7 +4,6 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 
 import UserDashboardLayout from "@/layout/UserDashboard";
-import DashboardCard from "@/components/DashboardCard";
 
 export default function DashboardPage() {
   useEffect(() => {
@@ -16,36 +15,59 @@ export default function DashboardPage() {
 
   return (
     <UserDashboardLayout>
-      <div className="max-w-5xl mx-auto mb-9">
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-4">
-          <DashboardCard title="Investment" value="" />
-          <DashboardCard title="Investment" value="" />
-        </div>
-      </div>
-      <div className="mt-[27px] p-0 overflow-x-auto block shadow border border-[#DADCE0] hover:drop-shadow-[0px_1px_3px_#D7D7E0] bg-white rounded-lg">
-        <table className="min-w-[800px] w-full">
-          <thead className="text-[14px] text-ash rounded-lg bg-ash1 border-b border-b-ash2">
-            <tr className="text-left">
-              <th className="pl-10 py-3 font-light">ACTION</th>
-              <th className="font-light">REF</th>
-              <th className="font-light">DATE</th>
-              <th className="font-light">ACC NAME</th>
+      {" "}
+      <div className="profile-page grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        <section className="business-overview p-6 bg-white rounded-lg shadow-md">
+          <h2 className="text-xl font-bold mb-2">Business Overview</h2>
+          <p>This section provides an overview of our automobile business.</p>
+          {/* Add more content here */}
+        </section>
 
-              <th className="font-light">AMOUNT</th>
-              <th className="pr-10 font-light">STATUS</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr className="text-[12px] last-of-type:border-b-0 border-b border-b-ash2">
-              <td className="p-3 pl-2 lg:pl-10 w-full lg:w-auto">
-                <div className="flex items-center">
-                  <span></span>
-                </div>
-              </td>
-              <td className="py-3"></td>
-            </tr>
-          </tbody>
-        </table>
+        <section className="kpi p-6 bg-white rounded-lg shadow-md">
+          <h2 className="text-xl font-bold mb-2">Key Performance Indicators</h2>
+          <p>Important metrics and performance indicators for our business.</p>
+          {/* Add KPI charts or data visualization here */}
+        </section>
+
+        <section className="investment-opportunities p-6 bg-white rounded-lg shadow-md">
+          <h2 className="text-xl font-bold mb-2">Investment Opportunities</h2>
+          <p>
+            Explore the investment opportunities in our automobile business.
+          </p>
+          {/* List investment opportunities with details */}
+        </section>
+
+        <section className="management-team p-6 bg-white rounded-lg shadow-md">
+          <h2 className="text-xl font-bold mb-2">Management Team</h2>
+          <p>Meet our dedicated and experienced management team.</p>
+          {/* Display team members with their roles and profiles */}
+        </section>
+
+        <section className="financial-info p-6 bg-white rounded-lg shadow-md">
+          <h2 className="text-xl font-bold mb-2">Financial Information</h2>
+          <p>Access financial reports, statements, and forecasts.</p>
+          {/* Display financial information and data */}
+        </section>
+
+        <section className="interactive-charts p-6 bg-white rounded-lg shadow-md">
+          <h2 className="text-xl font-bold mb-2">
+            Interactive Charts and Graphs
+          </h2>
+          <p>
+            Explore interactive data charts and graphs related to our business.
+          </p>
+          {/* Display interactive charts using charting libraries */}
+        </section>
+
+        <section className="call-to-action p-6 bg-white rounded-lg shadow-md">
+          <h2 className="text-xl font-bold mb-2">
+            Join Our Investment Community
+          </h2>
+          <p>
+            Take the first step towards investing in the future of automobiles.
+          </p>
+          {/* Add a call-to-action button or form */}
+        </section>
       </div>
     </UserDashboardLayout>
   );
