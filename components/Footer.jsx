@@ -8,11 +8,12 @@ import {
   BsTwitter,
   BsFacebook,
   BsYoutube,
+  BsWhatsapp,
 } from "react-icons/bs";
 
 function Footer() {
   return (
-    <div className="bg-[#008080] text-xl text-white p-4 ">
+    <div className="bg-gray-900 text-xl text-white p-4 ">
       <div className="h-1/2 w-full flex md:flex-row flex-col justify-around items-start ">
         <div className="p-5">
           <Link href="/" className="flex title-font font-medium items-center">
@@ -24,74 +25,93 @@ function Footer() {
               priority
             />
           </Link>
-          <p>We take the auto-load off you.</p>
         </div>
 
-        <div className="p-5">
+        <div className="p-5 ">
           <ul className="">
-            <p className="text-gray-200 font-bold text-2xl pb-4">Company</p>
-            <li className="text-gray-200 text-md pb-2  hover:text-gray-400 cursor-pointer ml-1">
+            <p className=" font-bold text-2xl pb-4">Quick Links</p>
+            <li className=" text-md pb-2  hover:text-gray-400 cursor-pointer ml-1">
               <Link href="/">Home</Link>
             </li>
-            <li className="text-gray-200 text-md pb-2  hover:text-gray-400 cursor-pointer ml-1">
+            <li className=" text-md pb-2  hover:text-gray-400 cursor-pointer ml-1">
               <Link href="/AboutUs">About Us</Link>
             </li>
-            <li className="text-gray-200 text-md pb-2  hover:text-gray-400 cursor-pointer ml-1">
+            <li className=" text-md pb-2  hover:text-gray-400 cursor-pointer ml-1">
               <Link href="/OurWork">Our Work</Link>
             </li>
-            <li className="text-gray-200 text-md pb-2  hover:text-gray-400 cursor-pointer ml-1">
+            <li className=" text-md pb-2  hover:text-gray-400 cursor-pointer ml-1">
               <Link href="/Services">Services</Link>
             </li>
-            <li className="text-gray-200 text-md pb-2  hover:text-gray-400 cursor-pointer ml-1">
+            <li className=" text-md pb-2  hover:text-gray-400 cursor-pointer ml-1">
               <Link href="/Blog">Blog</Link>
             </li>
           </ul>
         </div>
-        <div className="flex gap-6 p-5">
-          {/* <Link href="/">
-            <button className="cursor-pointer text-4xl hover:text-gray-400">
-              <BsLinkedin />
-            </button>
-          </Link> */}
-
-          <Link href="/">
-            <button className="cursor-pointer text-2xl hover:text-gray-400">
-              <BsInstagram />
-            </button>
-          </Link>
-
-          <Link href="/">
-            <button className="cursor-pointer text-2xl hover:text-gray-400">
-              <BsTwitter />
-            </button>
-          </Link>
-
-          <Link href="/">
-            <button className="cursor-pointer text-2xl hover:text-gray-400">
-              <BsFacebook />
-            </button>
-          </Link>
-
-          <Link href="/">
-            <button className="cursor-pointer text-2xl hover:text-gray-400">
-              <BsYoutube />
-            </button>
-          </Link>
-        </div>
 
         <div className="p-5">
-          <p className="text-gray-200 font-bold text-2xl pb-4">Contact US</p>
-          <p className="text-gray-200 pb-4">
-            team@krussautomotiveservices.com <br />
-            Tel: +2349025301696 <br />
-            <span className="ml-7">+2347030894805</span> <br />
-            Lagos, Nigeria. <br />
-          </p>
+          <p className=" font-bold text-2xl pb-4">Contact US</p>
+          <p className="font-bold">Address</p>
+          <p className="mb-2">Kosofe, Lagos, Nigeria</p>
+          <p className="font-bold">Email</p>
+          <p className="mb-2"> team@krussautomotiveservices.com</p>
+          <p className="font-bold">Phone</p>
+          <p className="mb-2"> +2349025301696 </p>
+          <button className=" mt-4 bg-white text-black font-medium rounded-md px-4 py-2">
+            <BsWhatsapp className="inline-block mr-2 text-xl" /> Chat on
+            WhatsApp
+          </button>
+        </div>
+
+        <div className=" p-5 ">
+          <p className=" font-bold text-2xl pb-4">Stay Connected</p>
+          <p className="mb-2">
+            Keep up to date with industry insights and latest news
+          </p>{" "}
+          <input
+            required
+            type="email"
+            placeholder="Email address"
+            className="ring-1 ring-black-300  rounded-md px-4 py-2 outline-none focus:none "
+          />
+          <button className=" m-2 bg-white text-black font-medium rounded-md px-4 py-2 ">
+            Subscribe
+          </button>
+          <div className="flex gap-6 mt-5">
+            <Link href="/">
+              <button className="cursor-pointer text-2xl hover:text-gray-400">
+                <BsLinkedin />
+              </button>
+            </Link>
+
+            <Link href="/">
+              <button className="cursor-pointer text-2xl hover:text-gray-400">
+                <BsInstagram />
+              </button>
+            </Link>
+
+            <Link href="/">
+              <button className="cursor-pointer text-2xl hover:text-gray-400">
+                <BsTwitter />
+              </button>
+            </Link>
+
+            <Link href="/">
+              <button className="cursor-pointer text-2xl hover:text-gray-400">
+                <BsFacebook />
+              </button>
+            </Link>
+
+            <Link href="/">
+              <button className="cursor-pointer text-2xl hover:text-gray-400">
+                <BsYoutube />
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
       <hr />
 
-      <footer className="py-4 bg-gray-900 text-white text-center">
+      <footer className="py-4 bg-gray-900  text-center">
         <p>
           &copy; {new Date().getFullYear()} Kruss Automotive Services. All
           rights reserved.

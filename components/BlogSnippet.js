@@ -9,15 +9,41 @@ const BlogSnippet = () => {
   `;
 
   return (
-    <div className="rounded-lg p-6 shadow-lg flex flex-col md:flex-row items-center">
-      <div className="w-full md:w-1/2 mb-4 md:mb-0 items-center">
-        <Image src={BlogImage} alt="Blog Image" width={300} height={180} />
-      </div>
-      <div className="w-full md:w-1/2 md:pl-6">
-        <p className="text-lg mb-4 text-[#515B6D]">{snippetContent}</p>
-        <Link href="/blog" className="text-blue-500">
-          Read more
-        </Link>
+    <div className="relative bg-gradient-to-b from-gray-500 to-gray-700">
+      <Image
+        className="object-cover w-full h-[50vh] md:h-screen"
+        src={BlogImage}
+        alt="Blog Image"
+        priority
+      />
+      <div className="absolute inset-0 bg-black opacity-50"></div>
+      <div className="absolute inset-0 flex justify-center items-center">
+        <div className="flex flex-col md:flex-row w-full max-w-5xl p-6 bg-white text-black rounded-lg">
+          <div className="md:w-1/2 p-6">
+            <h3 className="text-3xl text-center font-bold mb-4">
+              Exciting News
+            </h3>
+            <p className="text-lg md:text-xl text-center mb-4">
+              Check out our e-book{" "}
+              <span className="text-blue-500">
+                "How to Buy and Sell Nigerian Used Cars"
+              </span>
+            </p>
+            <div className="text-center">
+              <Link href="/ebook">
+                <button className="bg-[#0B2546] text-white font-bold rounded-md px-6 py-3 text-lg">
+                  Purchase
+                </button>
+              </Link>
+            </div>
+          </div>
+          <div className="md:w-1/2 p-6">
+            <p className="text-lg mb-4">{snippetContent}</p>
+            <Link href="/blog" className="text-blue-500">
+              Read more
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   );
