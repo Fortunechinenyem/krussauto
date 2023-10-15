@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { GoLocation } from "react-icons/go";
 import { HiOutlineMailOpen } from "react-icons/hi";
 
-import Navbar from "@/components/Navbar";
+import Navbar from "@/components/Nav/Navbar";
 // import Footer from "@/components/Footer";
 
 function ContactUs() {
@@ -140,7 +140,7 @@ function ContactUs() {
               </div>
               <button
                 type="submit"
-                className="inline-block self-start bg-[#7ebebe] text-black font-bold rounded-md px-6 py-2 text-lg px-6 py-3 rounded-md text-sm font-medium"
+                className=" button px-6 py-2 text-lg px-6 py-3 rounded-md text-sm font-medium"
                 disabled={submitting}
               >
                 {submitting ? "Submitting..." : "Send Message"}

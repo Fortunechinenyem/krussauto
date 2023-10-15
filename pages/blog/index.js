@@ -1,11 +1,9 @@
 import React from "react";
-import BlogHero from "../../public/assets/images/car2.jpeg";
+
 import Image from "next/image";
 
 import Link from "next/link";
-import Logo from "../../public/assets/images/img (1).jpg";
-import Blog1 from "../../public/assets/images/pic (4).jpg";
-import Blog2 from "../../public/assets/images/img (8).jpg";
+import { BlogHero, Blog1, Blog2, Blog3 } from "../../public/images/index";
 import {
   BsLinkedin,
   BsInstagram,
@@ -13,7 +11,7 @@ import {
   BsFacebook,
   BsYoutube,
 } from "react-icons/bs";
-import BlogNav from "@/components/BlogNav";
+import BlogNav from "@/components/Nav/BlogNav";
 
 const Blog = () => {
   return (
@@ -46,7 +44,7 @@ const Blog = () => {
               on...
             </p>
             <Link href="/blog/tire-selection">
-              <button className="mt-9 text-black-300 bg-white text-[#2F4858] hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+              <button className="mt-9  hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                 Read More
               </button>
             </Link>
@@ -112,81 +110,55 @@ const Blog = () => {
         </div>
 
         <div className="mt-8 md:w-[300px] mx-auto">
-          <div className="bg-gray-100 p-6 rounded-lg">
-            <h2 className="text-2xl font-bold mb-4">Stay Updated!</h2>
-
-            <form className="flex flex-col space-y-2">
-              <input
-                type="name"
-                placeholder="Enter your name"
-                className="border border-gray-300 rounded-lg px-4 py-2"
-              />
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="border border-gray-300 rounded-lg px-4 py-2"
-              />
-              <button className="text-black-300 bg-[#006950] text-white hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                Subscribe
-              </button>
-            </form>
-          </div>
-          <div className="mt-9 mb-7 ">
-            <form className="flex items-center">
-              <input
-                type="search"
-                placeholder="Enter your search topic"
-                className="border border-gray-300 rounded-l-lg px-4 py-2 w-64 focus:outline-none focus:border-blue-500"
-              />
-              <button className="bg-[#006950] text-white hover:bg-blue-700 px-6 py-2 rounded-r-lg text-sm font-medium">
-                Search
-              </button>
-            </form>
-          </div>
-
-          <div className="mt-9 mb-7">
-            <p className="font-bold">Socials</p>
-            <div className="flex gap-6 p-5">
+          <div className=" p-5 ">
+            <p className=" font-bold text-2xl pb-4">Stay Connected</p>
+            <p className="mb-2">
+              Keep up to date with industry insights and latest news
+            </p>{" "}
+            <input
+              required
+              type="email"
+              placeholder="Email address"
+              className="ring-1 ring-black-300  rounded-md px-4 py-2 outline-none focus:none "
+            />
+            <button className=" m-2 button px-4 py-2 ">Subscribe</button>
+            <div className="flex gap-6 mt-5">
               <Link href="/">
-                <button className="cursor-pointer text-4xl hover:text-gray-400">
+                <button className="cursor-pointer text-2xl hover:text-gray-400">
                   <BsLinkedin />
                 </button>
-                LinkedIn
               </Link>
 
               <Link href="/">
                 <button className="cursor-pointer text-2xl hover:text-gray-400">
                   <BsInstagram />
                 </button>
-                Instagram
               </Link>
 
               <Link href="/">
                 <button className="cursor-pointer text-2xl hover:text-gray-400">
                   <BsTwitter />
                 </button>
-                Twitter
               </Link>
 
               <Link href="/">
                 <button className="cursor-pointer text-2xl hover:text-gray-400">
                   <BsFacebook />
                 </button>
-                Facebook
               </Link>
 
               <Link href="/">
                 <button className="cursor-pointer text-2xl hover:text-gray-400">
                   <BsYoutube />
                 </button>
-                Youtube
               </Link>
             </div>
           </div>
+
           <div className="mt-9 mb-7">
             <p className="font-bold ">News</p>
             <Link href="/" className=" items-center mb-7">
-              <Image className="w-64" src={Logo} alt="logo" priority />
+              <Image className="w-64" src={Blog3} alt="logo" priority />
             </Link>
           </div>
           <div className="mt-9 mb-7">

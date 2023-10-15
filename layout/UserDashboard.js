@@ -5,7 +5,7 @@ import { FaHamburger } from "react-icons/fa";
 import { ImBriefcase } from "react-icons/im";
 import { MdChat, MdHome, MdPerson, MdSupportAgent } from "react-icons/md";
 import { BiLogOut } from "react-icons/bi";
-import Logo from "../public/assets/images/logo.png";
+import Logo from "../public/images/index";
 
 const UserDashboardLayout = ({ children }) => {
   return (

@@ -3,10 +3,10 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 
 import InspectionLayout from "@/layout/InspectionLayout";
-import CheckedBoxesSection from "@/components/CheckedBoxesSection";
-import CommentsSection from "@/components/CommentsSection";
-import DamagedPartsSection from "@/components/DamagedPartsSection";
-import PercentageChecksSection from "@/components/PercentageCheck";
+import CheckedBoxesSection from "@/components/inspection/CheckedBoxesSection";
+import CommentsSection from "@/components/forum/CommentsSection";
+import DamagedPartsSection from "@/components/inspection/DamagedPartsSection";
+import PercentageChecksSection from "@/components/inspection/PercentageCheck";
 import VehicleInformationSection from "@/components/VehicleInformation";
 
 export default function InspectionPage() {

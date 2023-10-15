@@ -1,17 +1,26 @@
 import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
-import Navbar from "@/components/Navbar";
+import Navbar from "@/components/Nav/Navbar";
 import Footer from "@/components/Footer";
 import Image from "next/image";
 import Link from "next/link";
 
-import Logo from "../public/assets/images/carbg.png";
-import How from "../public/assets/images/how.png";
-import InvestImage from "../public/assets/images/k5.jpeg";
+import {
+  HowItWorks,
+  Hero,
+  InvestmentImage,
+  Product1,
+  Product2,
+  Product3,
+  Product4,
+  Product5,
+  Product6,
+} from "../public/images/index";
+
 import { FcInspection } from "react-icons/fc";
 import { MdOutlineMiscellaneousServices } from "react-icons/md";
-import { FaCar } from "react-icons/fa";
+import { FaArrowAltCircleRight, FaCar } from "react-icons/fa";
 import { FaMoneyBillAlt } from "react-icons/fa";
 import { MdSyncProblem } from "react-icons/md";
 import { GiDiscussion } from "react-icons/gi";
@@ -19,7 +28,8 @@ import FAQs from "./faq";
 
 import Aos from "aos";
 import "aos/dist/aos.css";
-import BlogSnippet from "@/components/BlogSnippet";
+import BlogSnippet from "@/components/blog/BlogSnippet";
+import ProductCards from "@/components/cards/ProductCards";
 
 export default function HomePage() {
   const [customerCount, setCustomerCount] = useState(0);
@@ -74,7 +84,7 @@ export default function HomePage() {
     <div className="m-2 text-xl">
       <Navbar />
 
-      <div className="mt-9 p-4 mb-9 text-white bg-gradient-to-b from-gray-500 to-gray-700 flex flex-col md:flex-row items-center">
+      <div className="mt-9 p-4 mb-9 text-white bg-gradient-to-b from-[#00B0BA] to-gray-700 flex flex-col md:flex-row items-center">
         <div className="md:w-1/2 mt-7">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold">
             {t("Get Your Auto Services Needs Taken Care Of")}
@@ -90,123 +100,56 @@ export default function HomePage() {
           data-aos="fade-down"
           data-aos-delay="400"
         >
-          <Image className="w-full max-w-md" src={Logo} alt="logo" priority />
+          <Image className="w-full max-w-md" src={Hero} alt="logo" priority />
         </div>
       </div>
-      <section className="">
-        <div data-aos="fade-down" data-aos-delay="400">
-          <h3 className="p-4 text-[#11111]  text-center text-2xl md:text-2xl lg:text-4xl font-bold mb-4">
-            Our Product Suite
-          </h3>
+      <section className="product suite">
+        <ProductCards />
+      </section>
+      <section className="container mx-auto bg-[#F0F0F0]">
+        <div className="text-center mt-9 mb-9">
+          <h3 className="text-3xl font-bold">Why Kruss?</h3>
         </div>
-        <div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-7 mt-9 text-[#11111] text-xl md:text-xl lg:text-2xl"
-          data-aos="fade-down"
-          data-aos-delay="400"
-        >
-          <Link href="/services">
-            <div
-              className="bg-[] rounded-lg p-6 mt-7 shadow-lg"
-              data-aos="fade-down"
-              data-aos-delay="400"
-            >
-              <div className="">
-                <p className="text-xl font-bold mb-2">
-                  Pre-Purchase Inspection{" "}
-                  <span>
-                    <FcInspection />
-                  </span>
-                </p>
-              </div>
+
+        <div>
+          <div className="flex flex-wrap justify-center gap-8">
+            <div className="max-w-md lg:max-w-l lg:w-1/2 p-6 rounded-lg bg-blue-300">
+              <h4 className="text-2xl font-bold mb-4">Exceptional Service</h4>
+              <p className="text-gray-800">
+                We provide top-notch automotive services with a focus on quality
+                and excellence.
+              </p>
             </div>
-          </Link>
-          <Link href="/services/autoerrand">
-            {" "}
-            <div
-              className="bg-[] rounded-lg p-6 mt-7 shadow-lg"
-              data-aos="fade-down"
-              data-aos-delay="400"
-            >
-              <div className="">
-                {" "}
-                <p className="text-xl font-bold mb-2">
-                  Auto-Errand As A Service{" "}
-                  <span>
-                    <MdOutlineMiscellaneousServices />
-                  </span>
-                </p>
-              </div>
+
+            <div className="max-w-md lg:max-w-l lg:w-1/2 p-6 rounded-lg bg-green-300">
+              <h4 className="text-2xl font-bold mb-4">Reliable Solutions</h4>
+              <p className="text-gray-800">
+                Count on us for consistent and dependable solutions tailored to
+                meet your automotive needs.
+              </p>
             </div>
-          </Link>
-          <Link href="/services">
-            <div
-              className="bg-[] rounded-lg p-6 mt-7 shadow-lg"
-              data-aos="fade-down"
-              data-aos-delay="400"
-            >
-              <div className=" ">
-                <p className="text-xl font-bold mb-2">
-                  Fleet Management{" "}
-                  <span>
-                    <FaCar />
-                  </span>
-                </p>
-              </div>
+          </div>
+
+          <div className="flex flex-wrap justify-center gap-8 mt-4">
+            <div className="max-w-md lg:max-w-l lg:w-1/2 p-6 rounded-lg bg-yellow-300">
+              <h4 className="text-2xl font-bold mb-4">Customer Satisfaction</h4>
+              <p className="text-gray-800">
+                Your satisfaction is our priority. We aim to exceed your
+                expectations in every service we offer.
+              </p>
             </div>
-          </Link>
-          <Link href="/services">
-            <div
-              className="bg-[] rounded-lg p-6 mt-7 shadow-lg "
-              data-aos="fade-down"
-              data-aos-delay="400"
-            >
-              <div className=" ">
-                <p className="text-xl font-bold mb-2">
-                  Buy, Sell Cars{" "}
-                  <span>
-                    <FaMoneyBillAlt />
-                  </span>
-                </p>
-              </div>
+
+            <div className="max-w-md lg:max-w-l lg:w-1/2 p-6 rounded-lg bg-pink-300">
+              <h4 className="text-2xl font-bold mb-4">Innovative Solutions</h4>
+              <p className="text-gray-800">
+                We constantly innovate and adapt to provide cutting-edge
+                solutions that redefine the automotive experience.
+              </p>
             </div>
-          </Link>
-          <Link href="/services">
-            {" "}
-            <div
-              className="bg-[] rounded-lg p-6 mt-7 shadow-lg"
-              data-aos="fade-down"
-              data-aos-delay="400"
-            >
-              <div className=" ">
-                <p className="text-xl font-bold mb-2">
-                  Car Diagnostics{" "}
-                  <span>
-                    <MdSyncProblem />
-                  </span>
-                </p>
-              </div>
-            </div>
-          </Link>
-          <Link href="/services">
-            {" "}
-            <div
-              className="bg-[] rounded-lg p-6 mt-7 shadow-lg"
-              data-aos="fade-down"
-              data-aos-delay="400"
-            >
-              <div className=" ">
-                {" "}
-                <p className="text-xl font-bold mb-2">
-                  Auto Consultancy{" "}
-                  <span>
-                    <GiDiscussion />
-                  </span>
-                </p>
-              </div>
-            </div>
-          </Link>
+          </div>
         </div>
       </section>
+
       <section className="container mx-auto bg-[#F0F0F0]">
         <div className="text-center mt-9 mb-9">
           <h3 className="text-3xl font-bold">How It Works</h3>
@@ -217,7 +160,12 @@ export default function HomePage() {
             data-aos="fade-down"
             data-aos-delay="400"
           >
-            <Image className="w-full max-w-md" src={How} alt="logo" priority />
+            <Image
+              className="w-full max-w-md"
+              src={HowItWorks}
+              alt="how it works"
+              priority
+            />
           </div>
           <div className=" md:w-1/2  justify-center mb-7 mt-9">
             <div className=" rounded-lg p-6">
@@ -240,8 +188,8 @@ export default function HomePage() {
             </div>
             <div className="mt-8 ">
               <Link href="/appointment">
-                <button className="sm:text-center bg-[#0B2546] text-white font-bold rounded-md px-6 py-2 text-lg px-6 py-3 rounded-md text-x font-medium">
-                  Get Started
+                <button className="mt-4 button px-4 py-2 ml-4 md:mt-0 sm:mt-2">
+                  Get started
                 </button>
               </Link>
             </div>
@@ -253,7 +201,7 @@ export default function HomePage() {
         <div className="h-[50vh] md:h-screen relative">
           <Image
             className="absolute w-full h-full object-cover mix-blend-overlay"
-            src={InvestImage}
+            src={InvestmentImage}
             alt="Investment Image"
             priority
           />
@@ -272,7 +220,7 @@ export default function HomePage() {
               </p>
               <div className="text-center">
                 <Link href="/services">
-                  <button className="bg-[#0B2546] text-white font-bold rounded-md px-6 py-3 text-lg">
+                  <button className="button font-bold rounded-md px-6 py-3 text-lg">
                     See how it works
                   </button>
                 </Link>
@@ -283,7 +231,7 @@ export default function HomePage() {
       </section>
 
       <section className=" mt-5 mx-auto">
-        <div className="text-center mt-7 mb-7 shadow-lg rounded-lg overflow-hidden mt-9 flex flex-col md:flex-row justify-center items-center bg-gradient-to-b from-gray-500 to-gray-700 p-10">
+        <div className="text-center mt-7 mb-7 shadow-lg rounded-lg overflow-hidden mt-9 flex flex-col md:flex-row justify-center items-center bg-gradient-to-b from-[#00B0BA] to-gray-700 p-10">
           <div className="text-white">
             <p id="satisfiedCustomers" className="text-2xl font-bold">
               {customerCount} Satisfied Customers

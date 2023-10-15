@@ -20,7 +20,6 @@ export default function DashboardPage() {
         <section className="business-overview p-6 bg-white rounded-lg shadow-md">
           <h2 className="text-xl font-bold mb-2">Business Overview</h2>
           <p>This section provides an overview of our automobile business.</p>
-          {/* Add more content here */}
         </section>
 
         <section className="kpi p-6 bg-white rounded-lg shadow-md">

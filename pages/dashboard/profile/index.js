@@ -1,6 +1,6 @@
 import UserDashboardLayout from "@/layout/UserDashboard";
 import React from "react";
-import DashboardCard from "@/components/DashboardCard";
+import DashboardCard from "@/components/userdashboard/DashboardCard";
 
 const ProfilePage = () => {
   return (

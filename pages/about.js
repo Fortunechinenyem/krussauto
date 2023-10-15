@@ -8,10 +8,10 @@ import {
   FaCarSide,
 } from "react-icons/fa";
 import { IoMdPeople } from "react-icons/io";
-import AboutHero from "../public/assets/images/car2.jpeg";
-import Founder from "../public/assets/images/founderbg.png";
+import { AboutHero, Founder } from "@/public/images";
+
 import Image from "next/image";
-import Navbar from "@/components/Navbar";
+import Navbar from "@/components/Nav/Navbar";
 import Footer from "@/components/Footer";
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -188,13 +188,14 @@ const About = () => {
           </p>
           <div className="mt-5">
             <Link href="/careers">
-              <button className="inline-block bg-[#0B2546] text-white font-bold rounded-md px-6 py-3 text-lg">
+              <button className="button px-6 py-3 text-lg">
                 Go to Job Openings
               </button>
             </Link>
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

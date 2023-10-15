@@ -53,6 +53,21 @@ input:-webkit-autofill:active {
     opacity: 1;
   }
 }
+.button {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  padding: 16px 56px;
+  color: #fafafa;
+  background: #3a9ea3;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  white-space: nowrap;
+}
 
 #satisfiedCustomers,
 #trustedBrands {

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Navbar from "@/components/Navbar";
+import Navbar from "@/components/Nav/Navbar";
 
 const services = [
   "Pre-Purchase Inspection",
@@ -97,7 +97,7 @@ const Appointment = () => {
       margin: "2rem auto",
       padding: "1rem",
       maxWidth: "600px",
-      background: "#515B6D",
+      background: "#414656",
       borderRadius: "10px",
       boxShadow: "0px 2px 10px rgba(0, 0, 0, 0.1)",
     },
@@ -217,7 +217,7 @@ const Appointment = () => {
               value={message}
               onChange={handleMessageChange}
             />
-            <button type="submit" style={styles.button}>
+            <button type="submit" className="button">
               Book Appointment
             </button>
           </form>

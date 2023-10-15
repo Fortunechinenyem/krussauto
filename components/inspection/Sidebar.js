@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import Image from "next/image";
-import Logo from "../../public/assets/images/logo.png";
+import Logo from "../../public/images/index";
 
 export default function Sidebar() {
   return (

@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Logo from "../public/assets/images/logo.png";
+import { Logo } from "@/public/images";
 import {
   BsLinkedin,
   BsInstagram,
@@ -13,7 +13,7 @@ import {
 
 function Footer() {
   return (
-    <div className="bg-gray-900 text-xl text-white p-4 ">
+    <div className="bg-gradient-to-b from-[#00B0BA] to-gray-400  text-xl text-black p-4 ">
       <div className="h-1/2 w-full flex md:flex-row flex-col justify-around items-start ">
         <div className="p-5">
           <Link href="/" className="flex title-font font-medium items-center">
@@ -111,7 +111,7 @@ function Footer() {
       </div>
       <hr />
 
-      <footer className="py-4 bg-gray-900  text-center">
+      <footer className="py-4 bg-gray-500  text-center">
         <p>
           &copy; {new Date().getFullYear()} Kruss Automotive Services. All
           rights reserved.
