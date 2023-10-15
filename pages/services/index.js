@@ -1,6 +1,6 @@
 import React from "react";
 
-import ServicesHero from "../../public/assets/images/kruss (1).jpg";
+// import ServicesHero from "../../public/assets/images/kruss (1).jpg";
 import Image from "next/image";
 import Navbar from "@/components/Nav/Navbar";
 import Footer from "@/components/Footer";
@@ -19,12 +19,12 @@ const Services = () => {
     <div className="m-2 text-xl">
       <Navbar />
       <div className="relative h-screen bg-gradient-to-b from-gray-500 to-gray-700 w-full bg-cover">
-        <Image
+        {/* <Image
           className="absolute w-full h-full object-cover mix-blend-overlay"
           src={ServicesHero}
           alt="about hero"
           priority
-        />
+        /> */}
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="absolute inset-0 flex justify-center items-center">
           <div
