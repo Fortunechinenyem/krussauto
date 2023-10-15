@@ -7,7 +7,6 @@ import CheckedBoxesSection from "@/components/inspection/CheckedBoxesSection";
 import CommentsSection from "@/components/forum/CommentsSection";
 import DamagedPartsSection from "@/components/inspection/DamagedPartsSection";
 import PercentageChecksSection from "@/components/inspection/PercentageCheck";
-import VehicleInformationSection from "@/components/VehicleInformation";
 
 export default function InspectionPage() {
   useEffect(() => {
@@ -24,13 +23,6 @@ export default function InspectionPage() {
           Vehicle Inspection Report
         </h1>
         <div className="grid grid-cols-1 gap-6">
-          <div
-            className="rounded-lg bg-white shadow-md p-6"
-            data-aos="fade-down"
-            data-aos-delay="200"
-          >
-            <VehicleInformationSection />
-          </div>
           <div
             className="rounded-lg bg-white shadow-md p-6"
             data-aos="fade-down"
