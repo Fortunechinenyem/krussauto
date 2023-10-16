@@ -52,9 +52,9 @@ function ContactUs() {
   };
 
   return (
-    <div className=" text-xl">
+    <div className=" container mx-auto ">
       <Navbar />
-      <div className="container text-center my-12 mb-7">
+      <div className="container mx-auto text-center my-12 mb-7">
         <h3 className="font-bold text-4xl mb-7">Get in Touch</h3>
         <p className="text-xl">
           Tell us where you are and where you want to be.

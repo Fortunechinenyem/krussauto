@@ -86,3 +86,33 @@ export async function getAllAppointments() {
 
   return appointments;
 }
+// Investors
+export async function getAllInvestors() {
+  const client = await connectToDatabase();
+  const db = client.db();
+
+  const investors = await db.collection("investors").find().toArray();
+
+  return investors;
+}
+
+export async function saveInvestor(investorData) {
+  const client = await connectToDatabase();
+  const db = client.db("krussauto");
+  const investorsCollection = db.collection("investors");
+
+  const result = await investorsCollection.insertOne(investorData);
+
+  return result.insertedId;
+}
+
+export async function updateInvestor(investorId, newData) {
+  const client = await connectToDatabase();
+  const db = client.db();
+
+  const result = await db
+    .collection("investors")
+    .updateOne({ _id: investorId }, { $set: newData });
+
+  return result;
+}

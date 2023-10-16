@@ -159,6 +159,7 @@ const Appointment = () => {
           <div style={styles.successMessage}>
             <p>Your appointment has been booked successfully!</p>
             <button
+              className=" "
               style={styles.button}
               onClick={() => setFormSubmitted(false)}
             >
@@ -217,7 +218,7 @@ const Appointment = () => {
               value={message}
               onChange={handleMessageChange}
             />
-            <button type="submit" className="button">
+            <button type="submit" className="button mt-4">
               Book Appointment
             </button>
           </form>

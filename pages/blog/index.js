@@ -15,9 +15,9 @@ import BlogNav from "@/components/Nav/BlogNav";
 
 const Blog = () => {
   return (
-    <div className="m-2 text-xl">
+    <div className="container mx-auto">
       <BlogNav />
-      <div className="relative w-full h-[50vh] md:h-[50vh] lg:h-screen bg-gradient-to-b from-gray-500 to-gray-700 bg-cover">
+      <div className="mt-9 relative w-full h-[50vh] md:h-[50vh] lg:h-screen bg-gradient-to-b from-gray-500 to-gray-700 bg-cover">
         <Image
           className="absolute w-full h-full object-cover mix-blend-overlay"
           src={BlogHero}

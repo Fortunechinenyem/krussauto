@@ -6,24 +6,8 @@ import Footer from "@/components/Footer";
 import Image from "next/image";
 import Link from "next/link";
 
-import {
-  HowItWorks,
-  Hero,
-  InvestmentImage,
-  Product1,
-  Product2,
-  Product3,
-  Product4,
-  Product5,
-  Product6,
-} from "../public/images/index";
+import { HowItWorks, Hero, InvestmentImage } from "../public/images/index";
 
-import { FcInspection } from "react-icons/fc";
-import { MdOutlineMiscellaneousServices } from "react-icons/md";
-import { FaArrowAltCircleRight, FaCar } from "react-icons/fa";
-import { FaMoneyBillAlt } from "react-icons/fa";
-import { MdSyncProblem } from "react-icons/md";
-import { GiDiscussion } from "react-icons/gi";
 import FAQs from "./faq";
 
 import Aos from "aos";
@@ -84,25 +68,27 @@ export default function HomePage() {
     <div className="m-2 text-xl">
       <Navbar />
 
-      <div className="mt-9 p-4 mb-9 text-white bg-gradient-to-b from-[#00B0BA] to-gray-700 flex flex-col md:flex-row items-center">
-        <div className="md:w-1/2 mt-7">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold">
-            {t("Get Your Auto Services Needs Taken Care Of")}
-          </h1>
-          <p className="text-lg md:text-xl mt-4">
-            Don't get stuck with a lemon – let our professionals take the load
-            off you.
-          </p>
-        </div>
+      <section className="container mx-auto">
+        <div className="mt-9 p-4 mb-9 text-white bg-gradient-to-b from-[#00B0BA] to-gray-700 flex flex-col md:flex-row items-center">
+          <div className="md:w-1/2 mt-7">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold">
+              {t("Get Your Auto Services Needs Taken Care Of")}
+            </h1>
+            <p className="text-lg md:text-xl mt-4">
+              Don't get stuck with a lemon – let our professionals take the load
+              off you.
+            </p>
+          </div>
 
-        <div
-          className="md:w-1/2 flex justify-center mt-7 "
-          data-aos="fade-down"
-          data-aos-delay="400"
-        >
-          <Image className="w-full max-w-md" src={Hero} alt="logo" priority />
+          <div
+            className="md:w-1/2 flex justify-center mt-7 "
+            data-aos="fade-down"
+            data-aos-delay="400"
+          >
+            <Image className="w-full max-w-md" src={Hero} alt="logo" priority />
+          </div>
         </div>
-      </div>
+      </section>
       <section className="product suite">
         <ProductCards />
       </section>
@@ -197,7 +183,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="relative mt-5 bg-gradient-to-b from-gray-500 to-gray-700">
+      <section className="container mx-auto relative mt-5 bg-gradient-to-b from-gray-500 to-gray-700">
         <div className="h-[50vh] md:h-screen relative">
           <Image
             className="absolute w-full h-full object-cover mix-blend-overlay"
@@ -230,7 +216,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className=" mt-5 mx-auto">
+      <section className="container mx-auto mt-5 mx-auto">
         <div className="text-center mt-7 mb-7 shadow-lg rounded-lg overflow-hidden mt-9 flex flex-col md:flex-row justify-center items-center bg-gradient-to-b from-[#00B0BA] to-gray-700 p-10">
           <div className="text-white">
             <p id="satisfiedCustomers" className="text-2xl font-bold">
@@ -286,7 +272,7 @@ export default function HomePage() {
           <FAQs />
         </div>
       </section>
-      <section className="p-5 mt-5 bg-[#F0F0F0] mx-auto my-10 rounded-lg shadow-lg">
+      <section className="container mx-auto p-5 mt-5 bg-[#F0F0F0] mx-auto my-10 rounded-lg shadow-lg">
         <div className=" mt-5">
           <h2 className="text-3xl text-center mt-5 mb-5 font-bold mb-6 text-[#515B6D]">
             Check Out Our Latest Blog Post

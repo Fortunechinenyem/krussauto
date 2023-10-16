@@ -68,6 +68,22 @@ input:-webkit-autofill:active {
   border-radius: 10px;
   white-space: nowrap;
 }
+.button2 {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  padding: 16px 56px;
+  color: #1b1a1a;
+  background: #abc3f7;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  outline-color: #111111;
+  white-space: nowrap;
+}
 
 #satisfiedCustomers,
 #trustedBrands {

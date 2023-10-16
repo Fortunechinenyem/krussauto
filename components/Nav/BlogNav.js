@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Logo from "../../public/images/index";
+
 import { BiSearch } from "react-icons/bi";
 import {
   // BsLinkedin,
@@ -11,6 +11,7 @@ import {
   // BsYoutube,
 } from "react-icons/bs";
 import Hamburger from "../HamburgerMenu";
+import { Logo } from "@/public/images";
 
 export default function BlogNav() {
   const [isOpen, setIsOpen] = useState(false);

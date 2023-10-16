@@ -5,6 +5,7 @@ import Blog3 from "./img (1).jpg";
 
 import Hero from "./carbg.png";
 import AboutHero from "./carbg.png";
+import ServicesHero from "./krussservices.png";
 import Founder from "./5236.jpg";
 import HowItWorks from "./how.png";
 import InvestmentImage from "./kruss1.jpg";
@@ -35,4 +36,5 @@ export {
   Product4,
   Product5,
   Product6,
+  ServicesHero,
 };

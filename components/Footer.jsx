@@ -13,7 +13,7 @@ import {
 
 function Footer() {
   return (
-    <div className="bg-gradient-to-b from-[#00B0BA] to-gray-400  text-xl text-black p-4 ">
+    <div className="container mx-auto bg-gradient-to-b from-[#00B0BA] to-gray-400  text-xl text-black p-4 ">
       <div className="h-1/2 w-full flex md:flex-row flex-col justify-around items-start ">
         <div className="p-5">
           <Link href="/" className="flex title-font font-medium items-center">
