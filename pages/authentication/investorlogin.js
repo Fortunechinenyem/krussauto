@@ -23,7 +23,7 @@ export default function InvestorLoginPage() {
       Cookies.set("token", token);
 
       // Redirect to the dashboard
-      router.push("/dashboard");
+      router.push("/dashboard/investors");
     } catch (error) {
       setError("Invalid email or password. Please try again.");
       console.error(error);
@@ -31,13 +31,13 @@ export default function InvestorLoginPage() {
   };
 
   return (
-    <div className="px-4 md:px-8 lg:px-16 flex flex-col items-center justify-center min-h-screen bg-gray-100">
-      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-800">
+    <div className=" text-[#FAFAFA] px-4 md:px-8 lg:px-16 flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-[#00B0BA] to-gray-700">
+      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 ">
         Login
       </h1>
       <form
         onSubmit={handleLogin}
-        className="bg-white shadow-md rounded-md p-8"
+        className=" bg-white shadow-md rounded-md p-8"
       >
         <input
           type="email"

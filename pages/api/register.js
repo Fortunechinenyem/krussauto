@@ -25,7 +25,6 @@ export default async function handler(req, res) {
       email,
     });
 
-    // Close the client connection when done
     client.close();
 
     res.status(200).json({ message: "Registration successful" });

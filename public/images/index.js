@@ -18,6 +18,7 @@ import Product4 from "./product4.jpeg";
 import Product5 from "./product5.jpg";
 import Product6 from "./product6.jpg";
 import TestimonialImage from "./founder.jpg";
+import NotFoundImage from "./404-image.jpg";
 
 export {
   AboutHero,
@@ -31,6 +32,7 @@ export {
   HowItWorks,
   InvestmentImage,
   Logo,
+  NotFoundImage,
   Product1,
   Product2,
   Product3,

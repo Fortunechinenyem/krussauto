@@ -13,7 +13,7 @@ import {
 
 function Footer() {
   return (
-    <div className="container mx-auto bg-gradient-to-b from-[#00B0BA] to-gray-400  text-xl text-black p-4 ">
+    <div className="container mx-auto bg-gradient-to-b from-[#00B0BA] to-gray-400  text-black p-4 ">
       <div className="h-1/2 w-full flex md:flex-row flex-col justify-around items-start ">
         <div className="p-5">
           <Link href="/" className="flex title-font font-medium items-center">
@@ -21,7 +21,7 @@ function Footer() {
               className=" mb-5"
               src={Logo}
               alt="logo"
-              width={110}
+              width={150}
               priority
             />
           </Link>

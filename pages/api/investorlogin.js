@@ -8,7 +8,6 @@ export default async function handler(req, res) {
 
   const { email, password } = req.body;
 
-  // Validate the input
   if (!email || !password) {
     res.status(400).json({ message: "Email and password are required" });
     return;
@@ -18,10 +17,8 @@ export default async function handler(req, res) {
     const investor = await getInvestorByEmailAndPassword(email, password);
 
     if (investor) {
-      // Investor found, login successful
       res.status(200).json({ message: "Login successful" });
     } else {
-      // Investor not found or invalid credentials
       res.status(401).json({ message: "Invalid email or password" });
     }
   } catch (error) {

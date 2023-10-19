@@ -61,7 +61,7 @@ const ProductCards = () => {
     <section className="container mx-auto">
       <div data-aos="fade-down" data-aos-delay="400">
         <h3 className="p-4 text-[#11111] text-center text-2xl md:text-2xl lg:text-4xl font-bold mb-4">
-          Our Product Suite
+          Our Services
         </h3>
       </div>
       <div

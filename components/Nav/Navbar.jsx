@@ -69,10 +69,10 @@ function Navbar() {
           !isMenuOpen ? "hidden md:flex" : ""
         }`}
       >
-        <div className="login mb-2 md:mb-0  sm:mb-5">
+        <div className="login mb-2 md:mb-0   sm:mb-5">
           <Link
-            href="/login"
-            className="text-[#111111]  sm:mb-2 sm:mt-5 ml-12 md:ml-0"
+            href="/authentication/login"
+            className="text-[#111111] sm:mb-2 sm:mt-5 mx-auto sm:ml-10 md:ml-0"
             style={{ whiteSpace: "nowrap", fontFamily: "Lato" }}
           >
             Log In

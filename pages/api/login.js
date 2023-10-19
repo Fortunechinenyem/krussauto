@@ -23,14 +23,11 @@ export default async function handler(req, res) {
     const user = await collection.findOne({ email, password });
 
     if (user) {
-      // User found, login successful
       res.status(200).json({ message: "Login successful" });
     } else {
-      // User not found or invalid credentials
       res.status(401).json({ message: "Invalid email or password" });
     }
 
-    // Close the client connection when done
     client.close();
   } catch (error) {
     console.error("An error occurred:", error);
