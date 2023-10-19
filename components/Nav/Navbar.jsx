@@ -1,98 +1,88 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Logo } from "@/public/images";
+import { useRouter } from "next/router";
+import { NavBarItems } from "@/layout/constants";
 import Hamburger from "../HamburgerMenu";
+import Button from "../Buttons";
 
 function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [hasScrolled, setHasScrolled] = useState(false);
+  const router = useRouter();
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
+    setIsMenuOpen(!isMenuOpen);
+  };
+  const handleScroll = () => {
+    if (window.scrollY > 0) {
+      setHasScrolled(true);
+    } else {
+      setHasScrolled(false);
+    }
   };
 
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <div className="container mx-auto">
-      <header className="flex flex-col md:flex-row items-center justify-between p-4 w-full">
-        <div className="container flex items-center justify-between">
-          <Link href="/" className="flex title-font font-medium">
-            <Image className="" src={Logo} alt="logo" width={110} priority />
-          </Link>
+    <nav
+      className={`fixed container top-0 w-full flex flex-col md:flex-row items-center justify-between p-4  bg-white transition-all ease-in-out duration-300 ${
+        hasScrolled ? "shadow-lg" : ""
+      }`}
+      style={{ zIndex: 1000 }}
+    >
+      <div className=" container flex items-center justify-between">
+        <Link href="/" className="flex title-font gap-2 font-medium">
+          <Image className="" src={Logo} alt="logo" width={110} priority />
+        </Link>
 
-          <button
-            className="focus:outline-none md:hidden"
-            aria-label="Open Menu"
-            onClick={toggleMenu}
-          >
-            <Hamburger />
-          </button>
-        </div>
+        <button className="md:hidden focus:outline-none" onClick={toggleMenu}>
+          <Hamburger isMenuOpen={isMenuOpen} />
+        </button>
+      </div>
 
-        <nav
-          className={`container items-center flex flex-col md:flex-row gap-4 md:gap-5 mt-2 md:mt-0 ${
-            !isOpen ? "hidden md:flex" : ""
-          }`}
-        >
-          <Link
-            href="/"
-            className="text-[#111] sm:mb-3 text-xl"
-            onClick={toggleMenu}
-          >
-            Home
-          </Link>
-          <Link
-            href="/about"
-            className="text-[#111] sm:mb-3 text-xl"
-            onClick={toggleMenu}
-          >
-            About
-          </Link>
-          <Link
-            href="/services"
-            className="text-[#111] sm:mb-3 text-xl"
-            onClick={toggleMenu}
-          >
-            Services
-          </Link>
-
-          <Link
-            href="/blog"
-            className="text-[#111] sm:mb-3 text-xl"
-            onClick={toggleMenu}
-          >
-            Blog
-          </Link>
-          <Link
-            href="/contact"
-            className="text-[#111] sm:mb-3 text-xl"
-            onClick={toggleMenu}
-          >
-            Contact
-          </Link>
-          <div
-            className={`md:flex md:flex-row sm:gap-4 sm:flex-col mt-2 sm:mb-4 sm:mt-5 md:mt-0 items-center ${
-              !isOpen ? "hidden md:flex" : ""
-            }`}
-          >
-            <div className="login mb-2 md:mb-0  sm:mb-5">
-              <Link
-                href="/login"
-                className="button2 rounded-md border-black text-xl sm:mb-2 sm:mt-5 ml-8 md:ml-0"
-                style={{ whiteSpace: "nowrap" }}
-              >
-                Log In
-              </Link>
-            </div>
-            <Link href="/appointment">
-              <button className="mt-4 button px-4 py-2 ml-4 md:mt-0 sm:mt-2">
-                Get started
-              </button>
+      <ul
+        className={`container items-center flex flex-col md:flex-row gap-4 md:gap-7 mt-2 md:mt-0 ${
+          !isMenuOpen ? "hidden md:flex" : ""
+        }`}
+      >
+        {NavBarItems.map((item) => (
+          <li key={item.label} className="text-[#111] sm:mb-3 ">
+            <Link
+              href={item.url}
+              className={router.pathname === item.url ? "active-link" : ""}
+            >
+              {item.label}
             </Link>
-          </div>
-        </nav>
-        <hr />
-      </header>
-    </div>
+          </li>
+        ))}
+      </ul>
+
+      <div
+        className={`md:flex md:flex-row sm:gap-4 sm:flex-col mt-2 sm:mb-4 sm:mt-5 md:mt-0 items-center ${
+          !isMenuOpen ? "hidden md:flex" : ""
+        }`}
+      >
+        <div className="login mb-2 md:mb-0  sm:mb-5">
+          <Link
+            href="/login"
+            className="text-[#111111]  sm:mb-2 sm:mt-5 ml-12 md:ml-0"
+            style={{ whiteSpace: "nowrap", fontFamily: "Lato" }}
+          >
+            Log In
+          </Link>
+        </div>
+        <Link href="/appointment">
+          <button className="button ml-4 md:mt-0 sm:mt-2">Get Started</button>
+        </Link>
+      </div>
+    </nav>
   );
 }
 

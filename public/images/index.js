@@ -17,6 +17,7 @@ import Product3 from "./product3.jpg";
 import Product4 from "./product4.jpeg";
 import Product5 from "./product5.jpg";
 import Product6 from "./product6.jpg";
+import TestimonialImage from "./founder.jpg";
 
 export {
   AboutHero,
@@ -37,4 +38,5 @@ export {
   Product5,
   Product6,
   ServicesHero,
+  TestimonialImage,
 };

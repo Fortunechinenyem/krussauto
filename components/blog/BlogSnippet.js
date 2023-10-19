@@ -18,29 +18,23 @@ const BlogSnippet = () => {
       />
       <div className="absolute inset-0 bg-black opacity-50"></div>
       <div className="absolute inset-0 flex justify-center items-center">
-        <div className="flex flex-col md:flex-row w-full max-w-5xl p-6 bg-white text-black rounded-lg">
-          <div className="md:w-1/2 p-6">
-            <h3 className="text-3xl text-center font-bold mb-4">
-              Exciting News
-            </h3>
-            <p className="text-lg md:text-xl text-center mb-4">
-              Check out our e-book{" "}
-              <span className="text-blue-500">
-                "How to Buy and Sell Nigerian Used Cars"
-              </span>
-            </p>
-            <div className="text-center">
-              <Link href="/ebook">
-                <button className="button px-6 py-3 text-lg">Purchase</button>
-              </Link>
-            </div>
-          </div>
-          <div className="md:w-1/2 p-6">
-            <p className="text-lg mb-4">{snippetContent}</p>
-            <Link href="/blog" className="text-blue-500">
-              Read more
+        <div className="flex flex-col w-full max-w-5xl p-6 bg-white text-black rounded-lg">
+          <h3 className="text-3xl text-center font-bold mb-4">Exciting News</h3>
+          <p className="text-lg md:text-xl text-center mb-4">
+            Check out our e-book{" "}
+            <span className="text-blue-500">
+              "How to Buy and Sell Nigerian Used Cars"
+            </span>
+          </p>
+          <div className="text-center">
+            <Link href="/ebook">
+              <button className="button px-6 py-3 text-lg">Purchase</button>
             </Link>
           </div>
+          <p className="text-lg mt-6">{snippetContent}</p>
+          <Link href="/blog" className="text-blue-500 mt-4 text-center">
+            Read more
+          </Link>
         </div>
       </div>
     </div>

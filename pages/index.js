@@ -14,6 +14,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import BlogSnippet from "@/components/blog/BlogSnippet";
 import ProductCards from "@/components/cards/ProductCards";
+import Testimonial from "@/layout/Testimonial";
 
 export default function HomePage() {
   const [customerCount, setCustomerCount] = useState(0);
@@ -65,10 +66,10 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div className="m-2 text-xl">
+    <div className="container mx-auto">
       <Navbar />
 
-      <section className="container mx-auto">
+      <section className="container mx-auto mt-9   py-10 md:py-10">
         <div className="mt-9 p-4 mb-9 text-white bg-gradient-to-b from-[#00B0BA] to-gray-700 flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 mt-7">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold">
@@ -230,39 +231,18 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      <section>
-        <div
-          className="testimonial-section bg-gray-100 py-10"
-          data-aos="fade-down"
-          data-aos-delay="400"
-        >
-          <div className="container mx-auto">
-            <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-center mb-6">
-              Testimonials
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 text-center gap-6">
-              <div
-                className="testimonial-card bg-[] p-6 rounded-lg shadow-lg"
-                data-aos="fade-down"
-                data-aos-delay="400"
-              >
-                <p className=" text-lg mb-4">
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Aliquam venenatis eget elit nec accumsan."
-                </p>
-                <p className=" font-semibold">James Sturgis</p>
-              </div>
-              <div
-                className="testimonial-card bg-[] p-6 rounded-lg shadow-lg"
-                data-aos="fade-down"
-                data-aos-delay="400"
-              >
-                <p className=" text-lg mb-4">
-                  "Suspendisse consectetur nunc eget quam vulputate, ac gravida
-                  odio lacinia."
-                </p>
-                <p className=" font-semibold">Sheldon Cooper</p>
-              </div>
+      <section className="testimonialsection  mx-auto bg-[#F5F5F5]">
+        <div className="py-12">
+          <div className="mx-auto mb-5 text-center">
+            <h4 className="text-2xl text-[#141414] font-bold">
+              Dont just take Our Word for it...
+            </h4>
+            <p className="text-[#8C8C8C] text-xl mt-2 mb-5 text-center">
+              Here, we have testimonials from our past clients who have
+              patronised us
+            </p>
+            <div>
+              <Testimonial />
             </div>
           </div>
         </div>
