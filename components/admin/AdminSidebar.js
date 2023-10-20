@@ -2,7 +2,7 @@ import React from "react";
 import { FaHome, FaUsers, FaCog, FaSignOutAlt } from "react-icons/fa"; // You can customize these icons
 import Link from "next/link";
 import Image from "next/image";
-import Logo from "../../public/images/index";
+import { Logo } from "@/public/images";
 
 const AdminSidebar = () => {
   return (

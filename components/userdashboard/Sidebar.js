@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import Image from "next/image";
-import Logo from "../../public/images/index";
+
 import { AiOutlineHome } from "react-icons/ai";
 import { FcInspection } from "react-icons/fc";
 import { MdOutlineSupportAgent } from "react-icons/md";
@@ -9,6 +9,7 @@ import { MdOutlineHomeRepairService } from "react-icons/md";
 import { FaBlog } from "react-icons/fa";
 import { BsChat } from "react-icons/bs";
 import { BiLogOut } from "react-icons/bi";
+import { Logo } from "@/public/images";
 export default function Sidebar() {
   return (
     <div className=" p-4 h-screen">

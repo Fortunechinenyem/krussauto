@@ -2,7 +2,6 @@
 import React, { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
-
 import UserDashboardLayout from "@/layout/UserDashboard";
 
 export default function DashboardPage() {

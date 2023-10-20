@@ -1,4 +1,4 @@
-import { getInvestorByEmailAndPassword } from "../../db/index";
+import { getInvestorByEmailAndPassword } from "@/models/investors";
 
 export default async function handler(req, res) {
   if (req.method !== "POST") {
