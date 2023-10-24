@@ -97,7 +97,7 @@ const Appointment = () => {
       margin: "2rem auto",
       padding: "1rem",
       maxWidth: "600px",
-      background: "#414656",
+      background: "#008199",
       borderRadius: "10px",
       boxShadow: "0px 2px 10px rgba(0, 0, 0, 0.1)",
     },
@@ -150,10 +150,13 @@ const Appointment = () => {
   };
 
   return (
-    <div>
+    <div className="container mx-auto">
       <Navbar />
 
-      <div style={styles.container}>
+      <div
+        className="container mx-auto mt-12   py-10 md:py-10"
+        style={styles.container}
+      >
         <h2 style={styles.header}>Book an Appointment</h2>
         {formSubmitted ? (
           <div style={styles.successMessage}>
@@ -218,7 +221,7 @@ const Appointment = () => {
               value={message}
               onChange={handleMessageChange}
             />
-            <button type="submit" className="button mt-4">
+            <button type="submit" className="button2 mt-4">
               Book Appointment
             </button>
           </form>

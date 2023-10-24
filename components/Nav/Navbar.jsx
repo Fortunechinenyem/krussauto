@@ -5,7 +5,6 @@ import { Logo } from "@/public/images";
 import { useRouter } from "next/router";
 import { NavBarItems } from "@/layout/constants";
 import Hamburger from "../HamburgerMenu";
-import Button from "../Buttons";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -70,13 +69,13 @@ function Navbar() {
         }`}
       >
         <div className="login mb-2 md:mb-0   sm:mb-5">
-          <Link
+          {/* <Link
             href="/authentication/login"
             className="text-[#111111] sm:mb-2 sm:mt-5 mx-auto sm:ml-10 md:ml-0"
             style={{ whiteSpace: "nowrap", fontFamily: "Lato" }}
           >
             Log In
-          </Link>
+          </Link> */}
         </div>
         <Link href="/appointment">
           <button className="button ml-4 md:mt-0 sm:mt-2">Get Started</button>

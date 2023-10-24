@@ -1,4 +1,4 @@
-import BlogHero from "./car2.jpeg";
+import BlogHero from "./krussbloghero.jpg";
 import Blog1 from "./img (1).jpg";
 import Blog2 from "./img (1).jpg";
 import Blog3 from "./img (1).jpg";

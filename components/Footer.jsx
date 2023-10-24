@@ -51,7 +51,7 @@ function Footer() {
         <div className="p-5">
           <p className=" font-bold text-2xl pb-4">Contact US</p>
           <p className="font-bold">Address</p>
-          <p className="mb-2">Kosofe, Lagos, Nigeria</p>
+          <p className="mb-2"> Lagos, Nigeria</p>
           <p className="font-bold">Email</p>
           <p className="mb-2"> team@krussautomotiveservices.com</p>
           <p className="font-bold">Phone</p>

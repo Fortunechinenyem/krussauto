@@ -50,9 +50,10 @@ const Invest = () => {
             </li>
           </ul>
           <div className="mt-6 text-center">
-            <Link href="/authentication/investorregister" className="button ">
+            {/* <Link href="/authentication/investorregister" className="button ">
               Become An Investor
-            </Link>
+            </Link> */}
+            <h3 className="text-3xl font-bold"> Coming Soon!</h3>
           </div>
         </div>
       </div>

@@ -2,8 +2,9 @@ import React, { useState } from "react";
 
 import { GoLocation } from "react-icons/go";
 import { HiOutlineMailOpen } from "react-icons/hi";
-
+import Image from "next/image";
 import Navbar from "@/components/Nav/Navbar";
+import { AboutHero } from "@/public/images";
 // import Footer from "@/components/Footer";
 
 function ContactUs() {
@@ -52,7 +53,7 @@ function ContactUs() {
   };
 
   return (
-    <div className=" container mx-auto ">
+    <div className=" container mx-auto mt-12   py-10 md:py-10">
       <Navbar />
       <div className="container mx-auto text-center my-12 mb-7">
         <h3 className="font-bold text-4xl mb-7">Get in Touch</h3>
@@ -69,12 +70,12 @@ function ContactUs() {
                 Reinvent your experience with us
               </h3>
             </div>
-            <div className=" space-y-5 mt-5">
-              <div className=" space-x-2">
+            <div className=" space-y-5 mt-9 mb-5">
+              <div className="flex items-center space-x-2 ml-0">
                 <span className="text-2xl">
                   <GoLocation />
                 </span>
-                <p className="text-xl">Oduntan Street, Ketu Lagos State.</p>
+                <p className="text-xl">Lagos State, Nigeria.</p>
               </div>
               <div className="flex items-center space-x-2 ml-0">
                 <span className="text-2xl">
@@ -82,6 +83,12 @@ function ContactUs() {
                 </span>
                 <p className="text-xl">buzzimails@gmail.com</p>
               </div>
+              <Image
+                className=" w-full h-full   "
+                src={AboutHero}
+                alt="about hero"
+                priority
+              />
             </div>
           </div>
           <div className="bg-white rounded-xl shadow-lg p-10 max-w-2xl text-gray-600 md:w-100 mb-7">

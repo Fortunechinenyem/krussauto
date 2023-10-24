@@ -8,7 +8,7 @@ const TireSelection = () => {
   return (
     <div className="m-2 text-xl">
       <Navbar />
-      <div className="relative bg-gradient-to-tr from-gray-500 to-gray-700 w-full bg-cover">
+      <div className="relative bg-gradient-to-tr from-gray-500 to-gray-700 w-full bg-cover mx-auto mt-12   py-10 md:py-10">
         {/* <Image
           className="absolute w-full h-full object-cover mix-blend-overlay"
           src={BlogHero}

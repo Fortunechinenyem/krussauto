@@ -24,19 +24,6 @@ const Services = () => {
               exceed expectations.
             </p>
           </div>
-
-          {/* <div
-            className="md:w-1/2 flex justify-center mt-7"
-            data-aos="fade-down"
-            data-aos-delay="400"
-          >
-            <Image
-              className="w-full max-w-md"
-              src={ServicesHero}
-              alt="Services Hero"
-              priority
-            />
-          </div> */}
         </div>
       </section>
       <section>

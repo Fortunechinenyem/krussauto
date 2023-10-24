@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const AutoConsultancy = () => {
   return (
-    <div className="m-2 text-xl">
+    <div className="container mx-auto">
       <Navbar />
       <div className="relative h-screen bg-gradient-to-b from-gray-500 to-gray-700 w-full bg-cover">
         {/* <Image

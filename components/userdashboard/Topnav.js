@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const Topnav = ({ profilePictureURL, user }) => {
@@ -6,7 +7,7 @@ const Topnav = ({ profilePictureURL, user }) => {
       <div className="text-lg">Welcome, {user}</div>
       {profilePictureURL && (
         <div className="flex items-center">
-          <img
+          <Image
             src={profilePictureURL}
             alt="Profile Picture"
             width={50}

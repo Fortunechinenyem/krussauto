@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
-// import Image from "next/image";
+import Image from "next/image";
 
 export default function RegisterForm() {
   const [firstName, setFirstName] = useState("");
@@ -128,7 +128,7 @@ export default function RegisterForm() {
             />
             {profilePictureURL && (
               <div className="flex items-center justify-center">
-                <img
+                <Image
                   src={profilePictureURL}
                   alt="Profile Picture"
                   width={110}

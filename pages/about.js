@@ -26,7 +26,7 @@ const About = () => {
   return (
     <div className="container mx-auto">
       <Navbar />
-      <div className="relative h-screen bg-gradient-to-b from-gray-500 to-gray-700 w-full bg-cover">
+      <div className="relative h-screen bg-gradient-to-b from-gray-500 to-gray-700 w-full bg-cover  mt-9   py-10 md:py-10">
         <Image
           className="absolute w-full h-full object-cover mix-blend-overlay"
           src={AboutHero}

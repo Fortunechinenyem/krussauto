@@ -19,37 +19,11 @@ const Blog = () => {
       <BlogNav />
       <div className="mt-9 relative w-full h-[50vh] md:h-[50vh] lg:h-screen bg-gradient-to-b from-gray-500 to-gray-700 bg-cover">
         <Image
-          className="absolute w-full h-full object-cover mix-blend-overlay"
+          className="absolute w-full h-full object-cover "
           src={BlogHero}
           alt="blog hero"
           priority
         />
-        <div className="absolute inset-0 bg-black opacity-30"></div>
-        <div className="absolute inset-0 flex flex-col justify-center items-center text-center">
-          <div
-            className="mt-9 text-white"
-            data-aos="fade-down"
-            data-aos-delay="400"
-          >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-              How to buy Nigerian Used Cars
-            </h1>
-            <div className="flex text-xl justify-center items-center gap-4">
-              <p>By KrussAutoServe Team</p>
-              <p>.Date</p>
-            </div>
-            <p className=" text-xl max-w-xl mx-auto">
-              Getting durable and quality Nigerian used cars have become an
-              extreme sport, you need to be armed with the right information
-              on...
-            </p>
-            <Link href="/blog/tire-selection">
-              <button className="mt-9  hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                Read More
-              </button>
-            </Link>
-          </div>
-        </div>
       </div>
 
       <div className="text-xl m-4 mt-8 grid md:grid-cols-2 gap-8">
