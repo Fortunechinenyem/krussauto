@@ -58,14 +58,14 @@ const products = [
 
 const ProductCards = () => {
   return (
-    <section className="container mx-auto">
+    <section className="">
       <div data-aos="fade-down" data-aos-delay="400">
-        <h3 className="p-4 text-[#11111] text-center text-2xl md:text-2xl lg:text-4xl font-bold mb-4">
+        <h3 className="p-5 text-[#11111] text-center text-2xl md:text-2xl lg:text-4xl font-bold mb-4">
           Our Services
         </h3>
       </div>
       <div
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-7 mt-9 text-[#11111] text-xl md:text-xl lg:text-2xl"
+        className=" p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-7 mt-9 text-[#11111] text-xl md:text-xl lg:text-2xl"
         data-aos="fade-down"
         data-aos-delay="400"
       >

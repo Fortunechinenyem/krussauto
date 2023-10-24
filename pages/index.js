@@ -90,9 +90,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      <section className="product suite">
-        <ProductCards />
-      </section>
+
       <section className="container mx-auto bg-[#F0F0F0]">
         <div className="text-center mt-9 mb-9">
           <h3 className="text-3xl font-bold">Why Kruss?</h3>
@@ -137,7 +135,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="container mx-auto bg-[#F0F0F0]">
+      <section className="mt-9 product suite bg-gradient-to-b from-[#00B0BA] to-gray-400">
+        <ProductCards />
+      </section>
+
+      <section className="mt-9 mb-7 container mx-auto bg-[#F0F0F0]">
         <div className="text-center mt-9 mb-9">
           <h3 className="text-3xl font-bold">How It Works</h3>
         </div>
@@ -184,7 +186,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="container mx-auto relative mt-5 bg-gradient-to-b from-gray-500 to-gray-700">
+      <section className="container mx-auto relative mt-9 bg-gradient-to-b from-gray-500 to-gray-700">
         <div className="h-[50vh] md:h-screen relative">
           <Image
             className="absolute w-full h-full object-cover mix-blend-overlay"
@@ -234,7 +236,7 @@ export default function HomePage() {
       <section className="testimonialsection  mx-auto bg-[#F5F5F5]">
         <div className="py-12">
           <div className="mx-auto mb-5 text-center">
-            <h4 className="text-2xl text-[#141414] font-bold">
+            <h4 className="text-2xl mb-5  text-[#141414] font-bold">
               Dont just take Our Word for it...
             </h4>
             <p className="text-[#8C8C8C] text-xl mt-2 mb-5 text-center">
@@ -247,12 +249,12 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      <section className=" mt-5 container mx-auto">
+      <section className=" mt-9 container mx-auto">
         <div className="text-center mt-6 mb-5">
           <FAQs />
         </div>
       </section>
-      <section className="container mx-auto p-5 mt-5 bg-[#F0F0F0] mx-auto my-10 rounded-lg shadow-lg">
+      <section className="container mx-auto p-5 mt-9 mb-7 bg-[#F0F0F0] mx-auto my-10 rounded-lg shadow-lg">
         <div className=" mt-5">
           <h2 className="text-3xl text-center mt-5 mb-5 font-bold mb-6 text-[#515B6D]">
             Check Out Our Latest Blog Post
