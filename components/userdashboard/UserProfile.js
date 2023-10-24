@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 import { FaUser } from "react-icons/fa";
 
@@ -9,7 +10,7 @@ export const UserProfileCard = () => {
         <h3>User Profile</h3>
       </div>
       <div className="card-content">
-        <img src="user-profile-image.jpg" alt="User Profile" />
+        <Image src="user-profile-image.jpg" alt="User Profile" />
         <h4>User's Name</h4>
         <p>Email: user@example.com</p>
         <p>Location: City, Country</p>
