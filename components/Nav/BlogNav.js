@@ -91,10 +91,7 @@ export default function BlogNav() {
             </Link>
           </div>
           <div className="">
-            <Link
-              href="/"
-              className="button text-white hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-            >
+            <Link href="/" className="button ">
               Go to Website
             </Link>
           </div>

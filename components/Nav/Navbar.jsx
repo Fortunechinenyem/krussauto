@@ -31,12 +31,12 @@ function Navbar() {
 
   return (
     <nav
-      className={`fixed container top-0 w-full flex flex-col md:flex-row items-center justify-between p-4  bg-white transition-all ease-in-out duration-300 ${
+      className={`fixed container p-0  top-0 w-full flex flex-col md:flex-row items-center justify-between p-4  bg-white transition-all ease-in-out duration-300 ${
         hasScrolled ? "shadow-lg" : ""
       }`}
       style={{ zIndex: 1000 }}
     >
-      <div className=" container flex items-center justify-between">
+      <div className=" container flex items-center justify-between  px-2 md:px-4 lg:px-6 mx-auto">
         <Link href="/" className="flex title-font gap-2 font-medium">
           <Image className="" src={Logo} alt="logo" width={110} priority />
         </Link>

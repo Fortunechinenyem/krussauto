@@ -30,9 +30,9 @@ export default function HomePage() {
   }, []);
 
   useEffect(() => {
-    const targetCountCustomers = 500;
-    const targetCountBrands = 10;
-    const incrementInterval = 30;
+    const targetCountCustomers = 20;
+    const targetCountBrands = 5;
+    const incrementInterval = 3;
 
     let currentCountCustomers = 0;
     let currentCountBrands = 0;
@@ -139,13 +139,13 @@ export default function HomePage() {
         <ProductCards />
       </section>
 
-      <section className="mt-9 mb-7 container mx-auto bg-[#F0F0F0]">
-        <div className="text-center mt-9 mb-9">
-          <h3 className="text-3xl font-bold">How It Works</h3>
-        </div>
-        <div className="flex flex-col md:flex-row items-center">
+      <section className="py-8 md:py-12 mb-7 bg-white px-4">
+        <h4 className="text-[#141414] mb-5 text-center font-bold text-2xl md:text-2xl leading-normal tracking-[0.36px]">
+          How it Works
+        </h4>
+        <div className="flex flex-col md:flex-row items-center  justify-evenly">
           <div
-            className="md:w-1/2 justify-center mt-7 "
+            className="md-w-1/2 m-4 "
             data-aos="fade-down"
             data-aos-delay="400"
           >
@@ -156,7 +156,7 @@ export default function HomePage() {
               priority
             />
           </div>
-          <div className=" md:w-1/2  justify-center mb-7 mt-9">
+          <div className=" md:w-1/2 mt-8 md:mt-4 md:pl-12 text-center md:text-left">
             <div className=" rounded-lg p-6">
               <h4 className="text-xl font-bold mb-2">Step 1</h4>
               <p className="">

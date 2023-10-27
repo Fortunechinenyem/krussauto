@@ -61,7 +61,7 @@ export default function RegisterForm() {
       <nav className="flex justify-between items-center bg-white p-4 w-full">
         {isLoggedIn && profilePictureURL && (
           <div className="flex items-center">
-            <img
+            <Image
               src={profilePictureURL}
               alt="Profile Picture"
               width={110}
