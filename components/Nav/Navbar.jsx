@@ -31,7 +31,7 @@ function Navbar() {
 
   return (
     <nav
-      className={`fixed container p-0  top-0 w-full flex flex-col md:flex-row items-center justify-between p-4  bg-white transition-all ease-in-out duration-300 ${
+      className={`fixed container p-0  top-0 w-full flex flex-col md:flex-row items-center justify-between   bg-white transition-all ease-in-out duration-300 ${
         hasScrolled ? "shadow-lg" : ""
       }`}
       style={{ zIndex: 1000 }}

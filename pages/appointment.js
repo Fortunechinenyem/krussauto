@@ -154,7 +154,7 @@ const Appointment = () => {
       <Navbar />
 
       <div
-        className="container mx-auto mt-12   py-10 md:py-10"
+        className="container mx-auto mt-12   py-12 md:py-12"
         style={styles.container}
       >
         <h2 style={styles.header}>Book an Appointment</h2>
