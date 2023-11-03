@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import Image from "next/image";
 import Link from "next/link";
 
-import { HowItWorks, Hero, InvestmentImage } from "../public/images/index";
+import { Hero, InvestmentImage } from "../public/images/index";
 
 import FAQs from "./faq";
 
@@ -15,6 +15,7 @@ import "aos/dist/aos.css";
 import BlogSnippet from "@/components/blog/BlogSnippet";
 import ProductCards from "@/components/cards/ProductCards";
 import Testimonial from "@/layout/Testimonial";
+import HowItWorks from "@/components/Howitworks";
 
 export default function HomePage() {
   const [customerCount, setCustomerCount] = useState(0);
@@ -140,50 +141,7 @@ export default function HomePage() {
       </section>
 
       <section className="py-8 md:py-12 mb-7 bg-white px-4">
-        <h4 className="text-[#141414] mb-5 text-center font-bold text-2xl md:text-2xl leading-normal tracking-[0.36px]">
-          How it Works
-        </h4>
-        <div className="flex flex-col md:flex-row items-center  justify-evenly">
-          <div
-            className="md-w-1/2 m-4 "
-            data-aos="fade-down"
-            data-aos-delay="400"
-          >
-            <Image
-              className="w-full max-w-md"
-              src={HowItWorks}
-              alt="how it works"
-              priority
-            />
-          </div>
-          <div className=" md:w-1/2 mt-8 md:mt-4 md:pl-12 text-center md:text-left">
-            <div className=" rounded-lg p-6">
-              <h4 className="text-xl font-bold mb-2">Step 1</h4>
-              <p className="">
-                Choose the service you need and book an appointment.
-              </p>
-            </div>
-            <div className=" rounded-lg p-6">
-              <h4 className="text-xl font-bold mb-2">Step 2</h4>
-              <p className="">
-                Our professionals will provide the service at your convenience.
-              </p>
-            </div>
-            <div className=" rounded-lg p-6">
-              <h4 className="text-xl font-bold mb-2">Step 3</h4>
-              <p className="">
-                Sit back and enjoy a hassle-free experience with your vehicle.
-              </p>
-            </div>
-            <div className="mt-8 ">
-              <Link href="/appointment">
-                <button className="mt-4 button px-4 py-2 ml-4 md:mt-0 sm:mt-2">
-                  Get started
-                </button>
-              </Link>
-            </div>
-          </div>
-        </div>
+        <HowItWorks />
       </section>
 
       <section className="container mx-auto relative mt-9 bg-gradient-to-b from-gray-500 to-gray-700">

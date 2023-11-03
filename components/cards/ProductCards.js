@@ -79,7 +79,7 @@ const ProductCards = () => {
                   alt={`Product ${index + 1}`}
                   priority
                 />
-                <p className="text-xl font-bold my-2">{product.title}</p>
+                <p className="text-lg font-bold my-2">{product.title}</p>
                 <div className="mb-2">{product.icon}</div>
                 <div>
                   <FaArrowAltCircleRight />

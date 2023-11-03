@@ -70,10 +70,10 @@ const products = [
 
 const ProductCards2 = () => {
   return (
-    <section className="container mx-auto">
+    <section className="container mx-auto text-lg">
       <div data-aos="fade-down" data-aos-delay="400"></div>
       <div
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-7 mt-9 text-[#11111] text-xl md:text-xl lg:text-2xl"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-7 mt-9 text-[#11111] text-lg"
         data-aos="fade-down"
         data-aos-delay="400"
       >
@@ -87,7 +87,7 @@ const ProductCards2 = () => {
                   alt={`Product ${index + 1}`}
                   priority
                 />
-                <p className="text-xl font-bold my-2">{product.title}</p>
+                <p className="text-lg font-bold my-2">{product.title}</p>
                 <div className="mb-2">{product.icon}</div>
                 <div className="mb-2 font-medium text-center">
                   {product.description}

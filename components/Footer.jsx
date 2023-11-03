@@ -21,7 +21,7 @@ function Footer() {
               className=" mb-5"
               src={Logo}
               alt="logo"
-              width={150}
+              width={200}
               priority
             />
           </Link>
@@ -53,7 +53,7 @@ function Footer() {
           <p className="font-bold">Address</p>
           <p className="mb-2"> Lagos, Nigeria</p>
           <p className="font-bold">Email</p>
-          <p className="mb-2"> team@krussautomotiveservices.com</p>
+          <p className="mb-2"> hello@krussautoserve.ng.com</p>
           <p className="font-bold">Phone</p>
           <p className="mb-2"> +2349025301696 </p>
           <button className=" mt-4 bg-white text-black font-medium rounded-md px-4 py-2">

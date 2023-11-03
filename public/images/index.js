@@ -5,9 +5,14 @@ import Blog3 from "./img (1).jpg";
 
 import Hero from "./carbg.png";
 import AboutHero from "./carbg.png";
+import CarDiagnosticsHero from "./product5.jpg";
+import PrepurchaseHero from "./product1.jpeg";
+import AutoErrandHero from "./product2.jpg";
+import FleetManagementHero from "./product3.jpg";
 import ServicesHero from "./krussservices.png";
+import BuySellHero from "./product4.jpeg";
 import Founder from "./5236.jpg";
-import HowItWorks from "./how.png";
+import How from "./how.png";
 import InvestmentImage from "./kruss1.jpg";
 import BlogImage from "./img (1).jpg";
 import Logo from "./krusslogo.svg";
@@ -22,17 +27,22 @@ import NotFoundImage from "./404-image.jpg";
 
 export {
   AboutHero,
+  AutoErrandHero,
   Blog1,
   Blog2,
   Blog3,
   BlogHero,
   BlogImage,
+  BuySellHero,
+  CarDiagnosticsHero,
   Founder,
+  FleetManagementHero,
   Hero,
-  HowItWorks,
+  How,
   InvestmentImage,
   Logo,
   NotFoundImage,
+  PrepurchaseHero,
   Product1,
   Product2,
   Product3,
