@@ -3,9 +3,11 @@ import React from "react";
 import Image from "next/image";
 import Navbar from "@/components/Nav/Navbar";
 import Footer from "@/components/Footer";
+import { FaWrench, FaCheckCircle, FaChartBar, FaHammer } from "react-icons/fa";
 import Link from "next/link";
 import { CarDiagnosticsHero } from "@/public/images";
 import Testimonial from "@/layout/Testimonial";
+import CarDiagnosticsPricing from "@/components/cards/CarDiagnosticsPricing";
 
 const CarDiagnostics = () => {
   return (
@@ -63,53 +65,87 @@ const CarDiagnostics = () => {
         <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-center mb-6">
           Why Choose Our Car Diagnostics Service
         </h2>
-        <p className="text-lg mt-4">
-          At Kruss Automotive Services, we take pride in our car diagnostics
-          service for the following reasons:
-        </p>
-        <ul className="text-left text-lg mt-4">
-          <li>
-            Skilled Technicians: Our experienced technicians employ advanced
-            diagnostic tools and techniques.
-          </li>
-          <li>
-            Comprehensive Diagnostics: We identify and address complex issues
-            affecting your vehicle's performance.
-          </li>
-          <li>
-            Professional Analysis: We interpret diagnostic data, analyze
-            problems, and provide detailed insights into your car's condition.
-          </li>
-          <li>
-            Optimal Performance: Our recommendations ensure your car runs
-            efficiently.
-          </li>
-        </ul>
+        <div className="text-lg mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="bg-[#5E8BE4] p-4 rounded-lg">
+            <h3 className="text-xl font-bold mb-2">Skilled Technicians</h3>
+            <p>
+              Our experienced technicians employ advanced diagnostic tools and
+              techniques.
+            </p>
+          </div>
+          <div className="bg-[#008199] p-4 rounded-lg ">
+            <h3 className="text-xl font-bold mb-2">
+              Comprehensive Diagnostics
+            </h3>
+            <p>
+              We identify and address complex issues affecting your vehicle's
+              performance.
+            </p>
+          </div>
+          <div className="bg-[#00CDE9] p-4 rounded-lg ">
+            <h3 className="text-xl font-bold mb-2">Professional Analysis</h3>
+            <p>
+              We interpret diagnostic data, analyze problems, and provide
+              detailed insights into your car's condition.
+            </p>
+          </div>
+          <div className="bg-[#D5A419] p-4 rounded-lg ">
+            <h3 className="text-xl font-bold mb-2">Optimal Performance</h3>
+            <p>Our recommendations ensure your car runs efficiently.</p>
+          </div>
+        </div>
       </section>
-      <section className="bg-[#99B0A7] p-6 mt-9 mb-7 text-center">
+
+      <section className="bg-gray-500 text-white p-6 mt-9 mb-7 text-center">
         <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-center mb-6">
           Our Car Diagnostics Process - Step by Step
         </h2>
-        <div className="text-lg mt-4">
-          <ul className="text-left list-disc ml-6">
-            <li>
-              Step 1: Initial Diagnosis - Our technicians perform an initial
-              diagnosis to identify issues.
-            </li>
-            <li>
-              Step 2: Advanced Testing - We employ advanced diagnostic tools to
-              conduct comprehensive testing.
-            </li>
-            <li>
-              Step 3: Data Analysis - Our team analyzes diagnostic data and
-              provides detailed insights.
-            </li>
-            <li>
-              Step 4: Recommendations - Based on our analysis, we recommend
-              targeted repairs or maintenance.
-            </li>
-          </ul>
+        <div className="text-lg mt-4 grid grid-cols-1 md:grid-cols-4 md:gap-4">
+          <div className="flex flex-col items-center">
+            <div className="h-16 w-16 rounded-full bg-[#005D60] text-white flex items-center justify-center">
+              <FaWrench size={32} />
+            </div>
+            <p className="font-bold mt-2">Step 1: Initial Diagnosis</p>
+            <p className="text-left">
+              Our technicians perform an initial diagnosis to identify issues.
+            </p>
+          </div>
+
+          <div className="flex flex-col items-center">
+            <div className="h-16 w-16 rounded-full bg-[#005D60] text-white flex items-center justify-center">
+              <FaCheckCircle size={32} />
+            </div>
+            <p className="font-bold mt-2">Step 2: Advanced Testing</p>
+            <p className="text-left">
+              We employ advanced diagnostic tools to conduct comprehensive
+              testing.
+            </p>
+          </div>
+
+          <div className="flex flex-col items-center">
+            <div className="h-16 w-16 rounded-full bg-[#005D60] text-white flex items-center justify-center">
+              <FaChartBar size={32} />
+            </div>
+            <p className="font-bold mt-2">Step 3: Data Analysis</p>
+            <p className="text-left">
+              Our team analyzes diagnostic data and provides detailed insights.
+            </p>
+          </div>
+
+          <div className="flex flex-col items-center">
+            <div className="h-16 w-16 rounded-full bg-[#005D60] text-white flex items-center justify-center">
+              <FaHammer size={32} />
+            </div>
+            <p className="font-bold mt-2">Step 4: Recommendations</p>
+            <p className="text-left">
+              Based on our analysis, we recommend targeted repairs or
+              maintenance.
+            </p>
+          </div>
         </div>
+      </section>
+      <section>
+        <CarDiagnosticsPricing />
       </section>
 
       <section className="bg-gray-100 py-10">

@@ -1,14 +1,14 @@
 import React from "react";
 
-const AutoErrandPricing = () => {
+const CarDiagnosticsPricing = () => {
   return (
     <div className="p-6 mt-9 mb-7 text-center">
       <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-center mb-6">
         Packages
       </h3>
       <p className="text-lg mt-4">
-        Our Auto Errand services come in different packages to suit your needs.
-        Here's an overview of our pricing and what you'll get:
+        Our Car Diagnostics services come in different packages to suit your
+        needs. Here's an overview of our pricing and what you'll get:
       </p>
       <div className="mt-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -18,9 +18,9 @@ const AutoErrandPricing = () => {
             </div>
             <div className="text-center text-3xl font-bold">N25,000</div>
             <ul className="text-center text-base mt-4">
-              <li>One simple errand task</li>
-              <li>Errand completion report</li>
-              <li>Standard service</li>
+              <li>Initial Diagnosis</li>
+              <li>Diagnostic Report</li>
+              <li>Standard Service</li>
             </ul>
           </div>
           <div className="border p-4 rounded-lg shadow-lg bg-white relative">
@@ -32,22 +32,20 @@ const AutoErrandPricing = () => {
               Recommended
             </div>
             <ul className="text-center text-base mt-4">
-              <li>Up to two errand tasks</li>
-              <li>Errand completion reports</li>
-              <li>Premium service</li>
+              <li>Advanced Testing</li>
+              <li>Comprehensive Diagnostic Report</li>
+              <li>Premium Service</li>
             </ul>
           </div>
           <div className="border p-4 rounded-lg shadow-lg bg-white">
             <div className="bg-[#006291] text-white rounded-lg border mb-4 text-center text-lg font-semibold">
               Premium
             </div>
-            <div className="text-center text-3xl text-[#0B2546] font-bold">
-              N50,000
-            </div>
+            <div className="text-center text-3xl font-bold">N50,000</div>
             <ul className="text-center text-base mt-4">
-              <li>Up to three errand tasks</li>
-              <li>Errand completion reports</li>
-              <li>Priority service</li>
+              <li>Advanced Testing & Analysis</li>
+              <li>Comprehensive Diagnostic Report</li>
+              <li>Priority Service</li>
             </ul>
           </div>
         </div>
@@ -60,4 +58,4 @@ const AutoErrandPricing = () => {
   );
 };
 
-export default AutoErrandPricing;
+export default CarDiagnosticsPricing;

@@ -3,8 +3,8 @@ import React from "react";
 const FleetManagementPricing = () => {
   return (
     <div className="p-6 mt-9 mb-7 text-center">
-      <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
-        Pricing Information
+      <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-center mb-6">
+        Packages
       </h3>
       <p className="text-lg mt-4">
         Our Fleet Management services come in different packages to suit your

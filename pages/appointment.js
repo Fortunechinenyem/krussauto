@@ -10,6 +10,8 @@ const services = [
   "Auto Consultancy",
 ];
 
+const consultationOptions = ["Virtual", "Physical"]; // Options for Auto Consultancy service
+
 const Appointment = () => {
   const [appointmentDate, setAppointmentDate] = useState("");
   const [appointmentTime, setAppointmentTime] = useState("");
@@ -18,6 +20,7 @@ const Appointment = () => {
   const [message, setMessage] = useState("");
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [location, setLocation] = useState("");
+  const [consultationType, setConsultationType] = useState("");
 
   const handleDateChange = (e) => {
     setAppointmentDate(e.target.value);
@@ -28,7 +31,13 @@ const Appointment = () => {
   };
 
   const handleServiceChange = (e) => {
-    setSelectedService(e.target.value);
+    const selectedService = e.target.value;
+    setSelectedService(selectedService);
+
+    // If "Auto Consultancy" is selected, reset consultationType
+    if (selectedService !== "Auto Consultancy") {
+      setConsultationType("");
+    }
   };
 
   const handleFullNameChange = (e) => {
@@ -63,6 +72,7 @@ const Appointment = () => {
           service: selectedService,
           fullName: fullName,
           message: message,
+          consultationType: consultationType,
         }),
       });
 
@@ -72,6 +82,7 @@ const Appointment = () => {
           appointmentDate,
           appointmentTime,
           selectedService,
+          consultationType,
           fullName,
           message
         );
@@ -84,6 +95,7 @@ const Appointment = () => {
       setAppointmentDate("");
       setAppointmentTime("");
       setSelectedService("");
+      setConsultationType("");
       setFullName("");
       setMessage("");
     } catch (error) {
@@ -200,6 +212,21 @@ const Appointment = () => {
                 </option>
               ))}
             </select>
+            {selectedService === "Auto Consultancy" && ( // Render consultation options only for Auto Consultancy
+              <select
+                value={consultationType}
+                onChange={(e) => setConsultationType(e.target.value)}
+                style={styles.select}
+                required
+              >
+                <option value="">Select Consultation Type</option>
+                {consultationOptions.map((option, index) => (
+                  <option key={index} value={option}>
+                    {option}
+                  </option>
+                ))}
+              </select>
+            )}
             <input
               type="text"
               style={styles.input}

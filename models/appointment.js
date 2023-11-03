@@ -24,7 +24,7 @@ export async function getAppointments() {
     const client = await connectToDatabase();
     const db = client.db("krussauto");
 
-    const appointments = await db.collection("appointments").find().toArray();
+    const appointments = await db.collection("appointment").find().toArray();
 
     client.close();
 

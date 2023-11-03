@@ -8,6 +8,7 @@ import AboutHero from "./carbg.png";
 import CarDiagnosticsHero from "./product5.jpg";
 import PrepurchaseHero from "./product1.jpeg";
 import AutoErrandHero from "./product2.jpg";
+import AutoConsultancyHero from "./product6.jpg";
 import FleetManagementHero from "./product3.jpg";
 import ServicesHero from "./krussservices.png";
 import BuySellHero from "./product4.jpeg";
@@ -27,6 +28,7 @@ import NotFoundImage from "./404-image.jpg";
 
 export {
   AboutHero,
+  AutoConsultancyHero,
   AutoErrandHero,
   Blog1,
   Blog2,
