@@ -93,7 +93,7 @@ const AutoConsultancy = () => {
             data-aos-delay="400"
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-              Expert Auto Consultancy
+              Auto Consultancy
             </h1>
           </div>
         </div>

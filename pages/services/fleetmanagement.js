@@ -115,7 +115,7 @@ const FleetManagement = () => {
           Our fleet management solutions include the following key features:
         </p>
         <div className="mx-auto">
-          <ul className=" text-lg mt-4 flex md:flex-row sm:flex-col items-center">
+          <ul className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-6">
             <li className="flex items-center">
               <span className="bg-[#005D60] w-4 h-4 rounded-full mr-2"></span>
               Real-time vehicle tracking and location services.

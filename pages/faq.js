@@ -26,9 +26,9 @@ export default function FAQs() {
     flexDirection: "column",
     alignItems: "center",
     gap: "80px",
-    width: "80%", // Adjusted width for responsiveness
-    maxWidth: "1035px", // Maximum width for larger screens
-    margin: "0 auto", // Centering the component
+    width: "80%",
+    maxWidth: "1035px",
+    margin: "0 auto",
   };
 
   const questionStyle = {
@@ -40,7 +40,7 @@ export default function FAQs() {
     border: "1px solid #ccc",
     marginBottom: "10px",
     cursor: "pointer",
-    borderRadius: "10px", // Added border radius
+    borderRadius: "10px",
   };
 
   return (

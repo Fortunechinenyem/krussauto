@@ -107,10 +107,10 @@ const Appointment = () => {
   const styles = {
     container: {
       margin: "2rem auto",
-      padding: "1rem",
+      padding: "5rem 2rem ",
       maxWidth: "600px",
-      background: "#008199",
-      borderRadius: "10px",
+      background: "#3D8D89",
+      borderRadius: "20px",
       boxShadow: "0px 2px 10px rgba(0, 0, 0, 0.1)",
     },
     header: {
@@ -146,7 +146,7 @@ const Appointment = () => {
       border: "1px solid #ccc",
     },
     button: {
-      backgroundColor: "#0B2546",
+      backgroundColor: "#F5F9FF",
       color: "#fff",
       padding: "0.5rem 1rem",
       borderRadius: "5px",
@@ -165,10 +165,7 @@ const Appointment = () => {
     <div className="container mx-auto">
       <Navbar />
 
-      <div
-        className="container mx-auto mt-12   py-12 md:py-12"
-        style={styles.container}
-      >
+      <div className=" mt-12   py-12 md:py-12 " style={styles.container}>
         <h2 style={styles.header}>Book an Appointment</h2>
         {formSubmitted ? (
           <div style={styles.successMessage}>
