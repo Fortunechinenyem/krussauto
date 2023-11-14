@@ -106,15 +106,6 @@ const Appointment = () => {
     }
   };
 
-  //   useEffect(() => {
-  //     if (
-  //       router.query.openAppointmentModal ||
-  //       !router.asPath.includes("/appointment")
-  //     ) {
-  //       setModalIsOpen(true);
-  //     }
-  //   }, [router.query]);
-
   const closeModal = () => {
     setModalIsOpen(false);
     setFormSubmitted(false);
@@ -122,8 +113,8 @@ const Appointment = () => {
   const styles = {
     container: {
       margin: "2rem auto",
-      padding: "5rem 2rem ",
-      maxWidth: "600px",
+      padding: "2rem ",
+      maxWidth: "100%",
       background: "#3D8D89",
       borderRadius: "20px",
       boxShadow: "0px 2px 10px rgba(0, 0, 0, 0.1)",
@@ -161,8 +152,8 @@ const Appointment = () => {
       border: "1px solid #ccc",
     },
     button: {
-      backgroundColor: "#F5F9FF",
-      color: "#fff",
+      backgroundColor: "#3a9ea3",
+      color: "#fafafa",
       padding: "0.5rem 1rem",
       borderRadius: "5px",
       border: "none",
@@ -187,7 +178,8 @@ const Appointment = () => {
               backgroundColor: "rgba(0, 0, 0, 0.5)",
             },
             content: {
-              width: "50%",
+              width: "100%",
+              maxWidth: "600px",
               margin: "auto",
             },
           }}
@@ -271,10 +263,10 @@ const Appointment = () => {
                 value={message}
                 onChange={handleMessageChange}
               />
-              <button type="submit" className="button2 mt-4">
+              <button type="submit" className="button mt-4">
                 Book Appointment
               </button>
-              <button className="button2 mt-4" onClick={closeModal}>
+              <button className="button mt-4" onClick={closeModal}>
                 Close
               </button>
             </form>

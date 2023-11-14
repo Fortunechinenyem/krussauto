@@ -1,9 +1,19 @@
 import React, { useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
+
 import { How } from "@/public/images";
+import Appointment from "./modals/AppointmentModal";
 
 function HowItWorks() {
+  const [isAppointmentModalOpen, setIsAppointmentModalOpen] = useState(false);
+
+  const openAppointmentModal = () => {
+    setIsAppointmentModalOpen(true);
+  };
+
+  const closeAppointmentModal = () => {
+    setIsAppointmentModalOpen(false);
+  };
   const [activeStep, setActiveStep] = useState(null);
 
   const steps = [
@@ -64,11 +74,12 @@ function HowItWorks() {
             </div>
           ))}
           <div className="mt-8">
-            <Link href="/appointment">
-              <button className="mt-4 button px-4 py-2 ml-4 md:mt-0 sm:mt-2">
-                Get started
-              </button>
-            </Link>
+            <button
+              className="mt-4 button px-4 py-2 ml-4 md:mt-0 sm:mt-2"
+              onClick={openAppointmentModal}
+            >
+              Get started
+            </button>
           </div>
         </div>
       </div>
@@ -108,6 +119,9 @@ function HowItWorks() {
           border: 2px solid green;
         }
       `}</style>
+      {isAppointmentModalOpen && (
+        <Appointment onClose={closeAppointmentModal} />
+      )}
     </div>
   );
 }
