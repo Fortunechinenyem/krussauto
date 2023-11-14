@@ -1,15 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 
 import Image from "next/image";
 import Navbar from "@/components/Nav/Navbar";
 import Footer from "@/components/Footer";
 import { FaWrench, FaCheckCircle, FaChartBar, FaHammer } from "react-icons/fa";
-import Link from "next/link";
+
 import { CarDiagnosticsHero } from "@/public/images";
 import Testimonial from "@/layout/Testimonial";
 import CarDiagnosticsPricing from "@/components/cards/CarDiagnosticsPricing";
+import Appointment from "@/components/modals/AppointmentModal";
 
 const CarDiagnostics = () => {
+  const [isAppointmentModalOpen, setIsAppointmentModalOpen] = useState(false);
+
+  const openAppointmentModal = () => {
+    setIsAppointmentModalOpen(true);
+  };
+
+  const closeAppointmentModal = () => {
+    setIsAppointmentModalOpen(false);
+  };
+
   return (
     <div className="container mx-auto">
       <Navbar />
@@ -166,15 +177,18 @@ const CarDiagnostics = () => {
             Ready to Diagnose Your Car's Issues?
           </h2>
           <div className="text-center mt-6">
-            <Link href="/appointment">
-              <button className="button ml-4 md:mt-0 sm:mt-2">
-                Book Your Car Diagnostics Appointment
-              </button>
-            </Link>
+            <button
+              className="button ml-4 md:mt-0 sm:mt-2"
+              onClick={openAppointmentModal}
+            >
+              Book Your Car Diagnostics Appointment
+            </button>
           </div>
         </div>
       </section>
-
+      {isAppointmentModalOpen && (
+        <Appointment onClose={closeAppointmentModal} />
+      )}
       <Footer />
     </div>
   );

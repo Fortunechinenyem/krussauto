@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 
 import Image from "next/image";
 import Navbar from "@/components/Nav/Navbar";
 import Footer from "@/components/Footer";
-import Link from "next/link";
+
 import { AutoConsultancyHero } from "@/public/images";
 import Testimonial from "@/layout/Testimonial";
 import {
@@ -13,8 +13,18 @@ import {
   FaGasPump,
   FaRecycle,
 } from "react-icons/fa";
+import Appointment from "@/components/modals/AppointmentModal";
 
 const AutoConsultancy = () => {
+  const [isAppointmentModalOpen, setIsAppointmentModalOpen] = useState(false);
+
+  const openAppointmentModal = () => {
+    setIsAppointmentModalOpen(true);
+  };
+
+  const closeAppointmentModal = () => {
+    setIsAppointmentModalOpen(false);
+  };
   const autoConsultancyServices = [
     {
       title: "Vehicle Selection and Purchasing Assistance",
@@ -197,11 +207,12 @@ const AutoConsultancy = () => {
         </div>
         <div className="mt-9">
           <div className="text-center mt-6">
-            <Link href="/appointment">
-              <button className="button ml-4 md:mt-0 sm:mt-2">
-                Schedule a Consultation
-              </button>
-            </Link>
+            <button
+              className="button ml-4 md:mt-0 sm:mt-2"
+              onClick={openAppointmentModal}
+            >
+              Get Started
+            </button>
           </div>
         </div>
       </section>
@@ -219,6 +230,9 @@ const AutoConsultancy = () => {
       </section> */}
 
       <Footer />
+      {isAppointmentModalOpen && (
+        <Appointment onClose={closeAppointmentModal} />
+      )}
     </div>
   );
 };

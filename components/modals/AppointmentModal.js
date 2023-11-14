@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import Navbar from "@/components/Nav/Navbar";
+import { useRouter } from "next/router";
+import Modal from "react-modal";
 
 const services = [
   "Pre-Purchase Inspection",
@@ -10,9 +11,11 @@ const services = [
   "Auto Consultancy",
 ];
 
-const consultationOptions = ["Virtual", "Physical"]; // Options for Auto Consultancy service
+const consultationOptions = ["Virtual", "Physical"];
 
 const Appointment = () => {
+  const router = useRouter();
+  const [modalIsOpen, setModalIsOpen] = useState(true);
   const [appointmentDate, setAppointmentDate] = useState("");
   const [appointmentTime, setAppointmentTime] = useState("");
   const [selectedService, setSelectedService] = useState("");
@@ -34,7 +37,6 @@ const Appointment = () => {
     const selectedService = e.target.value;
     setSelectedService(selectedService);
 
-    // If "Auto Consultancy" is selected, reset consultationType
     if (selectedService !== "Auto Consultancy") {
       setConsultationType("");
     }
@@ -104,6 +106,19 @@ const Appointment = () => {
     }
   };
 
+  //   useEffect(() => {
+  //     if (
+  //       router.query.openAppointmentModal ||
+  //       !router.asPath.includes("/appointment")
+  //     ) {
+  //       setModalIsOpen(true);
+  //     }
+  //   }, [router.query]);
+
+  const closeModal = () => {
+    setModalIsOpen(false);
+    setFormSubmitted(false);
+  };
   const styles = {
     container: {
       margin: "2rem auto",
@@ -163,93 +178,108 @@ const Appointment = () => {
 
   return (
     <div className="container mx-auto">
-      <Navbar />
-
-      <div className=" mt-12   py-12 md:py-12 " style={styles.container}>
-        <h2 style={styles.header}>Book an Appointment</h2>
-        {formSubmitted ? (
-          <div style={styles.successMessage}>
-            <p>Your appointment has been booked successfully!</p>
-            <button
-              className=" "
-              style={styles.button}
-              onClick={() => setFormSubmitted(false)}
-            >
-              Book Another Appointment
-            </button>
-          </div>
-        ) : (
-          <form onSubmit={handleSubmit} style={styles.form}>
-            <input
-              type="date"
-              style={styles.input}
-              placeholder="Appointment Date"
-              value={appointmentDate}
-              onChange={handleDateChange}
-              required
-            />
-            <input
-              type="time"
-              style={styles.input}
-              placeholder="Appointment Time"
-              value={appointmentTime}
-              onChange={handleTimeChange}
-              required
-            />
-            <select
-              value={selectedService}
-              onChange={handleServiceChange}
-              style={styles.select}
-              required
-            >
-              <option value="">Select a Service</option>
-              {services.map((service, index) => (
-                <option key={index} value={service}>
-                  {service}
-                </option>
-              ))}
-            </select>
-            {selectedService === "Auto Consultancy" && ( // Render consultation options only for Auto Consultancy
+      <div className=" mt-12   py-12 md:py-12">
+        <Modal
+          isOpen={modalIsOpen}
+          onRequestClose={closeModal}
+          style={{
+            overlay: {
+              backgroundColor: "rgba(0, 0, 0, 0.5)",
+            },
+            content: {
+              width: "50%",
+              margin: "auto",
+            },
+          }}
+        >
+          <h2 style={styles.header}>Book an Appointment</h2>
+          {formSubmitted ? (
+            <div style={styles.successMessage}>
+              <p>Your appointment has been booked successfully!</p>
+              <button
+                className="button2"
+                style={styles.button}
+                onClick={closeModal}
+              >
+                Close
+              </button>
+            </div>
+          ) : (
+            <form onSubmit={handleSubmit} style={styles.form}>
+              <input
+                type="date"
+                style={styles.input}
+                placeholder="Appointment Date"
+                value={appointmentDate}
+                onChange={handleDateChange}
+                required
+              />
+              <input
+                type="time"
+                style={styles.input}
+                placeholder="Appointment Time"
+                value={appointmentTime}
+                onChange={handleTimeChange}
+                required
+              />
               <select
-                value={consultationType}
-                onChange={(e) => setConsultationType(e.target.value)}
+                value={selectedService}
+                onChange={handleServiceChange}
                 style={styles.select}
                 required
               >
-                <option value="">Select Consultation Type</option>
-                {consultationOptions.map((option, index) => (
-                  <option key={index} value={option}>
-                    {option}
+                <option value="">Select a Service</option>
+                {services.map((service, index) => (
+                  <option key={index} value={service}>
+                    {service}
                   </option>
                 ))}
               </select>
-            )}
-            <input
-              type="text"
-              style={styles.input}
-              placeholder="Full Name"
-              value={fullName}
-              onChange={handleFullNameChange}
-              required
-            />
-            <input
-              type="text"
-              style={styles.input}
-              placeholder="Location"
-              value={location}
-              onChange={handleLocationChange}
-            />
-            <textarea
-              style={styles.textarea}
-              placeholder="Drop a Note"
-              value={message}
-              onChange={handleMessageChange}
-            />
-            <button type="submit" className="button2 mt-4">
-              Book Appointment
-            </button>
-          </form>
-        )}
+              {selectedService === "Auto Consultancy" && ( // Render consultation options only for Auto Consultancy
+                <select
+                  value={consultationType}
+                  onChange={(e) => setConsultationType(e.target.value)}
+                  style={styles.select}
+                  required
+                >
+                  <option value="">Select Consultation Type</option>
+                  {consultationOptions.map((option, index) => (
+                    <option key={index} value={option}>
+                      {option}
+                    </option>
+                  ))}
+                </select>
+              )}
+              <input
+                type="text"
+                style={styles.input}
+                placeholder="Full Name"
+                value={fullName}
+                onChange={handleFullNameChange}
+                required
+              />
+              <input
+                type="text"
+                style={styles.input}
+                placeholder="Location"
+                value={location}
+                onChange={handleLocationChange}
+              />
+              <textarea
+                style={styles.textarea}
+                placeholder="Drop a Note"
+                value={message}
+                onChange={handleMessageChange}
+              />
+              <button type="submit" className="button2 mt-4">
+                Book Appointment
+              </button>
+              <button className="button2 mt-4" onClick={closeModal}>
+                Close
+              </button>
+            </form>
+          )}
+        </Modal>
       </div>
     </div>
   );

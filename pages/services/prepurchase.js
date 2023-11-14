@@ -1,14 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Navbar from "@/components/Nav/Navbar";
 import Footer from "@/components/Footer";
-import Link from "next/link";
+
 import { PrepurchaseHero } from "@/public/images";
 import Testimonial from "@/layout/Testimonial";
 import PrePurchaseInspectionCards from "@/components/cards/PrePurchaseCards";
 import PricingInformation from "@/components/cards/PrepurchasePricingCards";
+import Appointment from "@/components/modals/AppointmentModal";
 
 const PrePurchase = () => {
+  const [isAppointmentModalOpen, setIsAppointmentModalOpen] = useState(false);
+
+  const openAppointmentModal = () => {
+    setIsAppointmentModalOpen(true);
+  };
+
+  const closeAppointmentModal = () => {
+    setIsAppointmentModalOpen(false);
+  };
   return (
     <div className="container mx-auto">
       <Navbar />
@@ -82,16 +92,20 @@ const PrePurchase = () => {
             Ready to Make an Informed Purchase?
           </h3>
           <div className="text-center mt-6">
-            <Link href="/appointment">
-              <button className="button ml-4 md:mt-0 sm:mt-2">
-                Book An Inspection
-              </button>
-            </Link>
+            <button
+              className="button ml-4 md:mt-0 sm:mt-2"
+              onClick={openAppointmentModal}
+            >
+              Book An Inspection
+            </button>
           </div>
         </div>
       </section>
 
       <Footer />
+      {isAppointmentModalOpen && (
+        <Appointment onClose={closeAppointmentModal} />
+      )}
     </div>
   );
 };

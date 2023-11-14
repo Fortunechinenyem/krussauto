@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 
 import Image from "next/image";
 import Navbar from "@/components/Nav/Navbar";
 import Footer from "@/components/Footer";
-import Link from "next/link";
+
 import { BuySellHero } from "@/public/images";
 import {
   FaCheckCircle,
@@ -14,8 +14,18 @@ import {
 } from "react-icons/fa";
 import Testimonial from "@/layout/Testimonial";
 import BlogSnippet from "@/components/blog/BlogSnippet";
+import Appointment from "@/components/modals/AppointmentModal";
 
 const BuySell = () => {
+  const [isAppointmentModalOpen, setIsAppointmentModalOpen] = useState(false);
+
+  const openAppointmentModal = () => {
+    setIsAppointmentModalOpen(true);
+  };
+
+  const closeAppointmentModal = () => {
+    setIsAppointmentModalOpen(false);
+  };
   return (
     <div className="container mx-auto">
       <Navbar />
@@ -182,11 +192,12 @@ const BuySell = () => {
             Start Your Car Buying/Selling Journey
           </h3>
           <div className="text-center mt-6">
-            <Link href="/appointment">
-              <button className="button ml-4 md:mt-0 sm:mt-2">
-                Get Started
-              </button>
-            </Link>
+            <button
+              className="button ml-4 md:mt-0 sm:mt-2"
+              onClick={openAppointmentModal}
+            >
+              Get Started
+            </button>
           </div>
         </div>
       </section>
@@ -200,6 +211,9 @@ const BuySell = () => {
       </section>
 
       <Footer />
+      {isAppointmentModalOpen && (
+        <Appointment onClose={closeAppointmentModal} />
+      )}
     </div>
   );
 };

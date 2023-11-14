@@ -1,16 +1,24 @@
-import React from "react";
-
+import React, { useState } from "react";
 import Image from "next/image";
 import Navbar from "@/components/Nav/Navbar";
 import Footer from "@/components/Footer";
-import Link from "next/link";
 import { FaTruck, FaHardHat, FaShippingFast, FaLandmark } from "react-icons/fa";
 import { FleetManagementHero } from "@/public/images";
 import HowItWorks from "@/components/Howitworks";
 import Testimonial from "@/layout/Testimonial";
 import FleetManagementPricing from "@/components/cards/FleetManangementPricing";
+import Appointment from "@/components/modals/AppointmentModal";
 
 const FleetManagement = () => {
+  const [isAppointmentModalOpen, setIsAppointmentModalOpen] = useState(false);
+
+  const openAppointmentModal = () => {
+    setIsAppointmentModalOpen(true);
+  };
+
+  const closeAppointmentModal = () => {
+    setIsAppointmentModalOpen(false);
+  };
   return (
     <div className="container mx-auto">
       <Navbar />
@@ -154,16 +162,20 @@ const FleetManagement = () => {
             Streamline Your Fleet Operations Today
           </h3>
           <div className="text-center mt-6">
-            <Link href="/appointment">
-              <button className="button ml-4 md:mt-0 sm:mt-2">
-                Book Our Fleet Management Services
-              </button>
-            </Link>
+            <button
+              className="button ml-4 md:mt-0 sm:mt-2"
+              onClick={openAppointmentModal}
+            >
+              Book Our Fleet Management Services
+            </button>
           </div>
         </div>
       </section>
 
       <Footer />
+      {isAppointmentModalOpen && (
+        <Appointment onClose={closeAppointmentModal} />
+      )}
     </div>
   );
 };
