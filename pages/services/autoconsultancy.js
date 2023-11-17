@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import Image from "next/image";
 import Navbar from "@/components/Nav/Navbar";
@@ -6,85 +6,11 @@ import Footer from "@/components/Footer";
 
 import { AutoConsultancyHero } from "@/public/images";
 import Testimonial from "@/layout/Testimonial";
-import {
-  FaCar,
-  FaMoneyCheck,
-  FaTools,
-  FaGasPump,
-  FaRecycle,
-} from "react-icons/fa";
-import Appointment from "@/components/modals/AppointmentModal";
+
+import Link from "next/link";
+import { autoConsultancyServices } from "@/components/constants";
 
 const AutoConsultancy = () => {
-  const [isAppointmentModalOpen, setIsAppointmentModalOpen] = useState(false);
-
-  const openAppointmentModal = () => {
-    setIsAppointmentModalOpen(true);
-  };
-
-  const closeAppointmentModal = () => {
-    setIsAppointmentModalOpen(false);
-  };
-  const autoConsultancyServices = [
-    {
-      title: "Vehicle Selection and Purchasing Assistance",
-      description:
-        "Help clients choose the right vehicle that suits their needs, preferences, and budget.",
-      icon: <FaCar />,
-    },
-    {
-      title: "Fleet Optimization",
-      description:
-        "Analyze and optimize the composition and operation of a vehicle fleet for businesses.",
-      icon: <FaMoneyCheck />,
-    },
-    {
-      title: "Vehicle Maintenance Planning",
-      description:
-        "Develop customized maintenance schedules for individual vehicles or fleets.",
-      icon: <FaTools />,
-    },
-    {
-      title: "Cost Management and Budgeting",
-      description: "Create budgeting plans for vehicle-related expenses.",
-      icon: <FaMoneyCheck />,
-    },
-    {
-      title: "Vehicle Resale and Trade-In Advice",
-      description:
-        "Advise on when to sell or trade in a vehicle to maximize returns.",
-      icon: <FaCar />,
-    },
-    {
-      title: "Performance Upgrades and Modifications",
-      description:
-        "Suggest vehicle performance enhancements, modifications, or customizations.",
-      icon: <FaTools />,
-    },
-    {
-      title: "Insurance Guidance",
-      description:
-        "Assist clients in selecting the right auto insurance policies.",
-      icon: <FaMoneyCheck />,
-    },
-    {
-      title: "Fuel Efficiency Optimization",
-      description: "Recommend fuel-efficient driving techniques.",
-      icon: <FaGasPump />,
-    },
-    {
-      title: "Eco-Friendly Vehicle Options",
-      description:
-        "Provide information on eco-friendly and electric vehicle choices.",
-      icon: <FaRecycle />,
-    },
-    {
-      title: "Vehicle Inspection and Documentation",
-      description:
-        "Offer inspection services for vehicle condition assessment.",
-      icon: <FaCar />,
-    },
-  ];
   return (
     <div className="container mx-auto">
       <Navbar />
@@ -207,12 +133,11 @@ const AutoConsultancy = () => {
         </div>
         <div className="mt-9">
           <div className="text-center mt-6">
-            <button
-              className="button ml-4 md:mt-0 sm:mt-2"
-              onClick={openAppointmentModal}
-            >
-              Get Started
-            </button>
+            <Link href="/appointment">
+              <button className="button ml-4 md:mt-0 sm:mt-2">
+                Get Started
+              </button>
+            </Link>
           </div>
         </div>
       </section>
@@ -230,9 +155,6 @@ const AutoConsultancy = () => {
       </section> */}
 
       <Footer />
-      {isAppointmentModalOpen && (
-        <Appointment onClose={closeAppointmentModal} />
-      )}
     </div>
   );
 };

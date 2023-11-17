@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 
 import { How } from "@/public/images";
-import Appointment from "./modals/AppointmentModal";
+import Appointment from "../pages/appointment";
 
 function HowItWorks() {
   const [isAppointmentModalOpen, setIsAppointmentModalOpen] = useState(false);

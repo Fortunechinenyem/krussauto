@@ -5,12 +5,10 @@ import { Logo } from "@/public/images";
 import { useRouter } from "next/router";
 import { NavBarItems } from "@/layout/constants";
 import Hamburger from "../HamburgerMenu";
-import Appointment from "../modals/AppointmentModal";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [hasScrolled, setHasScrolled] = useState(false);
-  const [isAppointmentModalOpen, setIsAppointmentModalOpen] = useState(false);
   const router = useRouter();
 
   const toggleMenu = () => {
@@ -30,14 +28,6 @@ function Navbar() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
-  const openAppointmentModal = () => {
-    setIsAppointmentModalOpen(true);
-  };
-
-  const closeAppointmentModal = () => {
-    setIsAppointmentModalOpen(false);
-  };
 
   return (
     <>
@@ -88,17 +78,11 @@ function Navbar() {
             Log In
           </Link> */}
           </div>
-          <button
-            className="button ml-4 md:mt-0 sm:mt-2"
-            onClick={openAppointmentModal}
-          >
-            Get Started
-          </button>
+          <Link href="/appointment">
+            <button className="button ml-4 md:mt-0 sm:mt-2">Get Started</button>
+          </Link>
         </div>
       </nav>
-      {isAppointmentModalOpen && (
-        <Appointment onClose={closeAppointmentModal} />
-      )}
     </>
   );
 }
