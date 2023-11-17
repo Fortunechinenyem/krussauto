@@ -95,8 +95,8 @@ const Appointment = () => {
   };
 
   return (
-    <div className="container  mx-auto">
-      <div className="mt-12 p-4">
+    <div className="appointment-container  mx-auto">
+      <div className="mt-12 p-4 appointment-card">
         <div className="bg-[#2A8682] p-6 rounded-lg shadow-md">
           <h2 className="text-2xl font-bold mb-4 text-white">
             Book an Appointment
@@ -202,9 +202,12 @@ const Appointment = () => {
                   onChange={handleMessageChange}
                 />
               </div>
-              <button type="submit" className="button">
-                Book Appointment
-              </button>
+
+              <div className="text-center">
+                <button type="submit" className="button2">
+                  Book Appointment
+                </button>
+              </div>
             </form>
           )}
         </div>

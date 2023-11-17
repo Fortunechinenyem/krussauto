@@ -11,7 +11,97 @@ html {
   overflow-x: hidden;
 }
 
-.container {
+.btn:hover {
+  background-color: #2779bd;
+}
+.range-input {
+  background: #006950;
+
+  -webkit-slider-thumb {
+    background: #006950;
+  }
+}
+
+.nav {
+  flex-wrap: nowrap;
+  margin: 0.5rem;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.button {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  padding: 10px 30px;
+  color: #fafafa;
+  background: #3a9ea3;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  white-space: nowrap;
+}
+.button2 {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  padding: 16px 56px;
+  color: #1b1a1a;
+  background: #f7f9fc;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  outline-color: #111111;
+  white-space: nowrap;
+}
+
+#satisfiedCustomers,
+#trustedBrands {
+  font-size: 24px;
+  font-weight: bold;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.testimonial-section {
+  background-color: #f9f9f9;
+}
+
+.testimonial-card {
+  border: 1px solid #e5e5e5;
+}
+
+.testimonial-card p {
+  line-height: 1.5;
+}
+
+.testimonial-card p:first-of-type {
+  margin-bottom: 1.5rem;
+}
+
+.testimonial-card p:last-of-type {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+/* Center testimonials on small screens */
+@media (max-width: 767px) {
+  .testimonial-section {
+    text-align: center;
+  }
+}
+
+.appointment-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,7 +109,7 @@ html {
   height: 100%;
 }
 
-.card {
+.appointment-card {
   width: 100%;
   max-width: 800px;
   background: #fff;
@@ -50,22 +140,6 @@ html {
   font-size: 18px;
   font-weight: 600;
   margin-top: 16px;
-}
-
-.button {
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 1.5;
-  padding: 12px 24px;
-  color: #fff;
-  background: #3a9ea3;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.button:hover {
-  background-color: #2779bd;
 }
 
 .select-dropdown {
