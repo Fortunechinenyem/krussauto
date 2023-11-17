@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { useTranslation } from "react-i18next";
-
+import PageSEO from "@/components/pageSEO";
+import Head from "next/head";
 import Navbar from "@/components/Nav/Navbar";
 import Footer from "@/components/Footer";
 import Image from "next/image";
@@ -20,8 +20,6 @@ import HowItWorks from "@/components/Howitworks";
 export default function HomePage() {
   const [customerCount, setCustomerCount] = useState(0);
   const [brandCount, setBrandCount] = useState(0);
-
-  const { t } = useTranslation();
 
   useEffect(() => {
     Aos.init({
@@ -69,12 +67,34 @@ export default function HomePage() {
   return (
     <div className="container mx-auto">
       <Navbar />
+      <PageSEO
+        title="Home"
+        description="Kruss Automotive Services"
+        ogImage="../public/images/index/logo.svg"
+      />
+      <Head>
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "url": "https://www.krussautoserv.ng/",
+              "name": "Kruss Automotive Services",
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+2349025301696",
+                "contactType": "Customer service"
+              }
+            }
+          `}
+        </script>
+      </Head>
 
       <section className="container mx-auto mt-9   py-10 md:py-10">
         <div className="mt-9 p-4 mb-9 text-white bg-gradient-to-b from-[#00B0BA] to-gray-700 flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 mt-7">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold">
-              {t("Get Your Auto Services Needs Taken Care Of")}
+              Get Your Auto Services Needs Taken Care Of
             </h1>
             <p className="text-lg md:text-xl mt-4">
               Don't get stuck with a lemon – let our professionals take the load
