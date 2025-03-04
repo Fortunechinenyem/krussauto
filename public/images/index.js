@@ -12,6 +12,7 @@ import AutoConsultancyHero from "./product6.jpg";
 import FleetManagementHero from "./product3.jpg";
 import ServicesHero from "./krussservices.png";
 import BuySellHero from "./product4.jpeg";
+import CNGHero from "./product5.jpg";
 import Founder from "./5236.jpg";
 import How from "./how.png";
 import InvestmentImage from "./kruss1.jpg";
@@ -23,6 +24,7 @@ import Product3 from "./product3.jpg";
 import Product4 from "./product4.jpeg";
 import Product5 from "./product5.jpg";
 import Product6 from "./product6.jpg";
+import Product7 from "./product5.jpg";
 import TestimonialImage from "./founder.jpg";
 import NotFoundImage from "./404-image.jpg";
 
@@ -36,6 +38,7 @@ export {
   BlogHero,
   BlogImage,
   BuySellHero,
+  CNGHero,
   CarDiagnosticsHero,
   Founder,
   FleetManagementHero,
@@ -51,6 +54,7 @@ export {
   Product4,
   Product5,
   Product6,
+  Product7,
   ServicesHero,
   TestimonialImage,
 };

@@ -7,7 +7,8 @@ import { MdOutlineMiscellaneousServices } from "react-icons/md";
 import { FaCar } from "react-icons/fa";
 import { FaMoneyBillAlt } from "react-icons/fa";
 import { MdSyncProblem } from "react-icons/md";
-import { GiDiscussion } from "react-icons/gi";
+import { GiDiscussion, GiGasPump } from "react-icons/gi";
+
 import {
   Product1,
   Product2,
@@ -15,6 +16,7 @@ import {
   Product4,
   Product5,
   Product6,
+  Product7,
 } from "@/public/images";
 
 const products = [
@@ -33,6 +35,14 @@ const products = [
     icon: <MdOutlineMiscellaneousServices />,
     image: Product2,
     link: "/services/autoerrand",
+  },
+  {
+    title: "CNG Installation",
+    description:
+      "Convert your vehicle to run on Compressed Natural Gas (CNG) for better efficiency and lower emissions.",
+    icon: <GiGasPump />,
+    image: Product7,
+    link: "/services/cng-installation",
   },
   {
     title: "Fleet Management",
