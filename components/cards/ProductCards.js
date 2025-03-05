@@ -7,7 +7,7 @@ import { MdOutlineMiscellaneousServices } from "react-icons/md";
 import { FaArrowAltCircleRight, FaCar } from "react-icons/fa";
 import { FaMoneyBillAlt } from "react-icons/fa";
 import { MdSyncProblem } from "react-icons/md";
-import { GiDiscussion } from "react-icons/gi";
+import { GiDiscussion, GiGasPump } from "react-icons/gi";
 import {
   Product1,
   Product2,
@@ -15,79 +15,89 @@ import {
   Product4,
   Product5,
   Product6,
+  Product7,
 } from "@/public/images";
 
 const products = [
   {
     title: "Pre-Purchase Inspection",
-    icon: <FcInspection />,
+    icon: <FcInspection className="text-4xl text-blue-500" />,
     image: Product1,
     link: "/services/prepurchase",
   },
   {
     title: "Auto-Errand As A Service",
-    icon: <MdOutlineMiscellaneousServices />,
+    icon: (
+      <MdOutlineMiscellaneousServices className="text-4xl text-purple-500" />
+    ),
     image: Product2,
     link: "/services/autoerrand",
   },
   {
     title: "Fleet Management",
-    icon: <FaCar />,
+    icon: <FaCar className="text-4xl text-green-500" />,
     image: Product3,
     link: "/services/fleetmanagement",
   },
   {
     title: "Buy, Sell Cars",
-    icon: <FaMoneyBillAlt />,
+    icon: <FaMoneyBillAlt className="text-4xl text-yellow-500" />,
     image: Product4,
     link: "/services/buysell",
   },
   {
     title: "Car Diagnostics",
-    icon: <MdSyncProblem />,
+    icon: <MdSyncProblem className="text-4xl text-red-500" />,
     image: Product5,
     link: "/services/cardiagnostics",
   },
   {
     title: "Auto Consultancy",
-    icon: <GiDiscussion />,
+    icon: <GiDiscussion className="text-4xl text-indigo-500" />,
     image: Product6,
     link: "/services/autoconsultancy",
+  },
+  {
+    title: "CNG Installation",
+    icon: <GiGasPump className="text-4xl text-orange-500" />,
+    image: Product7,
+    link: "/services/cng-installation",
   },
 ];
 
 const ProductCards = () => {
   return (
-    <section className="">
-      <div data-aos="fade-down" data-aos-delay="400">
-        <h3 className="p-5 text-[#11111] text-center text-2xl md:text-2xl lg:text-4xl font-bold mb-4">
+    <section className="py-16 bg-gradient-to-b from-[#F0F0F0] to-white">
+      <div className="max-w-7xl mx-auto px-4">
+        <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-gray-900 mb-12">
           Our Services
         </h3>
-      </div>
-      <div
-        className=" p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-7 mt-9 text-[#11111] text-xl md:text-xl lg:text-2xl"
-        data-aos="fade-down"
-        data-aos-delay="400"
-      >
-        {products.map((product, index) => (
-          <Link href={product.link} key={index}>
-            <div className="bg-white rounded-lg p-6 mt-7 shadow-lg">
-              <div className="flex flex-col items-center">
-                <Image
-                  className="w-full max-w-md rounded-lg"
-                  src={product.image}
-                  alt={`Product ${index + 1}`}
-                  priority
-                />
-                <p className="text-lg font-bold my-2">{product.title}</p>
-                <div className="mb-2">{product.icon}</div>
-                <div>
-                  <FaArrowAltCircleRight />
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+          {products.map((product, index) => (
+            <Link href={product.link} key={index}>
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden transform hover:-translate-y-2 cursor-pointer">
+                <div className="relative h-48">
+                  <Image
+                    src={product.image}
+                    alt={product.title}
+                    layout="fill"
+                    objectFit="cover"
+                    className="rounded-t-xl"
+                  />
+                </div>
+                <div className="p-6 text-center">
+                  <div className="flex justify-center mb-4">{product.icon}</div>
+                  <h4 className="text-xl font-semibold text-gray-800 mb-2">
+                    {product.title}
+                  </h4>
+                  <div className="flex justify-center mt-4">
+                    <FaArrowAltCircleRight className="text-2xl text-blue-500 hover:text-blue-700 transition-colors duration-300" />
+                  </div>
                 </div>
               </div>
-            </div>
-          </Link>
-        ))}
+            </Link>
+          ))}
+        </div>
       </div>
     </section>
   );

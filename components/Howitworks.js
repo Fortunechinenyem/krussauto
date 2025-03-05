@@ -1,11 +1,9 @@
 import React, { useState } from "react";
-import Image from "next/image";
-
-import { How } from "@/public/images";
 import Appointment from "../pages/appointment";
 
 function HowItWorks() {
   const [isAppointmentModalOpen, setIsAppointmentModalOpen] = useState(false);
+  const [activeStep, setActiveStep] = useState(null);
 
   const openAppointmentModal = () => {
     setIsAppointmentModalOpen(true);
@@ -14,22 +12,22 @@ function HowItWorks() {
   const closeAppointmentModal = () => {
     setIsAppointmentModalOpen(false);
   };
-  const [activeStep, setActiveStep] = useState(null);
 
   const steps = [
     {
-      title: "Step 1",
-      description: "Choose the service you need and book an appointment.",
+      title: "Step 1: Choose Your Service",
+      description:
+        "Select the service you need and book an appointment online.",
     },
     {
-      title: "Step 2",
+      title: "Step 2: Professional Service",
       description:
-        "Our professionals will provide the service at your convenience.",
+        "Our experts will handle everything at your preferred time and location.",
     },
     {
-      title: "Step 3",
+      title: "Step 3: Enjoy the Results",
       description:
-        "Sit back and enjoy a hassle-free experience with your vehicle.",
+        "Relax and experience a seamless, hassle-free service for your vehicle.",
     },
   ];
 
@@ -38,87 +36,40 @@ function HowItWorks() {
   };
 
   return (
-    <div>
-      <h4 className="text-[#141414] mb-5 text-center font-bold text-2xl md:text-2xl leading-normal tracking-[0.36px]">
-        How it Works
-      </h4>
-      <div className="flex flex-col md:flex-row items-center justify-evenly">
-        <div
-          className="md-w-1/2 m-4 "
-          data-aos="fade-down"
-          data-aos-delay="400"
-        >
-          <Image
-            className="w-full max-w-md"
-            src={How}
-            alt="how it works"
-            priority
-          />
-          <div className="step-highlight">
-            {activeStep !== null && (
-              <div className={`step step-${activeStep + 1}`}></div>
-            )}
-          </div>
-        </div>
-        <div className="md-w-1/2 mt-8 md:mt-4 md:pl-12 text-center md:text-left">
+    <div className="bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-4xl mx-auto">
+        <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">
+          How It Works
+        </h2>
+        <div className="space-y-8">
           {steps.map((step, index) => (
             <div
               key={index}
-              className={`rounded-lg p-6 ${
-                activeStep === index ? "active-step" : ""
+              className={`group cursor-pointer p-6 rounded-lg transition-all duration-300 ${
+                activeStep === index
+                  ? "bg-blue-50 border-l-4 border-blue-500"
+                  : "bg-white hover:bg-gray-100"
               }`}
-              onClick={() => handleStepClick(index)} // Handle step click
+              onClick={() => handleStepClick(index)}
+              onMouseEnter={() => setActiveStep(index)}
+              onMouseLeave={() => setActiveStep(null)}
             >
-              <h4 className="text-xl font-bold mb-2">{step.title}</h4>
-              <p className="">{step.description}</p>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                {step.title}
+              </h3>
+              <p className="text-gray-600">{step.description}</p>
             </div>
           ))}
-          <div className="mt-8">
-            <button
-              className="mt-4 button px-4 py-2 ml-4 md:mt-0 sm:mt-2"
-              onClick={openAppointmentModal}
-            >
-              Get started
-            </button>
-          </div>
+        </div>
+        <div className="mt-12 text-center">
+          <button
+            onClick={openAppointmentModal}
+            className="  button inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+          >
+            Get Started
+          </button>
         </div>
       </div>
-      <style jsx>{`
-        .step-highlight {
-          position: relative;
-          width: 100%;
-          height: 100%;
-        }
-
-        .step {
-          position: absolute;
-          width: 30%;
-          height: 30%;
-          background: rgba(255, 0, 0, 0.2);
-          border: 2px solid red;
-          transition: all 0.5s ease;
-        }
-
-        .step-1 {
-          top: 10%;
-          left: 10%;
-        }
-
-        .step-2 {
-          top: 40%;
-          left: 40%;
-        }
-
-        .step-3 {
-          top: 70%;
-          left: 70%;
-        }
-
-        .active-step {
-          background: rgba(0, 255, 0, 0.2);
-          border: 2px solid green;
-        }
-      `}</style>
       {isAppointmentModalOpen && (
         <Appointment onClose={closeAppointmentModal} />
       )}

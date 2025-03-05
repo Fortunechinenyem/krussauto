@@ -14,8 +14,7 @@ import ServicesHero from "./krussservices.png";
 import BuySellHero from "./product4.jpeg";
 import CNGHero from "./product5.jpg";
 import Founder from "./5236.jpg";
-import How from "./how.png";
-import InvestmentImage from "./kruss1.jpg";
+
 import BlogImage from "./img (1).jpg";
 import Logo from "./krusslogo.svg";
 import Product1 from "./product1.jpeg";
@@ -25,7 +24,7 @@ import Product4 from "./product4.jpeg";
 import Product5 from "./product5.jpg";
 import Product6 from "./product6.jpg";
 import Product7 from "./product5.jpg";
-import TestimonialImage from "./founder.jpg";
+import TestimonialImage from "./founderbg.png";
 import NotFoundImage from "./404-image.jpg";
 
 export {
@@ -43,8 +42,6 @@ export {
   Founder,
   FleetManagementHero,
   Hero,
-  How,
-  InvestmentImage,
   Logo,
   NotFoundImage,
   PrepurchaseHero,

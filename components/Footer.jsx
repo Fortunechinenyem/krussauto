@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
-import { Logo } from "@/public/images";
+
 import {
   BsLinkedin,
   BsInstagram,
@@ -13,110 +12,89 @@ import {
 
 function Footer() {
   return (
-    <div className="container mx-auto bg-gray-600  text-white p-4 ">
-      <div className="h-1/2 w-full flex md:flex-row flex-col justify-around items-start ">
-        <div className="p-5">
-          <Link href="/" className="flex title-font font-medium items-center">
-            <Image
-              className=" mb-5"
-              src={Logo}
-              alt="logo"
-              width={200}
-              priority
-            />
-          </Link>
-        </div>
+    <div className="bg-gray-800 text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="mb-8 md:mb-0">
+            <h3 className="text-xl font-bold mb-4">Quick Links</h3>
+            <ul className="space-y-2">
+              {[
+                { label: "Home", href: "/" },
+                { label: "About Us", href: "/AboutUs" },
+                { label: "Our Work", href: "/OurWork" },
+                { label: "Services", href: "/Services" },
+                { label: "Blog", href: "/Blog" },
+              ].map((link, index) => (
+                <li key={index}>
+                  <Link
+                    href={link.href}
+                    className="text-gray-300 hover:text-blue-500 transition-colors duration-300"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-        <div className="p-5 ">
-          <ul className="">
-            <p className=" font-bold text-2xl pb-4">Quick Links</p>
-            <li className=" text-md pb-2  hover:text-gray-400 cursor-pointer ml-1">
-              <Link href="/">Home</Link>
-            </li>
-            <li className=" text-md pb-2  hover:text-gray-400 cursor-pointer ml-1">
-              <Link href="/AboutUs">About Us</Link>
-            </li>
-            <li className=" text-md pb-2  hover:text-gray-400 cursor-pointer ml-1">
-              <Link href="/OurWork">Our Work</Link>
-            </li>
-            <li className=" text-md pb-2  hover:text-gray-400 cursor-pointer ml-1">
-              <Link href="/Services">Services</Link>
-            </li>
-            <li className=" text-md pb-2  hover:text-gray-400 cursor-pointer ml-1">
-              <Link href="/Blog">Blog</Link>
-            </li>
-          </ul>
-        </div>
-
-        <div className="p-5">
-          <p className=" font-bold text-2xl pb-4">Contact US</p>
-          <p className="font-bold">Address</p>
-          <p className="mb-2"> Lagos, Nigeria</p>
-          <p className="font-bold">Email</p>
-          <p className="mb-2"> hello@krussautoserve.ng.com</p>
-          <p className="font-bold">Phone</p>
-          <p className="mb-2"> +2349025301696 </p>
-          <button className=" mt-4 bg-white text-black font-medium rounded-md px-4 py-2">
-            <BsWhatsapp className="inline-block mr-2 text-xl" /> Chat on
-            WhatsApp
-          </button>
-        </div>
-
-        <div className=" p-5 ">
-          <p className=" font-bold text-2xl pb-4">Stay Connected</p>
-          <p className="mb-2">
-            Keep up to date with industry insights and latest news
-          </p>{" "}
-          <input
-            required
-            type="email"
-            placeholder="Email address"
-            className="ring-1 ring-black-300  rounded-md px-4 py-2 outline-none focus:none "
-          />
-          <button className=" m-2 bg-white text-black font-medium rounded-md px-4 py-2 ">
-            Subscribe
-          </button>
-          <div className="flex gap-6 mt-5">
-            <Link href="/">
-              <button className="cursor-pointer text-2xl hover:text-gray-400">
-                <BsLinkedin />
+          <div className="mb-8 md:mb-0">
+            <h3 className="text-xl font-bold mb-4">Contact Us</h3>
+            <div className="space-y-2">
+              <p className="font-semibold">Address</p>
+              <p className="text-gray-300">Lagos, Nigeria</p>
+              <p className="font-semibold">Email</p>
+              <p className="text-gray-300">hello@krussautoserve.ng.com</p>
+              <p className="font-semibold">Phone</p>
+              <p className="text-gray-300">+2349025301696</p>
+              <button className="mt-4 flex items-center bg-white text-black font-medium rounded-md px-4 py-2 hover:bg-gray-100 transition-colors duration-300">
+                <BsWhatsapp className="inline-block mr-2 text-xl" /> Chat on
+                WhatsApp
               </button>
-            </Link>
+            </div>
+          </div>
 
-            <Link href="/">
-              <button className="cursor-pointer text-2xl hover:text-gray-400">
-                <BsInstagram />
+          <div>
+            <h3 className="text-xl font-bold mb-4">Stay Connected</h3>
+            <p className="text-gray-300 mb-4">
+              Keep up to date with industry insights and latest news.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-2">
+              <input
+                type="email"
+                placeholder="Email address"
+                className="w-full sm:w-64 px-4 py-2 rounded-md bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+              <button className="px-6 py-2 button text-white font-medium rounded-md hover:bg-blue-700 transition-colors duration-300">
+                Subscribe
               </button>
-            </Link>
-
-            <Link href="/">
-              <button className="cursor-pointer text-2xl hover:text-gray-400">
-                <BsTwitter />
-              </button>
-            </Link>
-
-            <Link href="/">
-              <button className="cursor-pointer text-2xl hover:text-gray-400">
-                <BsFacebook />
-              </button>
-            </Link>
-
-            <Link href="/">
-              <button className="cursor-pointer text-2xl hover:text-gray-400">
-                <BsYoutube />
-              </button>
-            </Link>
+            </div>
+            <div className="flex gap-4 mt-6">
+              {[
+                { icon: <BsLinkedin />, href: "/" },
+                { icon: <BsInstagram />, href: "/" },
+                { icon: <BsTwitter />, href: "/" },
+                { icon: <BsFacebook />, href: "/" },
+                { icon: <BsYoutube />, href: "/" },
+              ].map((social, index) => (
+                <Link
+                  key={index}
+                  href={social.href}
+                  className="text-gray-300 hover:text-blue-500 transition-colors duration-300"
+                >
+                  {social.icon}
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       </div>
-      <hr />
 
-      <footer className="py-4 bg-gray-500  text-center">
-        <p>
+      <div className="bg-gray-900 py-4 text-center">
+        <p className="text-gray-300">
           &copy; {new Date().getFullYear()} Kruss Automotive Services. All
           rights reserved.
         </p>
-      </footer>
+      </div>
     </div>
   );
 }

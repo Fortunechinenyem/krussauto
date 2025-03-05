@@ -6,5 +6,5 @@ export default {
   ...nextConfig,
   siteUrl: "https://www.krussautoserv.ng/",
   generateRobotsTxt: true,
-  sitemapSize: 7000,
+  // sitemapSize: 7000,
 };

@@ -14,6 +14,7 @@ function Navbar() {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
   const handleScroll = () => {
     if (window.scrollY > 0) {
       setHasScrolled(true);
@@ -30,60 +31,83 @@ function Navbar() {
   }, []);
 
   return (
-    <>
-      <nav
-        className={`fixed container p-0  top-0 w-full flex flex-col md:flex-row items-center justify-between   bg-white transition-all ease-in-out duration-300 ${
-          hasScrolled ? "shadow-lg" : ""
-        }`}
-        style={{ zIndex: 1000 }}
-      >
-        <div className=" container flex items-center justify-between  px-2 md:px-4 lg:px-6 mx-auto">
-          <Link href="/" className="flex title-font gap-2 font-medium">
-            <Image className="" src={Logo} alt="logo" width={110} priority />
-          </Link>
+    <nav
+      className={`fixed top-0 w-full bg-white transition-all duration-300 ${
+        hasScrolled ? "shadow-lg" : "shadow-sm"
+      }`}
+      style={{ zIndex: 1000 }}
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-20">
+          {/* Logo */}
+          <div className="flex-shrink-0">
+            <Link href="/">
+              <Image src={Logo} alt="logo" width={120} height={40} priority />
+            </Link>
+          </div>
 
-          <button className="md:hidden focus:outline-none" onClick={toggleMenu}>
-            <Hamburger isMenuOpen={isMenuOpen} />
-          </button>
-        </div>
+          {/* Hamburger Menu (Mobile) */}
+          <div className="flex md:hidden">
+            <button
+              onClick={toggleMenu}
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-900 focus:outline-none"
+            >
+              <Hamburger isMenuOpen={isMenuOpen} />
+            </button>
+          </div>
 
-        <ul
-          className={`container items-center flex flex-col md:flex-row gap-4 md:gap-7 mt-2 md:mt-0 ${
-            !isMenuOpen ? "hidden md:flex" : ""
-          }`}
-        >
-          {NavBarItems.map((item) => (
-            <li key={item.label} className="text-[#111] sm:mb-3 ">
+          {/* Desktop Menu */}
+          <div className="hidden md:flex md:items-center md:space-x-8">
+            {NavBarItems.map((item) => (
               <Link
+                key={item.label}
                 href={item.url}
-                className={router.pathname === item.url ? "active-link" : ""}
+                className={`text-gray-700 hover:text-blue-600 transition-colors duration-300 ${
+                  router.pathname === item.url ? "font-bold text-blue-600" : ""
+                }`}
               >
                 {item.label}
               </Link>
-            </li>
-          ))}
-        </ul>
-
-        <div
-          className={`md:flex md:flex-row sm:gap-4 sm:flex-col mt-2 sm:mb-4 sm:mt-5 md:mt-0 items-center ${
-            !isMenuOpen ? "hidden md:flex" : ""
-          }`}
-        >
-          <div className="login mb-2 md:mb-0   sm:mb-5">
-            {/* <Link
-            href="/authentication/login"
-            className="text-[#111111] sm:mb-2 sm:mt-5 mx-auto sm:ml-10 md:ml-0"
-            style={{ whiteSpace: "nowrap", fontFamily: "Lato" }}
-          >
-            Log In
-          </Link> */}
+            ))}
           </div>
-          <Link href="/appointment">
-            <button className="button ml-4 md:mt-0 sm:mt-2">Get Started</button>
-          </Link>
+
+          <div className="hidden md:flex md:items-center">
+            <Link href="/appointment">
+              <button className="button ml-8 px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors duration-300">
+                Get Started
+              </button>
+            </Link>
+          </div>
         </div>
-      </nav>
-    </>
+      </div>
+
+      <div
+        className={`md:hidden ${
+          isMenuOpen ? "block" : "hidden"
+        } transition-all duration-300`}
+      >
+        <div className="px-4 pt-2 pb-4 space-y-2 bg-white border-t border-gray-200">
+          {NavBarItems.map((item) => (
+            <Link
+              key={item.label}
+              href={item.url}
+              className={`block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 ${
+                router.pathname === item.url ? "bg-gray-100 font-bold" : ""
+              }`}
+            >
+              {item.label}
+            </Link>
+          ))}
+          <div className="mt-4">
+            <Link href="/appointment">
+              <button className=" button w-full px-4 py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors duration-300">
+                Get Started
+              </button>
+            </Link>
+          </div>
+        </div>
+      </div>
+    </nav>
   );
 }
 
