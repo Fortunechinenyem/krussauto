@@ -5,7 +5,6 @@ import { HiOutlineMailOpen } from "react-icons/hi";
 import Image from "next/image";
 import Navbar from "@/components/Nav/Navbar";
 import { AboutHero } from "@/public/images";
-// import Footer from "@/components/Footer";
 
 function ContactUs() {
   const [name, setName] = useState("");
@@ -161,7 +160,6 @@ function ContactUs() {
           </div>
         </div>
       </div>
-      {/* <Footer /> */}
     </div>
   );
 }

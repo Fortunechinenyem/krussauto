@@ -7,13 +7,11 @@ export default function CreateNewInspection() {
 
   const handleCreateInspection = async () => {
     try {
-      // Send a request to the server to create a new inspection
       await axios.post("/api/inspections", {
         carModel,
         inspectionDate,
       });
 
-      // Reset form values
       setCarModel("");
       setInspectionDate("");
     } catch (error) {

@@ -5,7 +5,6 @@ export default function InspectionReports() {
   const [reports, setReports] = useState([]);
 
   useEffect(() => {
-    // Fetch inspection reports from the server
     const fetchReports = async () => {
       try {
         const response = await axios.get("/api/reports");
